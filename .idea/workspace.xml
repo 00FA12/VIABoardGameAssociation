@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="41d552e9-10c0-4119-bcff-f890b241f4aa" name="Changes" comment="1 commit">
-      <change afterPath="$PROJECT_DIR$/src/main/LoadInitialData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/RunAssociationManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Catalogue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/GenreList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/MyFileHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/BoardGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/BoardGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/GameAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/GameAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Genre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Genre.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/MyDate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/MyDate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/RatingList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/RatingList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/test.java" afterDir="false" />
-    </list>
+    <list default="true" id="41d552e9-10c0-4119-bcff-f890b241f4aa" name="Changes" comment="2-nd commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,7 +62,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669474189533</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="2-nd commit">
+      <created>1669480285271</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1669480285271</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -91,6 +85,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1 commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="1 commit" />
+    <MESSAGE value="2-nd commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="2-nd commit" />
   </component>
 </project>
