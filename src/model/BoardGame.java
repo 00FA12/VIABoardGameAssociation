@@ -1,6 +1,8 @@
 package model;
 
-public class BoardGame
+import java.io.Serializable;
+
+public class BoardGame implements Serializable
 {
   private String title;
   private int ownerID;
@@ -70,5 +72,26 @@ public class BoardGame
   public void removeReservation()
   {
     this.gameAction = null;
+  }
+
+  public void addRating(int rating)
+  {
+    this.ratings.addRating(rating);
+  }
+
+  public String getAverageRating()
+  {
+    return ratings.average();
+  }
+
+  public RatingList getRatings()
+  {
+    return ratings;
+  }
+
+  public String toString()
+  {
+    return String.format("Title: %s\nOwner ID: %d\nDescription: %s"
+        + "\nGame status: %s", title, ownerID, description, gameAction);
   }
 }

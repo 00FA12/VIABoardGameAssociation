@@ -66,6 +66,56 @@ public class MyDate
     return new MyDate(day, month, year);
   }
 
+  public static int days(int year, int month, int day)
+  {
+    int val = 0;
+    for(int i = 1; i <= year; i++)
+    {
+      if(isLeapYear(i))
+      {
+        val += 366;
+      }
+      else
+      {
+        val += 365;
+      }
+    }
+    for(int i = 1; i <= month; i++)
+    {
+      val += daysInMonth(year, i);
+    }
+    val += day;
+    return val;
+  }
+
+  public static int daysInMonth(int year, int month)
+  {
+    if(month == 1 || month == 3 || month == 5 || month == 7
+        || month == 8 || month == 10 || month == 12)
+      return 31;
+    else if(month == 2 && isLeapYear(year))
+      return 29;
+    else if(month == 2 && !isLeapYear(year))
+      return 28;
+    else
+      return 30;
+  }
+
+  private static boolean isLeapYear(int year)
+  {
+    if(year % 4 == 0)
+    {
+      if(year % 100 == 0 && year % 400 == 0)
+        return true;
+      else if(year % 100 != 0)
+        return true;
+      else
+        return false;
+    }
+    else
+      return false;
+  }
+
   public String toString()
   {
     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
