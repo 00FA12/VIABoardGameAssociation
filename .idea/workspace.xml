@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="41d552e9-10c0-4119-bcff-f890b241f4aa" name="Changes" comment="2-nd commit">
-      <change afterPath="$PROJECT_DIR$/src/GUI/test.java" afterDir="false" />
+    <list default="true" id="e87b550e-3d6a-4d86-a721-c06a7156f051" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/model/BoardGame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/Genre.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/MyDate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/lists/GenreList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/lists/RatingList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/lists/StudentList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/MyFileHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/charm_glisten_6_2_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/controlsfx_11_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VIABoardGameAssociation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/VIABoardGameAssociation.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/test.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +38,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2I5VwJqkH0Iq0oaXUePFoy8ZabA" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="2IAetqpdlMcvNNFQ6phxNnkXqO9" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -33,33 +47,26 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "last_opened_file_path": "C:/Users/Sevastian/OneDrive - ViaUC/SEP1/VIABoardGameAssociation",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.45517242"
+    "last_opened_file_path": "C:/Users/GU301/IdeaProjects/SDJ classes"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="main" />
       <recent name="model" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Sevastian\OneDrive - ViaUC\SEP1\VIABoardGameAssociationTemp\src" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="utils" />
-      <recent name="GUI" />
     </key>
   </component>
   <component name="RunManager">
     <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="GUI.test" />
+      <option name="MAIN_CLASS_NAME" value="main.test" />
       <module name="VIABoardGameAssociation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="GUI.*" />
+          <option name="PATTERN" value="main.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -76,41 +83,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="41d552e9-10c0-4119-bcff-f890b241f4aa" name="Changes" comment="" />
-      <created>1669471670473</created>
+      <changelist id="e87b550e-3d6a-4d86-a721-c06a7156f051" name="Changes" comment="" />
+      <created>1669629032715</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1669471670473</updated>
+      <updated>1669629032715</updated>
     </task>
-    <task id="LOCAL-00001" summary="1 commit">
-      <created>1669474189533</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1669474189533</updated>
-    </task>
-    <task id="LOCAL-00002" summary="2-nd commit">
-      <created>1669480285271</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1669480285271</updated>
-    </task>
-    <task id="LOCAL-00003" summary="2-nd commit">
-      <created>1669480324456</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1669480324456</updated>
-    </task>
-    <task id="LOCAL-00004" summary="2-nd commit">
-      <created>1669626242172</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1669626242172</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -123,10 +101,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="1 commit" />
-    <MESSAGE value="2-nd commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="2-nd commit" />
   </component>
 </project>
