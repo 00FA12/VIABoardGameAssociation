@@ -2,7 +2,7 @@ package model.lists;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
-//HUGO
+//Hugo
 public class RatingList
 {
   private ArrayList<Integer> ratings;

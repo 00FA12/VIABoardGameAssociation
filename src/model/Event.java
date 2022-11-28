@@ -5,6 +5,8 @@ import model.lists.StudentList;
 import java.io.Serializable;
 import java.util.ArrayList;
 
+//Kateryna
+
 public class Event implements Serializable
 {
   private String title;
@@ -38,6 +40,11 @@ public class Event implements Serializable
   public void setTitle(String title)
   {
     this.title = title;
+  }
+
+  public void addAttender(Student student)
+  {
+    attenders.addStudent(student);
   }
 
   public void setDescription(String description)

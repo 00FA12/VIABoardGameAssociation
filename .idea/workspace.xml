@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e87b550e-3d6a-4d86-a721-c06a7156f051" name="Changes" comment="1" />
+    <list default="true" id="e87b550e-3d6a-4d86-a721-c06a7156f051" name="Changes" comment="1">
+      <change afterPath="$PROJECT_DIR$/src/model/lists/EventList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/lists/VotingList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Event.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/lists/RatingList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/lists/RatingList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/lists/StudentList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/lists/StudentList.java" afterDir="false" />
+    </list>
     <list id="37dfc347-85a4-445f-bb19-7292b1a54b4a" name="Changes by pind9" comment="">
       <change beforePath="$PROJECT_DIR$/src/model/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Event.java" afterDir="false" />
+    </list>
+    <list id="99c4598e-f4ff-4e1c-bad4-5914522b0450" name="Changes by Севастиан" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/LoadInitialData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/BoardGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/BoardGame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +32,15 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/model/Event.java">
+      <ranges>
+        <range start1="6" end1="6" start2="6" end2="8" changelist="e87b550e-3d6a-4d86-a721-c06a7156f051" />
+        <range start1="41" end1="41" start2="43" end2="48" changelist="e87b550e-3d6a-4d86-a721-c06a7156f051" />
+        <range start1="59" end1="60" start2="66" end2="68" changelist="37dfc347-85a4-445f-bb19-7292b1a54b4a" />
+      </ranges>
+    </file>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -33,13 +54,17 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "last_opened_file_path": "C:/Users/GU301/IdeaProjects/SDJ classes"
+    "last_opened_file_path": "C:/Users/GU301/IdeaProjects/SDJ classes",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="main" />
       <recent name="model" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\GU301\IdeaProjects\VIABoardGameAssociation\Diagrams" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="utils" />
@@ -88,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669638255017</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="1">
+      <created>1669638813869</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1669638813869</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

@@ -45,6 +45,11 @@ public class StudentList
     return students.size();
   }
 
+  public void removeStudent(Student student)
+  {
+    students.remove(student);
+  }
+
   public String toString()
   {
     String str = "";
