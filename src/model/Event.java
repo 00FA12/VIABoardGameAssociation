@@ -64,6 +64,7 @@ public class Event implements Serializable
 
   public String toSting()
   {
-    return "";
+    return "Title: "+ title+ "\nDescription: " + description
+        + "\nDate: " + date+ "\nAttenders: " + attenders;
   }
 }

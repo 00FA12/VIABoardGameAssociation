@@ -1,12 +1,12 @@
 package model.lists;
 
-import model.CandidateGame;
+import model.GameCandidate;
 
 import java.util.ArrayList;
 //Seva & Hugo
 public class VotingList
 {
-  private ArrayList<CandidateGame> votes;
+  private ArrayList<GameCandidate> votes;
 
   public void addVoid(CandidateGame vote)
   {
@@ -18,7 +18,7 @@ public class VotingList
     votes.clear();
   }
 
-  public CandidateGame getVoteByGameTitle(String title)
+  public GameCandidate getVoteByGameTitle(String title)
   {
     for (int i = 0; i < votes.size(); i++)
     {
@@ -30,7 +30,7 @@ public class VotingList
     return null;
   }
 
-  public CandidateGame getVote(int index)
+  public GameCandidate getVote(int index)
   {
     return votes.get(index);
   }
