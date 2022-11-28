@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e87b550e-3d6a-4d86-a721-c06a7156f051" name="Changes" comment="1">
-      <change afterPath="$PROJECT_DIR$/src/model/lists/EventList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/lists/VotingList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Event.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/lists/RatingList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/lists/RatingList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/lists/StudentList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/lists/StudentList.java" afterDir="false" />
+    </list>
+    <list id="af6a4ea2-a11d-45bd-b68d-b84fa47e2d70" name="Changes by micha" comment="">
+      <change beforePath="$PROJECT_DIR$/src/model/lists/VotingList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/lists/VotingList.java" afterDir="false" />
     </list>
     <list id="37dfc347-85a4-445f-bb19-7292b1a54b4a" name="Changes by pind9" comment="">
       <change beforePath="$PROJECT_DIR$/src/model/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Event.java" afterDir="false" />
@@ -16,6 +14,8 @@
       <change beforePath="$PROJECT_DIR$/src/main/LoadInitialData.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/test.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/BoardGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/BoardGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/lists/VotingList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/lists/VotingList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,11 +33,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/model/Event.java">
+    <file path="$PROJECT_DIR$/src/model/lists/VotingList.java">
       <ranges>
-        <range start1="6" end1="6" start2="6" end2="8" changelist="e87b550e-3d6a-4d86-a721-c06a7156f051" />
-        <range start1="41" end1="41" start2="43" end2="48" changelist="e87b550e-3d6a-4d86-a721-c06a7156f051" />
-        <range start1="59" end1="60" start2="66" end2="68" changelist="37dfc347-85a4-445f-bb19-7292b1a54b4a" />
+        <range start1="2" end1="3" start2="2" end2="3" changelist="af6a4ea2-a11d-45bd-b68d-b84fa47e2d70" />
+        <range start1="8" end1="9" start2="8" end2="9" changelist="af6a4ea2-a11d-45bd-b68d-b84fa47e2d70" />
+        <range start1="10" end1="11" start2="10" end2="11" changelist="99c4598e-f4ff-4e1c-bad4-5914522b0450" />
+        <range start1="20" end1="21" start2="20" end2="21" changelist="af6a4ea2-a11d-45bd-b68d-b84fa47e2d70" />
+        <range start1="31" end1="31" start2="31" end2="36" changelist="99c4598e-f4ff-4e1c-bad4-5914522b0450" />
+        <range start1="32" end1="33" start2="37" end2="38" changelist="af6a4ea2-a11d-45bd-b68d-b84fa47e2d70" />
       </ranges>
     </file>
   </component>
@@ -120,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669638813869</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="1">
+      <created>1669643517329</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1669643517329</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
