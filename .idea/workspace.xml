@@ -1,25 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e87b550e-3d6a-4d86-a721-c06a7156f051" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/model/BoardGame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Genre.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/MyDate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/lists/GenreList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/lists/RatingList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/lists/StudentList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/MyFileHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/charm_glisten_6_2_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/controlsfx_11_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VIABoardGameAssociation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/VIABoardGameAssociation.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/test.java" beforeDir="false" />
+    <list default="true" id="e87b550e-3d6a-4d86-a721-c06a7156f051" name="Changes" comment="1">
+      <change beforePath="$PROJECT_DIR$/src/model/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Event.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/lists/StudentList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/lists/StudentList.java" afterDir="false" />
     </list>
+    <list id="3c7d85d4-fcc9-419e-9236-eddbcf4f1ead" name="Changes by micha" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -89,6 +75,14 @@
       <option name="presentableId" value="Default" />
       <updated>1669629032715</updated>
     </task>
+    <task id="LOCAL-00001" summary="1">
+      <created>1669637929031</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1669637929031</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -101,5 +95,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="1" />
+    <option name="LAST_COMMIT_MESSAGE" value="1" />
   </component>
 </project>

@@ -40,6 +40,11 @@ public class StudentList
     this.students.set(index, student);
   }
 
+  public int getSize()
+  {
+    return students.size();
+  }
+
   public String toString()
   {
     String str = "";
