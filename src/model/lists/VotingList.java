@@ -8,7 +8,7 @@ public class VotingList
 {
   private ArrayList<GameCandidate> votes;
 
-  public void addVoid(CandidateGame vote)
+  public void addVote(GameCandidate vote)
   {
     this.votes.add(vote);
   }
@@ -28,6 +28,11 @@ public class VotingList
       }
     }
     return null;
+  }
+
+  public int getSize()
+  {
+    return votes.size();
   }
 
   public GameCandidate getVote(int index)

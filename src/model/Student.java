@@ -11,7 +11,7 @@ public class Student implements Serializable
 
   public Student(String name, int ID)
   {
-    this.ID = ID;
+    this.ID = ID; // todo ID check like in GameCandidate
     this.name = name;
     this.isMember = false;
   }
