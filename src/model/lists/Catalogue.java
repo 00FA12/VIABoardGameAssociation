@@ -4,7 +4,8 @@ import model.BoardGame;
 
 import java.util.ArrayList;
 
-public class Catalogue
+//SEVA
+public class Catalogue implements Serializable
 {
   private ArrayList<BoardGame> catalogue;
 

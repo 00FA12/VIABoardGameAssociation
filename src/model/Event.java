@@ -6,7 +6,6 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 //Kateryna
-
 public class Event implements Serializable
 {
   private String title;

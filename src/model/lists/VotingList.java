@@ -2,7 +2,9 @@ package model.lists;
 
 import model.GameCandidate;
 
+import java.io.Serializable;
 import java.util.ArrayList;
+
 //Seva & Hugo
 public class VotingList
 {

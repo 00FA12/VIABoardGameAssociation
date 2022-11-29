@@ -2,6 +2,7 @@ package model.lists;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+
 //Hugo
 public class RatingList
 {

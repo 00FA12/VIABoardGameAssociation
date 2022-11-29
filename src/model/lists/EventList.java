@@ -5,8 +5,7 @@ import model.Event;
 import java.util.ArrayList;
 
 //Hugo
-
-public class EventList
+public class EventList implements Serializable
 {
   private ArrayList<Event> events;
   public EventList()
