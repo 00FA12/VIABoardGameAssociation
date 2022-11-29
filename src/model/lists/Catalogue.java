@@ -2,6 +2,7 @@ package model.lists;
 
 import model.BoardGame;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 //SEVA

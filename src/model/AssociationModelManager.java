@@ -1,12 +1,14 @@
 package model;
 
+import model.lists.StudentList;
 import model.lists.VotingList;
 import utils.MyFileHandler;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.Serializable;
 
-public class AssociationModelManager
+public class AssociationModelManager implements Serializable
 {
   private static final String fileName = "association.bin";
 
@@ -51,5 +53,10 @@ public class AssociationModelManager
   public static VotingList getVotingList()
   {
     return getAssociation().getVotingList();
+  }
+
+  public static StudentList getStudentList()
+  {
+    return getAssociation().getStudentList();
   }
 }

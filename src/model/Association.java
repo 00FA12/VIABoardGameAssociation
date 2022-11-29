@@ -2,8 +2,10 @@ package model;
 
 import model.lists.*;
 
+import java.io.Serializable;
+
 //together
-public class Association
+public class Association implements Serializable
 {
   private GenreList genreList;
   private StudentList studentList;

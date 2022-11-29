@@ -1,5 +1,8 @@
 package model;
 
+import model.lists.StudentList;
+import model.lists.VotingList;
+
 import java.io.Serializable;
 
 //Sevastian
@@ -11,9 +14,16 @@ public class Student implements Serializable
 
   public Student(String name, int ID)
   {
-    this.ID = ID; // todo ID check like in GameCandidate
-    this.name = name;
-    this.isMember = false;
+    StudentList studentList = AssociationModelManager.getStudentList();
+    if (studentList.getStudentById(ID) == null)
+    {
+      this.ID = ID;
+      this.name = name;
+      this.isMember = false;
+    }
+    else {
+      throw new IllegalArgumentException("ID is not unique!");
+    }
   }
 
   public String getName()

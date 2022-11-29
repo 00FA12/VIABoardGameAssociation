@@ -2,6 +2,7 @@ package model.lists;
 
 import model.Event;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 //Hugo

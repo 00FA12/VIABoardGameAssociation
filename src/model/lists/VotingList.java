@@ -6,7 +6,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 //Seva & Hugo
-public class VotingList
+public class VotingList implements Serializable
 {
   private ArrayList<GameCandidate> votes;
 

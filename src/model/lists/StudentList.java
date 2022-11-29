@@ -2,10 +2,11 @@ package model.lists;
 
 import model.Student;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 // Sevastian
-public class StudentList
+public class StudentList implements Serializable
 {
   private ArrayList<Student> students;
 

@@ -2,8 +2,10 @@ package model;
 
 import model.lists.VotingList;
 
+import java.io.Serializable;
+
 //Kateryna
-public class GameCandidate
+public class GameCandidate implements Serializable
 {
   private int numberOfVotes;
   private String titleOfGame;

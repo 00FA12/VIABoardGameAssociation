@@ -1,10 +1,11 @@
 package model.lists;
 
+import java.io.Serializable;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 //Hugo
-public class RatingList
+public class RatingList implements Serializable
 {
   private ArrayList<Integer> ratings;
   public RatingList()

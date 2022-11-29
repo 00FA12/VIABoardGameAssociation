@@ -3,6 +3,7 @@ package model;
 import model.lists.StudentList;
 
 import java.io.Serializable;
+import java.util.Base64;
 
 //MICHAEL
 public abstract class GameAction implements Serializable
