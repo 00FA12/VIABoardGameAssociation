@@ -1,18 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e87b550e-3d6a-4d86-a721-c06a7156f051" name="Changes" comment="1" />
-    <list id="af6a4ea2-a11d-45bd-b68d-b84fa47e2d70" name="Changes by micha" comment="Changes by micha" />
-    <list id="37dfc347-85a4-445f-bb19-7292b1a54b4a" name="Changes by pind9" comment="">
+    <list default="true" id="e87b550e-3d6a-4d86-a721-c06a7156f051" name="Changes" comment="1">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/charm_glisten_6_2_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VIABoardGameAssociation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/VIABoardGameAssociation.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test.java" afterDir="false" />
+    </list>
+    <list id="333ad59c-8813-4286-8c6e-d021d683be6e" name="Changes by micha" comment="">
       <change beforePath="$PROJECT_DIR$/src/model/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Event.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/GameAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/GameAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/MyDate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/MyDate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Reserve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Reserve.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/lists/Catalogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/lists/Catalogue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/lists/EventList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/lists/EventList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/lists/RatingList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/lists/RatingList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/lists/VotingList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/lists/VotingList.java" afterDir="false" />
     </list>
-    <list id="99c4598e-f4ff-4e1c-bad4-5914522b0450" name="Changes by Севастиан" comment="1">
-      <change beforePath="$PROJECT_DIR$/src/main/LoadInitialData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/BoardGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/BoardGame.java" afterDir="false" />
+    <list id="d1a99415-edf2-468f-a9e2-b3fdf658817e" name="Changes by Севастиан" comment="">
+      <change beforePath="$PROJECT_DIR$/genres.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Association.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Association.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/AssociationModelManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/AssociationModelManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Borrow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Borrow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/GameAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/GameAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/GameCandidate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/GameCandidate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/MyDate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/MyDate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/lists/Catalogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/lists/Catalogue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/lists/EventList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/lists/EventList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/lists/RatingList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/lists/RatingList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/lists/StudentList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/lists/StudentList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/lists/VotingList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/lists/VotingList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/MyFileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/MyFileHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/students.bin" beforeDir="false" afterPath="$PROJECT_DIR$/genres.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,14 +51,50 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/test.java">
+      <ranges>
+        <range start1="0" end1="1" start2="0" end2="1" changelist="e87b550e-3d6a-4d86-a721-c06a7156f051" />
+        <range start1="2" end1="2" start2="2" end2="5" changelist="d1a99415-edf2-468f-a9e2-b3fdf658817e" />
+        <range start1="6" end1="7" start2="9" end2="12" changelist="d1a99415-edf2-468f-a9e2-b3fdf658817e" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/model/lists/EventList.java">
+      <ranges>
+        <range start1="4" end1="4" start2="4" end2="5" changelist="d1a99415-edf2-468f-a9e2-b3fdf658817e" />
+        <range start1="7" end1="9" start2="8" end2="9" changelist="333ad59c-8813-4286-8c6e-d021d683be6e" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/model/lists/Catalogue.java">
+      <ranges>
+        <range start1="4" end1="4" start2="4" end2="5" changelist="d1a99415-edf2-468f-a9e2-b3fdf658817e" />
+        <range start1="6" end1="7" start2="7" end2="9" changelist="333ad59c-8813-4286-8c6e-d021d683be6e" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/model/lists/RatingList.java">
+      <ranges>
+        <range start1="2" end1="2" start2="2" end2="3" changelist="d1a99415-edf2-468f-a9e2-b3fdf658817e" />
+        <range start1="4" end1="4" start2="5" end2="6" changelist="333ad59c-8813-4286-8c6e-d021d683be6e" />
+        <range start1="5" end1="6" start2="7" end2="8" changelist="d1a99415-edf2-468f-a9e2-b3fdf658817e" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/model/GameAction.java">
+      <ranges>
+        <range start1="5" end1="5" start2="5" end2="6" changelist="d1a99415-edf2-468f-a9e2-b3fdf658817e" />
+        <range start1="6" end1="7" start2="7" end2="8" changelist="333ad59c-8813-4286-8c6e-d021d683be6e" />
+        <range start1="13" end1="14" start2="14" end2="23" changelist="333ad59c-8813-4286-8c6e-d021d683be6e" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/model/MyDate.java">
+      <ranges>
+        <range start1="2" end1="2" start2="2" end2="3" changelist="d1a99415-edf2-468f-a9e2-b3fdf658817e" />
+        <range start1="4" end1="5" start2="5" end2="7" changelist="333ad59c-8813-4286-8c6e-d021d683be6e" />
+      </ranges>
+    </file>
     <file path="$PROJECT_DIR$/src/model/lists/VotingList.java">
       <ranges>
-        <range start1="2" end1="3" start2="2" end2="3" changelist="37dfc347-85a4-445f-bb19-7292b1a54b4a" />
-        <range start1="8" end1="9" start2="8" end2="9" changelist="37dfc347-85a4-445f-bb19-7292b1a54b4a" />
-        <range start1="10" end1="11" start2="10" end2="11" changelist="99c4598e-f4ff-4e1c-bad4-5914522b0450" />
-        <range start1="20" end1="21" start2="20" end2="21" changelist="37dfc347-85a4-445f-bb19-7292b1a54b4a" />
-        <range start1="31" end1="31" start2="31" end2="36" changelist="99c4598e-f4ff-4e1c-bad4-5914522b0450" />
-        <range start1="32" end1="33" start2="37" end2="38" changelist="37dfc347-85a4-445f-bb19-7292b1a54b4a" />
+        <range start1="4" end1="4" start2="4" end2="5" changelist="333ad59c-8813-4286-8c6e-d021d683be6e" />
+        <range start1="5" end1="5" start2="6" end2="7" changelist="333ad59c-8813-4286-8c6e-d021d683be6e" />
+        <range start1="6" end1="7" start2="8" end2="9" changelist="d1a99415-edf2-468f-a9e2-b3fdf658817e" />
       </ranges>
     </file>
   </component>
@@ -53,13 +110,19 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "last_opened_file_path": "C:/Users/GU301/IdeaProjects/SDJ classes",
+    "last_opened_file_path": "C:/Users/GU301/Downloads/controlsfx-11.1.0.jar",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="GUI" />
       <recent name="main" />
       <recent name="model" />
     </key>
@@ -98,6 +161,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1669629032715</updated>
+      <workItem from="1669734724410" duration="5041000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1669637929031</created>
@@ -134,8 +198,32 @@
       <option name="project" value="LOCAL" />
       <updated>1669645046977</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="1">
+      <created>1669645455337</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1669645455337</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Changes by pind9">
+      <created>1669645469638</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1669645469638</updated>
+    </task>
+    <task id="LOCAL-00008" summary="1">
+      <created>1669645479967</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1669645479967</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -149,7 +237,19 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="Changes by pind9" />
     <MESSAGE value="1" />
     <option name="LAST_COMMIT_MESSAGE" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/test.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
