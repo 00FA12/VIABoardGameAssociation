@@ -40,11 +40,14 @@ public class EventController
   public void initialize()
   {
     ObservableList<String> items = FXCollections.observableArrayList();
-    StudentList studentList = AssociationModelManager.getStudentList();
+    StudentList studentList = AssociationModelManager.getAssociation().getStudentList();
     for (int i = 0; i < studentList.getSize(); i++)
     {
       items.add(studentList.getStudent(i).toString());
     }
+
+    if(items.size() == 0)
+      items.add("Empty");
     attenders = new CheckComboBox<String>(items);
 
     titleColumn.setCellValueFactory(
@@ -78,18 +81,26 @@ public class EventController
 
       Event event = new Event(title, description, date);
       StudentList tempStudentList = new StudentList();
-      for (String attender:attendersList)
+      try
       {
-        String[] splitter = attender.split(",");
-        int ID = Integer.parseInt(splitter[1]);
+        for (String attender:attendersList)
+        {
+          String[] splitter = attender.split(",");
+          int ID = Integer.parseInt(splitter[1]);
 
-        event.addAttender(tempStudentList.getStudentById(ID));
+          event.addAttender(tempStudentList.getStudentById(ID));
+        }
       }
+      catch (ArrayIndexOutOfBoundsException exception)
+      {
+        System.err.println("Student list is empty in event tab");
+      }
+
 
       Association association = AssociationModelManager.getAssociation();
       association.addEvent(event);
       AssociationModelManager.saveAssociation(association);
-
+      updateTable();
     }
     else if (e.getSource() == exportEventButton)
     {

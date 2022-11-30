@@ -1,6 +1,7 @@
 package main;
 
 import model.Association;
+import model.AssociationModelManager;
 import model.Genre;
 import model.lists.GenreList;
 import utils.MyFileHandler;
@@ -23,9 +24,9 @@ public class LoadInitialData
       {
         genreList.addGenre(new Genre(genresArray[i]));
       }
-      Association association = new Association();
+      Association association = AssociationModelManager.getAssociation();
       association.setGenreList(genreList);
-      MyFileHandler.writeToBinaryFile(fileNameBin, association);
+      AssociationModelManager.saveAssociation(association);
     }
     catch (FileNotFoundException e)
     {

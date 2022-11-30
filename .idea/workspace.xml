@@ -4,38 +4,8 @@
     <list default="true" id="e87b550e-3d6a-4d86-a721-c06a7156f051" name="Changes" comment="1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/association.bin" beforeDir="false" afterPath="$PROJECT_DIR$/association.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/CatalogueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/CatalogueController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/EventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/EventController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/StartGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/StartGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/VoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/VoteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/catalogue_tab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/catalogue_tab.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/edit_event_dialog_window.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/edit_event_dialog_window.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/edit_game_dialog_window.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/edit_game_dialog_window.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/edit_student_dialog_window.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/edit_student_dialog_window.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/event_tab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/event_tab.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/main.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/set_status_dialog_window.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/set_status_dialog_window.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/student_tab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/student_tab.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/vote_tab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/vote_tab.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/LoadInitialData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/LoadInitialData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Association.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Association.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/AssociationModelManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/AssociationModelManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/BoardGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/BoardGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Borrow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Borrow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Event.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/GameAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/GameAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/GameCandidate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/GameCandidate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Genre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Genre.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/MyDate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/MyDate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/lists/Catalogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/lists/Catalogue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/lists/EventList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/lists/EventList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/lists/GenreList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/lists/GenreList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/lists/RatingList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/lists/RatingList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/lists/StudentList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/lists/StudentList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/MyFileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/MyFileHandler.java" afterDir="false" />
     </list>
     <list id="333ad59c-8813-4286-8c6e-d021d683be6e" name="Changes by micha" comment="Changes by micha" />
     <list id="4fa5175e-d647-41de-a295-944379350ec5" name="Changes by pind9" comment="" />
@@ -226,7 +196,21 @@
       <option name="project" value="LOCAL" />
       <updated>1669741057908</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="1">
+      <created>1669836710539</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1669836710539</updated>
+    </task>
+    <task id="LOCAL-00015" summary="1">
+      <created>1669836971340</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1669836971340</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
