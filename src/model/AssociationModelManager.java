@@ -24,7 +24,8 @@ public class AssociationModelManager implements Serializable
     }
     catch (IOException e)
     {
-      System.err.println(String.format("End of file %s, or it is empty", fileName));
+      System.err.println(
+          String.format("End of file %s, or it is empty", fileName));
     }
   }
 
@@ -41,11 +42,13 @@ public class AssociationModelManager implements Serializable
     }
     catch (IOException e)
     {
-      System.err.println(String.format("End of file %s, or it is empty", fileName));
+      System.err.println(
+          String.format("End of file %s, or it is empty", fileName));
     }
     catch (ClassNotFoundException e)
     {
-      System.err.println(String.format("Class is not found in %s file", fileName));
+      System.err.println(
+          String.format("Class is not found in %s file", fileName));
     }
     return association;
   }

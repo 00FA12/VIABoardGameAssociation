@@ -3,7 +3,6 @@ package model;
 import model.lists.StudentList;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 
 //Kateryna
 public class Event implements Serializable
@@ -63,7 +62,7 @@ public class Event implements Serializable
 
   public String toSting()
   {
-    return "Title: "+ title+ "\nDescription: " + description
-        + "\nDate: " + date+ "\nAttenders: " + attenders;
+    return "Title: " + title + "\nDescription: " + description + "\nDate: "
+        + date + "\nAttenders: " + attenders;
   }
 }

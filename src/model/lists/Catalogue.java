@@ -29,14 +29,13 @@ public class Catalogue implements Serializable
   {
     for (int i = 0; i < catalogue.size(); i++)
     {
-      if(catalogue.get(i).getTitle().equals(title))
+      if (catalogue.get(i).getTitle().equals(title))
         return catalogue.get(i);
     }
     return null;
   }
 
   /**
-   *
    * @param title
    * @return -1 if there is no BoardGame with such title
    */
@@ -44,7 +43,7 @@ public class Catalogue implements Serializable
   {
     for (int i = 0; i < catalogue.size(); i++)
     {
-      if(catalogue.get(i).getTitle().equals(title))
+      if (catalogue.get(i).getTitle().equals(title))
         return i;
     }
     return -1;
@@ -58,9 +57,12 @@ public class Catalogue implements Serializable
   //todo Change the method parameters in astah
   public void removeBoardGame(BoardGame boardGame)
   {
-    try{
+    try
+    {
       this.catalogue.remove(getIndexOfBoardGameByTitle(boardGame.getTitle()));
-    }catch (IndexOutOfBoundsException e){
+    }
+    catch (IndexOutOfBoundsException e)
+    {
       System.err.println("unfortunately could not remove the game");
     }
   }

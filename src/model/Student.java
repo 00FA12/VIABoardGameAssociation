@@ -1,8 +1,5 @@
 package model;
 
-import model.lists.StudentList;
-import model.lists.VotingList;
-
 import java.io.Serializable;
 
 //Sevastian
@@ -14,16 +11,16 @@ public class Student implements Serializable
 
   public Student(String name, int ID)
   {
-   // StudentList studentList = AssociationModelManager.getStudentList();
-   // if (studentList.getStudentById(ID) == null)
-   // {
-      this.ID = ID;
-      this.name = name;
-      this.isMember = false;
-   // }
-   // else {
+    // StudentList studentList = AssociationModelManager.getStudentList();
+    // if (studentList.getStudentById(ID) == null)
+    // {
+    this.ID = ID;
+    this.name = name;
+    this.isMember = false;
+    // }
+    // else {
     //  throw new IllegalArgumentException("ID is not unique!");
-  //  }
+    //  }
     // todo ID check!
   }
 
@@ -66,7 +63,7 @@ public class Student implements Serializable
 
   public String getStatus()
   {
-    return isMember? "Member" : "Guest";
+    return isMember ? "Member" : "Guest";
   }
 
   public Student copy()
@@ -76,7 +73,7 @@ public class Student implements Serializable
 
   public boolean equals(Object obj)
   {
-    if((obj == null || obj.getClass() != getClass()))
+    if ((obj == null || obj.getClass() != getClass()))
       return false;
 
     Student student = (Student) obj;

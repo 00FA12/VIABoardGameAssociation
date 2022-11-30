@@ -20,7 +20,7 @@ public class StudentList implements Serializable
     Student student = new Student("Bob", ID);
     for (int i = 0; i < students.size(); i++)
     {
-      if(students.get(i).equals(student))
+      if (students.get(i).equals(student))
         return students.get(i);
     }
     return null;

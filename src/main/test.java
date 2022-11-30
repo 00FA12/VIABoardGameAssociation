@@ -1,6 +1,5 @@
 package main;
 
-import javafx.stage.Window;
 import model.Association;
 import model.AssociationModelManager;
 

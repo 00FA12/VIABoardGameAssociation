@@ -8,8 +8,7 @@ import utils.MyFileHandler;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-public class
-LoadInitialData
+public class LoadInitialData
 {
   public static void load()
   {
@@ -20,7 +19,7 @@ LoadInitialData
     {
       String[] genresArray = MyFileHandler.readFromTextFile(fileNameTxt);
       genreList = new GenreList();
-      for(int i = 0; i < genresArray.length; i++)
+      for (int i = 0; i < genresArray.length; i++)
       {
         genreList.addGenre(new Genre(genresArray[i]));
       }
@@ -36,5 +35,7 @@ LoadInitialData
     {
       System.err.println("End of file");
     }
+
+    System.out.println("Load of initial data is done!");
   }
 }

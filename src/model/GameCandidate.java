@@ -14,7 +14,7 @@ public class GameCandidate implements Serializable
   {
     VotingList votes = AssociationModelManager.getVotingList();
     boolean flag = false;
-    if(votes != null)
+    if (votes != null)
     {
       for (int i = 0; i < votes.getSize(); i++)
       {
@@ -25,7 +25,7 @@ public class GameCandidate implements Serializable
           break;
         }
       }
-      if(!flag)
+      if (!flag)
       {
         numberOfVotes = 1;
         this.titleOfGame = titleOfGame;
@@ -33,8 +33,8 @@ public class GameCandidate implements Serializable
     }
     else
     {
-        numberOfVotes = 1;
-        this.titleOfGame = titleOfGame;
+      numberOfVotes = 1;
+      this.titleOfGame = titleOfGame;
     }
   }
 
@@ -43,11 +43,11 @@ public class GameCandidate implements Serializable
     numberOfVotes++;
   }
 
-
   public void setTitleOfGame(String title)
   {
-    titleOfGame=title;
+    titleOfGame = title;
   }
+
   public String getTitleOfGame()
   {
     return titleOfGame;
@@ -55,7 +55,8 @@ public class GameCandidate implements Serializable
 
   public String toString()
   {
-    return "Number of votes: " + numberOfVotes+ "\t Title of game: "+ titleOfGame;
+    return "Number of votes: " + numberOfVotes + "\t Title of game: "
+        + titleOfGame;
   }
 
 }

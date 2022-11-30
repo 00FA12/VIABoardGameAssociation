@@ -1,11 +1,13 @@
 package utils;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MyFileHandler
 {
-  public static void writeToTextFile(String name, String str) throws FileNotFoundException
+  public static void writeToTextFile(String name, String str)
+      throws FileNotFoundException
   {
     PrintWriter write = null;
     try
@@ -16,12 +18,13 @@ public class MyFileHandler
     }
     finally
     {
-      if(write != null)
+      if (write != null)
         write.close();
     }
   }
 
-  public static void appendToTextFile(String name, String str) throws FileNotFoundException
+  public static void appendToTextFile(String name, String str)
+      throws FileNotFoundException
   {
     PrintWriter write = null;
     try
@@ -32,12 +35,13 @@ public class MyFileHandler
     }
     finally
     {
-      if(write != null)
+      if (write != null)
         write.close();
     }
   }
 
-  public static void appendArrayToTextFile(String name, String[] str) throws FileNotFoundException
+  public static void appendArrayToTextFile(String name, String[] str)
+      throws FileNotFoundException
   {
     PrintWriter write = null;
     try
@@ -48,12 +52,13 @@ public class MyFileHandler
     }
     finally
     {
-      if(write != null)
+      if (write != null)
         write.close();
     }
   }
 
-  public static String[] readFromTextFile(String fileName) throws FileNotFoundException
+  public static String[] readFromTextFile(String fileName)
+      throws FileNotFoundException
   {
     Scanner readFromFile = null;
     ArrayList<String> strs = new ArrayList<String>();
@@ -80,9 +85,11 @@ public class MyFileHandler
     return strs.toArray(strsArray);
   }
 
-  public static void writeToBinaryFile(String name, Object obj) throws FileNotFoundException, IOException
+  public static void writeToBinaryFile(String name, Object obj)
+      throws FileNotFoundException, IOException
   {
     ObjectOutputStream write = null;
+    System.out.println("Write to binary file was called!");
 
     try
     {
@@ -92,7 +99,7 @@ public class MyFileHandler
     }
     finally
     {
-      if(write != null)
+      if (write != null)
       {
         try
         {
@@ -106,20 +113,20 @@ public class MyFileHandler
     }
   }
 
-
-  public static Object readFromBinaryFile(String name) throws FileNotFoundException, IOException, ClassNotFoundException
+  public static Object readFromBinaryFile(String name)
+      throws FileNotFoundException, IOException, ClassNotFoundException
   {
     ObjectInputStream read = null;
     Object obj = null;
     try
     {
-      FileInputStream fileIn= new FileInputStream(name);
+      FileInputStream fileIn = new FileInputStream(name);
       read = new ObjectInputStream(fileIn);
       obj = read.readObject();
     }
     finally
     {
-      if(read != null)
+      if (read != null)
       {
         try
         {

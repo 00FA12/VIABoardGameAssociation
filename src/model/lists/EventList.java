@@ -9,6 +9,7 @@ import java.util.ArrayList;
 public class EventList implements Serializable
 {
   private ArrayList<Event> events;
+
   public EventList()
   {
     events = new ArrayList<Event>();
@@ -23,6 +24,7 @@ public class EventList implements Serializable
   {
     events.add(event);
   }
+
   public Event getEventByTitle(String title)
   {
     for (int i = 0; i < events.size(); i++)
@@ -55,7 +57,7 @@ public class EventList implements Serializable
     String temp = "";
     for (int i = 0; i < events.size(); i++)
     {
-      temp+= events.get(i) + "\n";
+      temp += events.get(i) + "\n";
     }
     return temp;
   }

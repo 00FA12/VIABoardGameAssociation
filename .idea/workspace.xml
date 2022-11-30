@@ -4,43 +4,42 @@
     <list default="true" id="e87b550e-3d6a-4d86-a721-c06a7156f051" name="Changes" comment="1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/association.bin" beforeDir="false" afterPath="$PROJECT_DIR$/association.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FXML/catalogue_tab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/catalogue_tab.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FXML/edit_event_dialog_window.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/edit_event_dialog_window.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FXML/edit_game_dialog_window.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/edit_game_dialog_window.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FXML/edit_student_dialog_window.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/edit_student_dialog_window.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FXML/event_tab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/event_tab.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FXML/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/main.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FXML/set_status_dialog_window.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/set_status_dialog_window.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FXML/student_tab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/student_tab.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FXML/vote_tab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/vote_tab.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/CatalogueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/CatalogueController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/EventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/EventController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Association.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Association.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Student.java" afterDir="false" />
-    </list>
-    <list id="333ad59c-8813-4286-8c6e-d021d683be6e" name="Changes by micha" comment="Changes by micha">
-      <change beforePath="$PROJECT_DIR$/src/GUI/CatalogueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/CatalogueController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/lists/Catalogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/lists/Catalogue.java" afterDir="false" />
-    </list>
-    <list id="4fa5175e-d647-41de-a295-944379350ec5" name="Changes by pind9" comment="">
-      <change beforePath="$PROJECT_DIR$/src/GUI/EventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/EventController.java" afterDir="false" />
-    </list>
-    <list id="d1a99415-edf2-468f-a9e2-b3fdf658817e" name="Changes by Севастиан" comment="Changes by Севастиан">
-      <change beforePath="$PROJECT_DIR$/src/GUI/EventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/EventController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/StudentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/StartGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/StartGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/VoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/VoteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/catalogue_tab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/catalogue_tab.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/edit_event_dialog_window.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/edit_event_dialog_window.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/edit_game_dialog_window.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/edit_game_dialog_window.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/edit_student_dialog_window.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/edit_student_dialog_window.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/event_tab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/event_tab.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/set_status_dialog_window.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/set_status_dialog_window.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/student_tab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/student_tab.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/vote_tab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/vote_tab.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/LoadInitialData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/LoadInitialData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Association.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Association.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/AssociationModelManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/AssociationModelManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/BoardGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/BoardGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Borrow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Borrow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Event.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/GameAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/GameAction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/GameCandidate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/GameCandidate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Genre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Genre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/MyDate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/MyDate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Student.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/lists/Catalogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/lists/Catalogue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/lists/EventList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/lists/EventList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/lists/GenreList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/lists/GenreList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/lists/RatingList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/lists/RatingList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/lists/StudentList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/lists/StudentList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/lists/VotingList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/lists/VotingList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/MyFileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/MyFileHandler.java" afterDir="false" />
     </list>
+    <list id="333ad59c-8813-4286-8c6e-d021d683be6e" name="Changes by micha" comment="Changes by micha" />
+    <list id="4fa5175e-d647-41de-a295-944379350ec5" name="Changes by pind9" comment="" />
+    <list id="d1a99415-edf2-468f-a9e2-b3fdf658817e" name="Changes by Севастиан" comment="Changes by Севастиан" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,83 +56,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/GUI/EventController.java">
-      <ranges>
-        <range start1="2" end1="3" start2="2" end2="5" changelist="4fa5175e-d647-41de-a295-944379350ec5" />
-        <range start1="5" end1="5" start2="7" end2="8" changelist="4fa5175e-d647-41de-a295-944379350ec5" />
-        <range start1="6" end1="7" start2="9" end2="18" changelist="4fa5175e-d647-41de-a295-944379350ec5" />
-        <range start1="9" end1="11" start2="20" end2="24" changelist="d1a99415-edf2-468f-a9e2-b3fdf658817e" />
-        <range start1="15" end1="16" start2="28" end2="29" changelist="4fa5175e-d647-41de-a295-944379350ec5" />
-        <range start1="18" end1="19" start2="31" end2="38" changelist="e87b550e-3d6a-4d86-a721-c06a7156f051" />
-        <range start1="20" end1="20" start2="39" end2="57" changelist="4fa5175e-d647-41de-a295-944379350ec5" />
-        <range start1="21" end1="21" start2="58" end2="60" changelist="4fa5175e-d647-41de-a295-944379350ec5" />
-        <range start1="22" end1="22" start2="61" end2="93" changelist="4fa5175e-d647-41de-a295-944379350ec5" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/GUI/StudentController.java">
-      <ranges>
-        <range start1="3" end1="7" start2="3" end2="7" changelist="d1a99415-edf2-468f-a9e2-b3fdf658817e" />
-        <range start1="9" end1="11" start2="9" end2="10" changelist="d1a99415-edf2-468f-a9e2-b3fdf658817e" />
-        <range start1="14" end1="22" start2="13" end2="24" changelist="d1a99415-edf2-468f-a9e2-b3fdf658817e" />
-        <range start1="23" end1="29" start2="25" end2="36" changelist="e87b550e-3d6a-4d86-a721-c06a7156f051" />
-        <range start1="30" end1="34" start2="37" end2="45" changelist="d1a99415-edf2-468f-a9e2-b3fdf658817e" />
-        <range start1="35" end1="38" start2="46" end2="55" changelist="d1a99415-edf2-468f-a9e2-b3fdf658817e" />
-        <range start1="39" end1="41" start2="56" end2="58" changelist="d1a99415-edf2-468f-a9e2-b3fdf658817e" />
-        <range start1="42" end1="49" start2="59" end2="73" changelist="e87b550e-3d6a-4d86-a721-c06a7156f051" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/model/Association.java">
-      <ranges>
-        <range start1="14" end1="14" start2="14" end2="24" changelist="e87b550e-3d6a-4d86-a721-c06a7156f051" />
-        <range start1="74" end1="74" start2="84" end2="85" changelist="d1a99415-edf2-468f-a9e2-b3fdf658817e" />
-        <range start1="132" end1="133" start2="143" end2="144" changelist="e87b550e-3d6a-4d86-a721-c06a7156f051" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/model/Student.java">
-      <ranges>
-        <range start1="16" end1="19" start2="16" end2="19" changelist="e87b550e-3d6a-4d86-a721-c06a7156f051" />
-        <range start1="22" end1="26" start2="22" end2="27" changelist="e87b550e-3d6a-4d86-a721-c06a7156f051" />
-        <range start1="27" end1="27" start2="28" end2="35" changelist="d1a99415-edf2-468f-a9e2-b3fdf658817e" />
-        <range start1="58" end1="58" start2="66" end2="71" changelist="d1a99415-edf2-468f-a9e2-b3fdf658817e" />
-        <range start1="74" end1="75" start2="87" end2="88" changelist="d1a99415-edf2-468f-a9e2-b3fdf658817e" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/GUI/MainController.java">
-      <ranges>
-        <range start1="3" end1="3" start2="3" end2="4" changelist="d1a99415-edf2-468f-a9e2-b3fdf658817e" />
-        <range start1="5" end1="5" start2="6" end2="7" changelist="d1a99415-edf2-468f-a9e2-b3fdf658817e" />
-        <range start1="9" end1="21" start2="11" end2="20" changelist="d1a99415-edf2-468f-a9e2-b3fdf658817e" />
-        <range start1="24" end1="28" start2="23" end2="27" changelist="e87b550e-3d6a-4d86-a721-c06a7156f051" />
-        <range start1="34" end1="35" start2="33" end2="34" changelist="e87b550e-3d6a-4d86-a721-c06a7156f051" />
-        <range start1="38" end1="39" start2="37" end2="38" changelist="e87b550e-3d6a-4d86-a721-c06a7156f051" />
-        <range start1="42" end1="43" start2="41" end2="42" changelist="e87b550e-3d6a-4d86-a721-c06a7156f051" />
-        <range start1="46" end1="47" start2="45" end2="46" changelist="e87b550e-3d6a-4d86-a721-c06a7156f051" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/GUI/CatalogueController.java">
-      <ranges>
-        <range start1="2" end1="3" start2="2" end2="2" changelist="333ad59c-8813-4286-8c6e-d021d683be6e" />
-        <range start1="4" end1="4" start2="3" end2="4" changelist="e87b550e-3d6a-4d86-a721-c06a7156f051" />
-        <range start1="7" end1="7" start2="7" end2="8" changelist="e87b550e-3d6a-4d86-a721-c06a7156f051" />
-        <range start1="10" end1="10" start2="11" end2="12" changelist="333ad59c-8813-4286-8c6e-d021d683be6e" />
-        <range start1="11" end1="11" start2="13" end2="14" changelist="333ad59c-8813-4286-8c6e-d021d683be6e" />
-        <range start1="13" end1="19" start2="16" end2="29" changelist="333ad59c-8813-4286-8c6e-d021d683be6e" />
-        <range start1="20" end1="21" start2="30" end2="31" changelist="333ad59c-8813-4286-8c6e-d021d683be6e" />
-        <range start1="22" end1="22" start2="32" end2="41" changelist="333ad59c-8813-4286-8c6e-d021d683be6e" />
-        <range start1="25" end1="25" start2="44" end2="71" changelist="333ad59c-8813-4286-8c6e-d021d683be6e" />
-        <range start1="26" end1="26" start2="72" end2="77" changelist="333ad59c-8813-4286-8c6e-d021d683be6e" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/model/lists/Catalogue.java">
-      <ranges>
-        <range start1="57" end1="58" start2="57" end2="59" changelist="333ad59c-8813-4286-8c6e-d021d683be6e" />
-        <range start1="59" end1="60" start2="60" end2="65" changelist="333ad59c-8813-4286-8c6e-d021d683be6e" />
-        <range start1="65" end1="66" start2="70" end2="71" changelist="d1a99415-edf2-468f-a9e2-b3fdf658817e" />
-        <range start1="69" end1="70" start2="74" end2="74" changelist="d1a99415-edf2-468f-a9e2-b3fdf658817e" />
-      </ranges>
-    </file>
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -142,19 +64,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "last_opened_file_path": "C:/Users/GU301/IdeaProjects/SDJ classes",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/GU301/IdeaProjects/SDJ classes&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="GUI" />
@@ -333,7 +255,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/model/Event.java</url>
-          <line>48</line>
+          <line>47</line>
           <properties class="model.Event" method="setDescription">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
