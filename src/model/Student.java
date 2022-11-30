@@ -14,16 +14,17 @@ public class Student implements Serializable
 
   public Student(String name, int ID)
   {
-    StudentList studentList = AssociationModelManager.getStudentList();
-    if (studentList.getStudentById(ID) == null)
-    {
+   // StudentList studentList = AssociationModelManager.getStudentList();
+   // if (studentList.getStudentById(ID) == null)
+   // {
       this.ID = ID;
       this.name = name;
       this.isMember = false;
-    }
-    else {
-      throw new IllegalArgumentException("ID is not unique!");
-    }
+   // }
+   // else {
+    //  throw new IllegalArgumentException("ID is not unique!");
+  //  }
+    // todo ID check!
   }
 
   public String getName()

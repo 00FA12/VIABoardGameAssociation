@@ -7,7 +7,7 @@
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<VBox xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.MainController">
    <children>
       <MenuBar>
         <menus>
@@ -26,21 +26,21 @@
             </Menu>
         </menus>
       </MenuBar>
-      <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+      <TabPane fx:id="tabs" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
          <tabs>
-            <Tab text="Catalogue">
+            <Tab fx:id="catalogueTab" text="Catalogue">
                <content>
                   <fx:include source="catalogue_tab.fxml" />
                </content></Tab>
-            <Tab text="Students">
+            <Tab fx:id="studentTab" text="Students">
                <content>
                   <fx:include source="student_tab.fxml" />
                </content></Tab>
-            <Tab text="Events">
+            <Tab fx:id="eventTab" text="Events">
                <content>
                   <fx:include source="event_tab.fxml" />
                </content></Tab>
-            <Tab text="Vote">
+            <Tab fx:id="voteTab" text="Vote">
                <content>
                   <fx:include source="vote_tab.fxml" />
                </content></Tab>

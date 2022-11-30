@@ -13,6 +13,16 @@ public class Association implements Serializable
   private EventList eventList;
   private VotingList votingList;
 
+  public Association()
+  {
+    this.studentList = new StudentList();
+    this.genreList= new GenreList();
+    this.catalogue = new Catalogue();
+    this.eventList = new EventList();
+    this.votingList = new VotingList();
+  }
+
+
   public Catalogue getCatalogue()
   {
     return catalogue;
@@ -130,7 +140,7 @@ public class Association implements Serializable
 
   public void removeBoardGame(int index)
   {
-    this.catalogue.removeBoardGame(index);
+    catalogue.removeBoardGame(getBoardGame(index));
   }
 
   public void setGenre(Genre genre, int index)

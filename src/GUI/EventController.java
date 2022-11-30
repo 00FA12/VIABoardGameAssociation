@@ -16,7 +16,13 @@ public class EventController {
     @FXML private CheckComboBox participants;
     @FXML private Button editEventButton;
     @FXML private Button deleteEventButton;
-    @FXML private Button export;
+    @FXML private Button addEventButton;
+    @FXML private Button exportEventButton;
+    @FXML private TableColumn<Event, String> titleColumn;
+    @FXML private TableColumn<Event, String> descriptionColumn;
+    @FXML private TableColumn<Event, String> dateColumn;
+    @FXML private TableColumn<Event, String> attendersColumn;
+
 
 
 

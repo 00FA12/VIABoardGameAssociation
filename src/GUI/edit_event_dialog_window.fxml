@@ -13,8 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import org.controlsfx.control.CheckComboBox?>
 
-
-<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="325.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="325.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI/">
    <children>
       <VBox alignment="CENTER" prefHeight="206.0" prefWidth="325.0" spacing="40.0">
          <children>
@@ -45,18 +44,18 @@
                         <Insets left="10.0" />
                      </GridPane.margin>
                   </Label>
-                  <TextField fx:id="titleField" GridPane.columnIndex="1" />
+                  <TextField fx:id="titleField" onAction="#handleAction" GridPane.columnIndex="1" />
                   <TextArea fx:id="descriptionArea" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                   <Label text="Participants" GridPane.rowIndex="3">
                      <GridPane.margin>
                         <Insets left="10.0" />
                      </GridPane.margin>
                   </Label>
-                  <DatePicker GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <DatePicker onAction="#handleAction" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                   <CheckComboBox fx:id="participantsCheckedComboBox" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                </children>
             </GridPane>
-            <Button fx:id="addGameButton" alignment="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Confirm changes" />
+            <Button fx:id="addGameButton" alignment="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleAction" text="Confirm changes" />
          </children>
          <HBox.margin>
             <Insets />

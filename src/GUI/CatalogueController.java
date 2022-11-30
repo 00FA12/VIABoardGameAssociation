@@ -2,9 +2,11 @@ package GUI;
 
 import com.gluonhq.charm.glisten.control.*;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.VBox;
 import model.AssociationModelManager;
 import model.BoardGame;

@@ -21,12 +21,17 @@ public class StudentController
     private Button deleteStudentButton;
     private Button editStudentButton;
 
+  public void initialize()
+  {
+    nameColumn.setCellValueFactory(
+        new PropertyValueFactory<Student, String>("name"));
+    IDColumn.setCellValueFactory(
+        new PropertyValueFactory<Student, String>("ID"));
+    statusColumn.setCellValueFactory(
+        new PropertyValueFactory<Student, String>("status"));
 
-    public void initialize(AssociationModelManager modelManager)
-    {
-        this.modelManager = modelManager;
-        updateTable();
-    }
+    updateTable();
+  }
 
     public void handleAction(ActionEvent e)
     {
@@ -40,11 +45,18 @@ public class StudentController
         }
     }
 
-    public void updateTable()
+  public void updateTable()
+  {
+    StudentList studentList = AssociationModelManager.getAssociation()
+        .getStudentList();
+    studentTable.getItems().clear();
+
+    for (int i = 0; i < studentList.getSize(); i++)
     {
-        if(modelManager != null)
-        {
-            // todo update table
-        }
+      Student student = studentList.getStudent(i);
+      studentTable.getItems().add(student);
     }
+    // todo update table
+
+  }
 }

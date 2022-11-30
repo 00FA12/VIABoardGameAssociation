@@ -22,29 +22,29 @@ public class MainController
 
     public void initialize()
     {
-        studentController.initialize(modelManager);
-        voteController.initialize(modelManager);
-        catalogueController.initialize(modelManager);
-        eventController.initialize(modelManager);
+       // studentTabController.initialize(modelManager);
+       // voteTabController.initialize(modelManager);
+       // catalogueTabController.initialize(modelManager);
+       // eventTabController.initialize(modelManager);
     }
 
     public void tabChanged(Event event)
     {
         if(studentTab.isSelected())
         {
-            studentController.updateTable();
+            studentTabController.updateTable();
         }
         else if (eventTab.isSelected())
         {
-            eventController.updateTable();
+            eventTabController.updateTable();
         }
         else if(voteTab.isSelected())
         {
-            voteController.updateTable();
+            voteTabController.updateTable();
         }
         else if (catalogueTab.isSelected())
         {
-            catalogueController.updateTable();
+            catalogueTabController.updateTable();
         }
     }
 
