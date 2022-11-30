@@ -13,7 +13,6 @@ public class VoteController
 {
   @FXML private TextField titleField;
   @FXML private TableView<GameCandidate> votesTable;
-  @FXML private TextField titleAutoCompleteField;
   @FXML private Button voteButton;
   @FXML private AssociationModelManager modelManager;
 
@@ -34,7 +33,7 @@ public class VoteController
     {
 
     }
-    else if (e.getSource() == titleAutoCompleteField)
+    else if (e.getSource() == titleField)
     {
 
     }
