@@ -55,9 +55,14 @@ public class Catalogue implements Serializable
     this.catalogue.set(index, boardGame);
   }
 
-  public void removeBoardGame(int index)
+  //todo Change the method parameters in astah
+  public void removeBoardGame(BoardGame boardGame)
   {
-    this.catalogue.remove(index);
+    try{
+      this.catalogue.remove(getIndexOfBoardGameByTitle(boardGame.getTitle()));
+    }catch (IndexOutOfBoundsException e){
+      System.err.println("unfortunately could not remove the game");
+    }
   }
 
   public String toString()
