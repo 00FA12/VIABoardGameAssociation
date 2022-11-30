@@ -1,25 +1,27 @@
 package GUI;
 
 import javafx.event.ActionEvent;
-import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.fxml.FXML;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
+import model.Association;
 import model.AssociationModelManager;
 import model.Student;
-
-import javax.swing.*;
+import model.lists.StudentList;
 
 public class StudentController
 {
-    private AssociationModelManager modelManager;
-    private TableView<Student> studentTable;
-    private TextField nameField;
-    private TextField IDField;
-    private CheckBox isMemberCheckBox;
-    private Button addStudentButton;
-    private Button deleteStudentButton;
-    private Button editStudentButton;
+
+  @FXML private TableView<Student> studentTable;
+  @FXML private TextField nameField;
+  @FXML private TextField IDField;
+  @FXML private CheckBox isMemberCheckBox;
+  @FXML private Button addStudentButton;
+  @FXML private Button deleteStudentButton;
+  @FXML private Button editStudentButton;
+  @FXML private TableColumn<Student, String> nameColumn;
+  @FXML private TableColumn<Student, String> IDColumn;
+  @FXML private TableColumn<Student, String> statusColumn;
 
   public void initialize()
   {
@@ -33,17 +35,27 @@ public class StudentController
     updateTable();
   }
 
-    public void handleAction(ActionEvent e)
+  public void handleAction(ActionEvent e)
+  {
+    if (e.getSource() == addStudentButton)
     {
-        if(e.getSource() == addStudentButton)
-        {
+      Student student = null;
+      String name = nameField.getText();
+      int ID = Integer.parseInt(IDField.getText());
+      boolean isMember = isMemberCheckBox.isSelected();
 
-        }
-        else if(e.getSource() == deleteStudentButton)
-        {
+      student = new Student(name, ID, isMember);
 
-        }
+      Association association = AssociationModelManager.getAssociation();
+      association.addStudent(student);
+      AssociationModelManager.saveAssociation(association);
+      updateTable();
     }
+    else if (e.getSource() == deleteStudentButton)
+    {
+
+    }
+  }
 
   public void updateTable()
   {

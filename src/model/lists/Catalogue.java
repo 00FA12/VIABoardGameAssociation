@@ -68,11 +68,10 @@ public class Catalogue implements Serializable
   public String toString()
   {
     String str = "";
-    for (int i = 0; i < catalogue.size() - 1; i++)
+    for (int i = 0; i < catalogue.size(); i++)
     {
       str += catalogue.get(i) + "\n";
     }
-    str += catalogue.get(catalogue.size() - 1);
     return str;
   }
 }

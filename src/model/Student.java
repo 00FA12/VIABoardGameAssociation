@@ -27,6 +27,13 @@ public class Student implements Serializable
     // todo ID check!
   }
 
+  public Student(String name, int ID, boolean isMember)
+  {
+    this.ID = ID;
+    this.name = name;
+    this.isMember = isMember;
+  }
+
   public String getName()
   {
     return this.name;
@@ -57,6 +64,11 @@ public class Student implements Serializable
     this.isMember = false;
   }
 
+  public String getStatus()
+  {
+    return isMember? "Member" : "Guest";
+  }
+
   public Student copy()
   {
     return new Student(name, ID);
@@ -73,7 +85,7 @@ public class Student implements Serializable
 
   public String toString()
   {
-    return String.format("Name: %s\nID: %d\nStatus: %s", name, ID, isMember ? "member" : "guest");
+    return name;
   }
 
 }

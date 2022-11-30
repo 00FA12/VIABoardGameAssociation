@@ -55,7 +55,7 @@ public class GameCandidate implements Serializable
 
   public String toString()
   {
-    return "Number of votes: " + numberOfVotes+ "\n Title of game: "+ titleOfGame;
+    return "Number of votes: " + numberOfVotes+ "\t Title of game: "+ titleOfGame;
   }
 
 }

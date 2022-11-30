@@ -12,5 +12,5 @@ public class Genre implements Serializable
   public String getName(){return name;}
   public void setName(String name){this.name = name;}
 
-  public String toString(){return String.format("Genre name: %s\n", this.getName());}
+  public String toString(){return name;}
 }

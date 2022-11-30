@@ -47,7 +47,7 @@ public class VotingList implements Serializable
     String temp = "";
     for (int i = 0; i < votes.size(); i++)
     {
-      temp+= "Rating number " + i + " is " + votes.get(i) + "\n";
+      temp += votes.get(i) + "\n";
     }
     return temp;
   }

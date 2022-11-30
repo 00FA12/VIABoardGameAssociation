@@ -1,24 +1,23 @@
 package GUI;
 
 import javafx.event.Event;
+import javafx.fxml.FXML;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
+import model.Association;
 import model.AssociationModelManager;
 
 public class MainController
 {
-    private final String fileName = "FXML/main.fxml";
-    private TabPane tabs;
-    private Tab catalogueTab;
-    private Tab voteTab;
-    private Tab studentTab;
-    private Tab eventTab;
-
-    private VoteController voteController;
-    private EventController studentController;
-    private CatalogueController eventController;
-    private StudentController catalogueController;
-    private AssociationModelManager modelManager;
+    @FXML private TabPane tabs;
+    @FXML private Tab catalogueTab;
+    @FXML private Tab voteTab;
+    @FXML private Tab studentTab;
+    @FXML private Tab eventTab;
+    @FXML private VoteController voteTabController;
+    @FXML private EventController eventTabController;
+    @FXML private CatalogueController catalogueTabController;
+    @FXML private StudentController studentTabController;
 
     public void initialize()
     {

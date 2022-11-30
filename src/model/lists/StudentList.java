@@ -54,11 +54,10 @@ public class StudentList implements Serializable
   public String toString()
   {
     String str = "";
-    for (int i = 0; i < students.size() - 1; i++)
+    for (int i = 0; i < students.size(); i++)
     {
       str += students.get(i) + "\n";
     }
-    str += students.get(students.size() - 1);
     return str;
   }
 }

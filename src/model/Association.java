@@ -83,6 +83,7 @@ public class Association implements Serializable
     return this.studentList.getStudent(index);
   }
 
+
   public BoardGame getBoardGame(int index)
   {
     return this.catalogue.getBoardGame(index);

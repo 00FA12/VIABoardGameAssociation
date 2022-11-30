@@ -40,6 +40,11 @@ public class EventList implements Serializable
     events.set(index, event);
   }
 
+  public int getSize()
+  {
+    return events.size();
+  }
+
   public void removeEvent(int index)
   {
     events.remove(index);

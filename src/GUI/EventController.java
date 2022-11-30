@@ -18,8 +18,10 @@ import org.controlsfx.control.*;
 import java.util.ArrayList;
 
 //Kateryna//
-public class EventController {
-@FXML private TableView<Event> eventsTable;
+public class EventController
+{
+    // todo delete all modelManager fields in astah!!
+    @FXML private TableView<Event> eventsTable;
     @FXML private TextField titleField;
     @FXML private TextArea descriptionArea;
     @FXML private DatePicker datePicker;
