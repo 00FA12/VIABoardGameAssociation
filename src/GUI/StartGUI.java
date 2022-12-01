@@ -4,13 +4,14 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.Window;
 import main.LoadInitialData;
 
 public class StartGUI extends Application
 {
   public void start(Stage window) throws Exception
   {
-    LoadInitialData.load(); //todo event.tab.fxml 
+    LoadInitialData.load(); //todo event.tab.fxml
     window.setTitle("Association");
     FXMLLoader loader = new FXMLLoader();
     loader.setLocation(getClass().getResource("/GUI/main.fxml"));
