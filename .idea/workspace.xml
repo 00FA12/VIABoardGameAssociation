@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e87b550e-3d6a-4d86-a721-c06a7156f051" name="Changes" comment="1" />
+    <list default="true" id="e87b550e-3d6a-4d86-a721-c06a7156f051" name="Changes" comment="1">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/association.bin" beforeDir="false" afterPath="$PROJECT_DIR$/association.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/EventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/EventController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/LoadInitialData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/LoadInitialData.java" afterDir="false" />
+    </list>
     <list id="333ad59c-8813-4286-8c6e-d021d683be6e" name="Changes by micha" comment="Changes by micha" />
-    <list id="4fa5175e-d647-41de-a295-944379350ec5" name="Changes by pind9" comment="Changes by pind9" />
+    <list id="4fa5175e-d647-41de-a295-944379350ec5" name="Changes by pind9" comment="" />
     <list id="d1a99415-edf2-468f-a9e2-b3fdf658817e" name="Changes by Севастиан" comment="Changes by Севастиан" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,19 +34,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "last_opened_file_path": "C:/Users/GU301/IdeaProjects/VIABoardGameAssociation",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/GU301/IdeaProjects/SDJ classes&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="GUI" />
@@ -192,41 +197,20 @@
       <updated>1669741057908</updated>
     </task>
     <task id="LOCAL-00014" summary="1">
-      <created>1669830519557</created>
+      <created>1669836710539</created>
       <option name="number" value="00014" />
       <option name="presentableId" value="LOCAL-00014" />
       <option name="project" value="LOCAL" />
-      <updated>1669830519557</updated>
+      <updated>1669836710539</updated>
     </task>
-    <task id="LOCAL-00015" summary="Changes by micha">
-      <created>1669830530724</created>
+    <task id="LOCAL-00015" summary="1">
+      <created>1669836971340</created>
       <option name="number" value="00015" />
       <option name="presentableId" value="LOCAL-00015" />
       <option name="project" value="LOCAL" />
-      <updated>1669830530724</updated>
+      <updated>1669836971340</updated>
     </task>
-    <task id="LOCAL-00016" summary="Changes by pind9">
-      <created>1669830543270</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1669830543270</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Changes by Севастиан">
-      <created>1669830552373</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1669830552373</updated>
-    </task>
-    <task id="LOCAL-00018" summary="1">
-      <created>1669830560810</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1669830560810</updated>
-    </task>
-    <option name="localTasksCounter" value="19" />
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,8 +228,8 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Changes by micha" />
     <MESSAGE value="Changes by pind9" />
+    <MESSAGE value="Changes by micha" />
     <MESSAGE value="Changes by Севастиан" />
     <MESSAGE value="1" />
     <option name="LAST_COMMIT_MESSAGE" value="1" />
@@ -255,7 +239,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/model/Event.java</url>
-          <line>48</line>
+          <line>47</line>
           <properties class="model.Event" method="setDescription">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />

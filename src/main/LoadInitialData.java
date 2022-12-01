@@ -1,6 +1,7 @@
 package main;
 
 import model.Association;
+import model.AssociationModelManager;
 import model.Genre;
 import model.lists.GenreList;
 import utils.MyFileHandler;
@@ -8,8 +9,7 @@ import utils.MyFileHandler;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-public class
-LoadInitialData
+public class LoadInitialData
 {
   public static void load()
   {
@@ -20,13 +20,13 @@ LoadInitialData
     {
       String[] genresArray = MyFileHandler.readFromTextFile(fileNameTxt);
       genreList = new GenreList();
-      for(int i = 0; i < genresArray.length; i++)
+      for (int i = 0; i < genresArray.length; i++)
       {
         genreList.addGenre(new Genre(genresArray[i]));
       }
-      Association association = new Association();
+      Association association = AssociationModelManager.getAssociation();
       association.setGenreList(genreList);
-      MyFileHandler.writeToBinaryFile(fileNameBin, association);
+      AssociationModelManager.saveAssociation(association);
     }
     catch (FileNotFoundException e)
     {
@@ -36,5 +36,7 @@ LoadInitialData
     {
       System.err.println("End of file");
     }
+
+    System.out.println("Load of initial data is done!");
   }
 }

@@ -16,12 +16,11 @@ public class Association implements Serializable
   public Association()
   {
     this.studentList = new StudentList();
-    this.genreList= new GenreList();
+    this.genreList = new GenreList();
     this.catalogue = new Catalogue();
     this.eventList = new EventList();
     this.votingList = new VotingList();
   }
-
 
   public Catalogue getCatalogue()
   {
@@ -82,7 +81,6 @@ public class Association implements Serializable
   {
     return this.studentList.getStudent(index);
   }
-
 
   public BoardGame getBoardGame(int index)
   {

@@ -8,6 +8,7 @@ import java.util.ArrayList;
 public class RatingList implements Serializable
 {
   private ArrayList<Integer> ratings;
+
   public RatingList()
   {
     ratings = new ArrayList<Integer>();
@@ -15,7 +16,8 @@ public class RatingList implements Serializable
 
   public void addRating(int rating)
   {
-    if (rating<=5 && rating>=0) //We don't want super high or super low values
+    if (rating <= 5
+        && rating >= 0) //We don't want super high or super low values
     {
       ratings.add(rating);
     }
@@ -29,9 +31,9 @@ public class RatingList implements Serializable
     int sum = 0;
     for (int i = 0; i < ratings.size(); i++)
     {
-      sum+=ratings.get(i);
+      sum += ratings.get(i);
     }
-    return "" + lol.format(sum/ratings.size());
+    return "" + lol.format(sum / ratings.size());
   }
 
   public int getRating(int index)
@@ -54,7 +56,7 @@ public class RatingList implements Serializable
     String temp = "";
     for (int i = 0; i < ratings.size(); i++)
     {
-      temp+= "Rating number " + i + " is " + ratings.get(i) + "\n";
+      temp += "Rating number " + i + " is " + ratings.get(i) + "\n";
     }
     return temp;
   }

@@ -6,8 +6,6 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import main.LoadInitialData;
 
-import java.io.IOException;
-
 public class StartGUI extends Application
 {
   public void start(Stage window) throws Exception

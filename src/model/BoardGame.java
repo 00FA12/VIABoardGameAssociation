@@ -3,7 +3,6 @@ package model;
 import model.lists.RatingList;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 
 //HUGO
 public class BoardGame implements Serializable

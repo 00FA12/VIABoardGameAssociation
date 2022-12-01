@@ -9,11 +9,12 @@ public class MyDate implements Serializable
   private int day;
   private int month;
   private int year;
+
   public MyDate(int day, int month, int year)
   {
-    this.day=day;
-    this.month=month;
-    this.year=year;
+    this.day = day;
+    this.month = month;
+    this.year = year;
   }
 
   public MyDate()
@@ -23,25 +24,27 @@ public class MyDate implements Serializable
 
   public void today()
   {
-    LocalDate currentDate=LocalDate.now();
-    this.day=currentDate.getDayOfMonth();
-    this.month=currentDate.getMonthValue();
-    this.year=currentDate.getYear();
+    LocalDate currentDate = LocalDate.now();
+    this.day = currentDate.getDayOfMonth();
+    this.month = currentDate.getMonthValue();
+    this.year = currentDate.getYear();
   }
 
-public int getDay()
-{
-return day;
-}
-public int getMonth()
-{
-  return month;
-}
-public int getYear()
+  public int getDay()
+  {
+    return day;
+  }
 
-{
-  return year;
-}
+  public int getMonth()
+  {
+    return month;
+  }
+
+  public int getYear()
+
+  {
+    return year;
+  }
 
   public void setDay(int day)
   {
@@ -57,6 +60,7 @@ public int getYear()
   {
     this.year = year;
   }
+
   public boolean isLeapYear()
   {
     return (year % 4 == 0 && year % 100 != 0 || year % 400 == 0);
@@ -74,10 +78,12 @@ public int getYear()
       return false;
     }
   }
+
   public MyDate copy()
   {
     return new MyDate(day, month, year);
   }
+
   public String toString()
   {
     return day + "/" + month + "/" + year;
