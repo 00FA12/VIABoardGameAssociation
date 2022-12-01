@@ -155,7 +155,7 @@ public class EventController
         else if (e.getSource() == editEventButton)
         {
             String title = titleField.getText();
-            String description = descriptionColumn.getText();
+            String description = descriptionArea.getText();
 
             MyDate date = new MyDate();
             LocalDate tempDate = datePicker.getValue();
