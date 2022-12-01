@@ -54,8 +54,7 @@ public class CatalogueController
     else if (e.getSource() == deleteGameButton)
     {
       BoardGame game = catalogueTable.getSelectionModel().getSelectedItem();
-      AssociationModelManager.getAssociation().getCatalogue()
-          .removeBoardGame(game);
+      AssociationModelManager.getAssociation().getCatalogue().removeBoardGame(game);
     }
     else if (e.getSource() == addGameButton)
     {
@@ -65,11 +64,12 @@ public class CatalogueController
       Genre genre = genreChoiceBox.getSelectionModel().getSelectedItem();
 
       AssociationModelManager.getAssociation().getCatalogue()
-          .addBoardGame(new BoardGame(title, ownerID, description, genre));
+              .addBoardGame(new BoardGame(title, ownerID, description, genre));
     }
     else if (e.getSource() == borrowGameButton)
     {
-
+      BoardGame game = catalogueTable.getSelectionModel().getSelectedItem();
+//      AssociationModelManager.getAssociation().getBoardGameByTitle(game.getTitle()).borrow();
     }
     else if (e.getSource() == reserveGameButton)
     {
