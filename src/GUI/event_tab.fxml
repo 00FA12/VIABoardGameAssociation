@@ -1,135 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 <?import org.controlsfx.control.CheckComboBox?>
-<VBox alignment="CENTER" xmlns="http://javafx.com/javafx/19"
-      xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.EventController">
+
+<VBox alignment="CENTER" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.EventController">
     <children>
-        <TableView fx:id="eventsTable" maxHeight="-Infinity"
-                   maxWidth="-Infinity" minHeight="-Infinity"
-                   minWidth="-Infinity" prefHeight="250.0" prefWidth="600.0">
+        <TableView fx:id="eventsTable" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="600.0">
             <columns>
-                <TableColumn fx:id="titleColumn" prefWidth="100.79998779296875"
-                             resizable="false" text="Title"/>
-                <TableColumn fx:id="descriptionColumn"
-                             prefWidth="203.20001220703125" text="Description"/>
-                <TableColumn fx:id="dateColumn" minWidth="0.0" prefWidth="100.0"
-                             text="Date"/>
-                <TableColumn fx:id="attendersColumn"
-                             prefWidth="194.4000244140625" text="Participants"/>
+                <TableColumn fx:id="titleColumn" prefWidth="100.79998779296875" resizable="false" text="Title" />
+                <TableColumn fx:id="descriptionColumn" prefWidth="203.20001220703125" text="Description" />
+                <TableColumn fx:id="dateColumn" minWidth="0.0" prefWidth="100.0" text="Date" />
+                <TableColumn fx:id="attendersColumn" prefWidth="194.4000244140625" text="Participants" />
             </columns>
             <columnResizePolicy>
-                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
             </columnResizePolicy>
         </TableView>
-        <Button fx:id="editEventButton" alignment="CENTER"
-                contentDisplay="CENTER" maxWidth="1.7976931348623157E308"
-                mnemonicParsing="false" onAction="#handleAction"
-                text="Edit event"/>
-        <HBox alignment="CENTER" prefHeight="294.0" prefWidth="600.0"
-              spacing="100.0">
+        <Button fx:id="editEventButton" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleAction" text="Edit event" />
+        <HBox alignment="CENTER" prefHeight="294.0" prefWidth="600.0" spacing="100.0">
             <children>
-                <VBox alignment="TOP_CENTER" prefHeight="206.0"
-                      prefWidth="325.0" spacing="20.0">
+                <VBox alignment="TOP_CENTER" prefHeight="206.0" prefWidth="325.0" spacing="20.0">
                     <children>
-                        <GridPane gridLinesVisible="true" prefHeight="159.0"
-                                  prefWidth="206.0">
+                        <GridPane gridLinesVisible="true" prefHeight="159.0" prefWidth="206.0">
                             <columnConstraints>
-                                <ColumnConstraints hgrow="SOMETIMES"
-                                                   minWidth="10.0"
-                                                   prefWidth="100.0"/>
-                                <ColumnConstraints hgrow="SOMETIMES"
-                                                   minWidth="10.0"
-                                                   prefWidth="100.0"/>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                             </columnConstraints>
                             <rowConstraints>
-                                <RowConstraints
-                                        maxHeight="1.7976931348623157E308"
-                                        minHeight="-Infinity" prefHeight="30.0"
-                                        vgrow="SOMETIMES"/>
-                                <RowConstraints
-                                        maxHeight="1.7976931348623157E308"
-                                        minHeight="-Infinity" prefHeight="100.0"
-                                        vgrow="SOMETIMES"/>
-                                <RowConstraints minHeight="-Infinity"
-                                                prefHeight="30.0"
-                                                vgrow="SOMETIMES"/>
-                                <RowConstraints
-                                        maxHeight="1.7976931348623157E308"
-                                        minHeight="-Infinity" prefHeight="30.0"
-                                        vgrow="SOMETIMES"/>
+                                <RowConstraints maxHeight="1.7976931348623157E308" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="1.7976931348623157E308" minHeight="-Infinity" prefHeight="100.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="1.7976931348623157E308" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
                             </rowConstraints>
                             <children>
                                 <Label text="Title">
                                     <GridPane.margin>
-                                        <Insets left="10.0"/>
+                                        <Insets left="10.0" />
                                     </GridPane.margin>
                                 </Label>
                                 <Label text="Description" GridPane.rowIndex="1">
                                     <GridPane.margin>
-                                        <Insets left="10.0"/>
+                                        <Insets left="10.0" />
                                     </GridPane.margin>
                                 </Label>
                                 <Label text="Date" GridPane.rowIndex="2">
                                     <GridPane.margin>
-                                        <Insets left="10.0"/>
+                                        <Insets left="10.0" />
                                     </GridPane.margin>
                                 </Label>
-                                <TextField fx:id="titleField"
-                                           onAction="#handleAction"
-                                           GridPane.columnIndex="1"/>
-                                <TextArea fx:id="descriptionArea"
-                                          prefHeight="200.0" prefWidth="200.0"
-                                          GridPane.columnIndex="1"
-                                          GridPane.rowIndex="1"/>
-                                <Label text="Participants"
-                                       GridPane.rowIndex="3">
+                                <TextField fx:id="titleField" onAction="#handleAction" GridPane.columnIndex="1" />
+                                <TextArea fx:id="descriptionArea" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                <Label text="Participants" GridPane.rowIndex="3">
                                     <GridPane.margin>
-                                        <Insets left="10.0"/>
+                                        <Insets left="10.0" />
                                     </GridPane.margin>
                                 </Label>
-                                <DatePicker fx:id="datePicker"
-                                            onAction="#handleAction"
-                                            GridPane.columnIndex="1"
-                                            GridPane.rowIndex="2"/>
-                                <CheckComboBox maxWidth="1.7976931348623157E308"
-                                               GridPane.columnIndex="1"
-                                               GridPane.rowIndex="3"/>
+                                <DatePicker fx:id="datePicker" onAction="#handleAction" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                <CheckComboBox maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                             </children>
                             <opaqueInsets>
-                                <Insets/>
+                                <Insets />
                             </opaqueInsets>
                             <VBox.margin>
-                                <Insets top="10.0"/>
+                                <Insets top="10.0" />
                             </VBox.margin>
                         </GridPane>
-                        <Button fx:id="addEventButton" alignment="CENTER"
-                                maxWidth="1.7976931348623157E308"
-                                mnemonicParsing="false" onAction="#handleAction"
-                                text="Add event"/>
+                        <Button fx:id="addEventButton" alignment="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleAction" text="Add event" />
                     </children>
                 </VBox>
-                <VBox fx:id="actionsForSelectedEventBox" alignment="CENTER"
-                      prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+                <VBox fx:id="actionsForSelectedEventBox" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0">
                     <children>
-                        <Button fx:id="deleteEventButton"
-                                maxWidth="1.7976931348623157E308"
-                                mnemonicParsing="false" onAction="#handleAction"
-                                text="Delete event"/>
-                        <Button fx:id="exportEventButton"
-                                maxWidth="1.7976931348623157E308"
-                                mnemonicParsing="false" onAction="#handleAction"
-                                text="Export"/>
+                        <Button fx:id="deleteEventButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleAction" text="Delete event" />
+                        <Button fx:id="exportEventButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleAction" text="Export" />
                     </children>
                 </VBox>
             </children>
             <VBox.margin>
-                <Insets top="20.0"/>
+                <Insets top="20.0" />
             </VBox.margin>
             <padding>
-                <Insets bottom="20.0"/>
+                <Insets bottom="20.0" />
             </padding>
         </HBox>
     </children>
