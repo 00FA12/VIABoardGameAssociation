@@ -21,7 +21,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
 
-//Kateryna//
+//Together
 public class EventController
 {
     // todo delete all modelManager fields in astah!!
@@ -74,6 +74,15 @@ public class EventController
                 checkComboBox.getItems().clear();
                 checkComboBox.getItems().addAll(AssociationModelManager.getAssociation().getStudentList().getArrayOfStudents());
 
+                StudentList studentList = eventTemp.getAttenders();
+                for(int i = 0; i < studentList.getSize(); i++)
+                {
+                    if(checkComboBox.getItems().contains(studentList.getStudent(i)))
+                    {
+                        int index = checkComboBox.getItems().indexOf(studentList.getStudent(i));
+                        checkComboBox.getCheckModel().check(index);
+                    }
+                }
             }
         }
     }
@@ -185,11 +194,6 @@ public class EventController
 
     }/**/
 
-    public void onMouseClick(MouseEvent e)
-    {
-        updateTable();
-    }
-
     public void updateTable()
     {
         int indexSelected = eventsTable.getSelectionModel().getSelectedIndex();
@@ -206,6 +210,7 @@ public class EventController
             eventsTable.getItems().add(event);
         }
 
+//      ChechComboBox
         System.out.println(checkComboBox.getItems().size());
         checkComboBox.getItems().clear();
         checkComboBox.getItems().addAll(AssociationModelManager.getAssociation().getStudentList().getArrayOfStudents());

@@ -1,6 +1,7 @@
 package model;
 
 import model.lists.StudentList;
+import org.controlsfx.control.CheckComboBox;
 
 import java.io.Serializable;
 import java.util.List;
