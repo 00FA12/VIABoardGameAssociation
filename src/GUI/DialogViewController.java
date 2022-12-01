@@ -8,9 +8,24 @@ import javafx.scene.control.TextField;
 
 //Kateryna//
 public class DialogViewController
+
 {
-//    @FXML private TextField gameTitleField;
-//    @FXML private TextArea gameDescriprionArea;
+    @FXML private TextField statusBorrowerIDField;
+    @FXML private DatePicker statusStartDatePicker;
+    @FXML private DatePicker statusEndDatePicker;
+    @FXML private Button statusConfirmButton;
+    public void initialize()
+    {
+
+    }
+    public void handleActions(ActionEvent e)
+    {
+
+    }
+    public void updateGameStatusTable()
+    {
+
+    }
 
 
 }
