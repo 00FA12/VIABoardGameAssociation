@@ -36,7 +36,7 @@ public class EventController
     @FXML
     private VBox actionsForSelectedEventBox;
     @FXML
-    private CheckComboBox<Student> attenders;//todo change in class diagram "participants"
+    private CheckComboBox<Student> checkComboBox;//todo change in class diagram "participants"
     @FXML
     private Button editEventButton;
     @FXML
