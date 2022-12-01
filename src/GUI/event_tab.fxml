@@ -67,7 +67,7 @@
                                     </GridPane.margin>
                                 </Label>
                                 <DatePicker fx:id="datePicker" editable="false" onAction="#handleAction" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                <CheckComboBox fx:id="checkComboBox" maxWidth="1.7976931348623157E308" onMouseClicked="#onMouseClick" showCheckedCount="true" title="Name" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                <CheckComboBox fx:id="checkComboBox" maxWidth="1.7976931348623157E308" title="Name" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                             </children>
                             <opaqueInsets>
                                 <Insets />
@@ -76,7 +76,7 @@
                                 <Insets top="10.0" />
                             </VBox.margin>
                         </GridPane>
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
                      <children>
                               <Button fx:id="addEventButton" alignment="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleAction" prefWidth="150.0" text="Add event" />
                           <Button fx:id="editEventButton" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleAction" prefWidth="150.0" text="Edit event" />

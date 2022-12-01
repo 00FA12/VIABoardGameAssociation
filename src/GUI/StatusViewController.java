@@ -7,7 +7,7 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 
 //Kateryna//
-public class DialogViewController
+public class StatusViewController
 
 {
     @FXML private TextField statusBorrowerIDField;

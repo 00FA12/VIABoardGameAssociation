@@ -36,7 +36,7 @@ public class EventController
     @FXML
     private VBox actionsForSelectedEventBox;
     @FXML
-    private CheckComboBox<Student> checkComboBox;//todo change in class diagram "participants"
+    private CheckComboBox<Student> checkComboBox;
     @FXML
     private Button editEventButton;
     @FXML
@@ -93,8 +93,12 @@ public class EventController
                 new PropertyValueFactory<Event, String>("attenders"));
 
 
+
+        eventsTable.getSelectionModel().selectFirst();
+
         updateTable();
     }
+
 
     public void handleAction(ActionEvent e)
     {
@@ -161,7 +165,11 @@ public class EventController
 
 
             Association association = AssociationModelManager.getAssociation();
-            association.getEventList().setEvent(new Event(title, description, date), eventsTable.getSelectionModel().getSelectedIndex());
+            int index = eventsTable.getSelectionModel().getSelectedIndex();
+
+            Event eventTemp = new Event(title, description, date);
+            eventTemp.addAttenderList(checkComboBox.getCheckModel().getCheckedItems());
+            association.getEventList().setEvent(eventTemp, index);
             AssociationModelManager.saveAssociation(association);
 
             updateTable();
@@ -184,6 +192,10 @@ public class EventController
 
     public void updateTable()
     {
+        int indexSelected = eventsTable.getSelectionModel().getSelectedIndex();
+        int indexFocused = eventsTable.getSelectionModel().getFocusedIndex();
+        if(indexSelected == -1)
+            indexSelected = 0;
         EventList eventList = AssociationModelManager.getAssociation()
                 .getEventList();
         eventsTable.getItems().clear();
@@ -198,6 +210,9 @@ public class EventController
         checkComboBox.getItems().clear();
         checkComboBox.getItems().addAll(AssociationModelManager.getAssociation().getStudentList().getArrayOfStudents());
         System.out.println(checkComboBox.getItems().size());
+
+        eventsTable.getSelectionModel().select(indexSelected);
+        eventsTable.requestFocus();
     }
 
 }

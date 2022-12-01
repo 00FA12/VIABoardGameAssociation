@@ -3,7 +3,8 @@ package GUI;
 import javafx.fxml.FXML;
 //Kateryna//
 
-public class DialogViewsHandler {
+public class StatusViewsHandler
+{
 
     @FXML private String setStatusViewFileName;
 

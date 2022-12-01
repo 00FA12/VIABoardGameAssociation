@@ -3,6 +3,7 @@ package model;
 import model.lists.StudentList;
 
 import java.io.Serializable;
+import java.util.List;
 
 //Kateryna
 public class Event implements Serializable
@@ -48,6 +49,14 @@ public class Event implements Serializable
   public void addAttender(Student student)
   {
     attenders.addStudent(student);
+  }
+
+  public void addAttenderList(List<Student> students)
+  {
+    for (Student student:students)
+    {
+      attenders.addStudent(student);
+    }
   }
 
   public void setDescription(String description)

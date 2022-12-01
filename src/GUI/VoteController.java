@@ -7,15 +7,16 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import model.AssociationModelManager;
 import model.GameCandidate;
+import model.Student;
+import model.lists.StudentList;
 
 //Kateryna
 public class VoteController
 {
   @FXML private TextField titleField;
-  @FXML private TableView<GameCandidate> votesTable;
   @FXML private Button voteButton;
-  @FXML private AssociationModelManager modelManager;
 
+  @FXML private AssociationModelManager modelManager;
   public void initialize(AssociationModelManager modelManager)
   {
     this.modelManager = modelManager;
@@ -29,17 +30,5 @@ public class VoteController
 
   public void handleAction(ActionEvent e)
   {
-    if (e.getSource() == votesTable)
-    {
-
-    }
-    else if (e.getSource() == titleField)
-    {
-
-    }
-    else if (e.getSource() == voteButton)
-    {
-
-    }
   }
 }
