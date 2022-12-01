@@ -1,5 +1,7 @@
 package GUI;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
@@ -51,6 +53,30 @@ public class EventController
     private TableColumn<Event, String> dateColumn;
     @FXML
     private TableColumn<Event, String> attendersColumn;
+    private MyTableListener tableListener;
+
+    private class MyTableListener implements ChangeListener<Event>
+    {
+        public void changed(ObservableValue<? extends Event> event, Event oldEvent, Event newEvent)
+        {
+            Event eventTemp = eventsTable.getSelectionModel().getSelectedItem();
+
+            if (eventTemp != null)
+            {
+                titleField.setText(eventTemp.getTitle());
+                descriptionArea.setText(eventTemp.getDescription());
+                String[] strDate = eventTemp.getDate().toString().split("\\.");
+                int day = Integer.parseInt(strDate[0]);
+                int month = Integer.parseInt(strDate[1]);
+                int year = Integer.parseInt(strDate[2]);
+                LocalDate tempDate = LocalDate.of(year, month, day);
+                datePicker.setValue(tempDate);
+                checkComboBox.getItems().clear();
+                checkComboBox.getItems().addAll(AssociationModelManager.getAssociation().getStudentList().getArrayOfStudents());
+
+            }
+        }
+    }
 
     public void initialize()
     {
@@ -75,7 +101,7 @@ public class EventController
         if (e.getSource() == addEventButton)
         {
             String title = titleField.getText();
-            String description = descriptionColumn.getText();
+            String description = descriptionArea.getText();
 
             MyDate date = new MyDate();
             LocalDate tempDate = datePicker.getValue();
@@ -127,10 +153,15 @@ public class EventController
             String title = titleField.getText();
             String description = descriptionColumn.getText();
 
+            MyDate date = new MyDate();
+            LocalDate tempDate = datePicker.getValue();
+            date.setDay(tempDate.getDayOfMonth());
+            date.setMonth(tempDate.getMonthValue());
+            date.setYear(tempDate.getYear()); // date initialization
 
 
             Association association = AssociationModelManager.getAssociation();
-          //  association.getEventList().setEvent(new Event(title, description, date), eventsTable.getSelectionModel().getSelectedIndex());
+            association.getEventList().setEvent(new Event(title, description, date), eventsTable.getSelectionModel().getSelectedIndex());
             AssociationModelManager.saveAssociation(association);
 
             updateTable();
@@ -143,17 +174,13 @@ public class EventController
             AssociationModelManager.saveAssociation(association);
             updateTable();
         }
-        else if (e.getSource() == eventsTable)
-        {
-            titleField.setText(titleColumn.getText());
-            descriptionArea.setText(descriptionColumn.getText());
-            String tempDate = dateColumn.getText();
-            MyDate eDate = new MyDate();
-            //eDate.setDay(dateColumn.getText());
-            //datePicker.setValue();
 
-        }
     }/**/
+
+    public void onMouseClick(MouseEvent e)
+    {
+        updateTable();
+    }
 
     public void updateTable()
     {
