@@ -1,0 +1,55 @@
+Index: src/model/AssociationModelManager.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package model;\r\n\r\nimport model.lists.StudentList;\r\nimport model.lists.VotingList;\r\nimport utils.MyFileHandler;\r\n\r\nimport java.io.FileNotFoundException;\r\nimport java.io.IOException;\r\nimport java.io.Serializable;\r\n\r\npublic class AssociationModelManager implements Serializable\r\n{\r\n  private static final String fileName = \"association.bin\";\r\n\r\n  public static void saveAssociation(Association association)\r\n  {\r\n    try\r\n    {\r\n      MyFileHandler.writeToBinaryFile(fileName, association);\r\n    }\r\n    catch (FileNotFoundException e)\r\n    {\r\n      System.err.println(String.format(\"File %s is not found\", fileName));\r\n    }\r\n    catch (IOException e)\r\n    {\r\n      System.err.println(\r\n          String.format(\"End of file %s, or it is empty\", fileName));\r\n    }\r\n  }\r\n\r\n  public static Association getAssociation()\r\n  {\r\n    Association association = null;\r\n    try\r\n    {\r\n      association = (Association) MyFileHandler.readFromBinaryFile(fileName);\r\n    }\r\n    catch (FileNotFoundException e)\r\n    {\r\n      System.err.println(String.format(\"File %s is not found\", fileName));\r\n    }\r\n    catch (IOException e)\r\n    {\r\n      System.err.println(\r\n          String.format(\"End of file %s, or it is empty\", fileName));\r\n    }\r\n    catch (ClassNotFoundException e)\r\n    {\r\n      System.err.println(\r\n          String.format(\"Class is not found in %s file\", fileName));\r\n    }\r\n    return association;\r\n  }\r\n\r\n  public static VotingList getVotingList()\r\n  {\r\n    return getAssociation().getVotingList();\r\n  }\r\n\r\n  public static StudentList getStudentList()\r\n  {\r\n    return getAssociation().getStudentList();\r\n  }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/model/AssociationModelManager.java b/src/model/AssociationModelManager.java
+--- a/src/model/AssociationModelManager.java	
++++ b/src/model/AssociationModelManager.java	
+@@ -50,6 +50,9 @@
+       System.err.println(
+           String.format("Class is not found in %s file", fileName));
+     }
++    catch (Exception e){
++      System.err.println("some other mistakes");
++    }
+     return association;
+   }
+ 
+Index: src/GUI/CatalogueController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package GUI;\r\n\r\nimport javafx.event.ActionEvent;\r\nimport javafx.fxml.FXML;\r\nimport javafx.scene.control.*;\r\nimport javafx.scene.control.cell.PropertyValueFactory;\r\nimport javafx.scene.layout.VBox;\r\nimport model.AssociationModelManager;\r\nimport model.BoardGame;\r\nimport model.Genre;\r\n\r\n//Michael\r\npublic class CatalogueController\r\n{\r\n\r\n  @FXML private TableView<BoardGame> catalogueTable;\r\n  @FXML private TextField titleField, ownerIDField;\r\n  @FXML private TextArea textArea;\r\n  @FXML private ChoiceBox<Genre> genreChoiceBox; //todo add to astah\r\n  @FXML private Button editGameButton, deleteGameButton, addGameButton, borrowGameButton, reserveGameButton, returnGameButton, addRateButton;\r\n  @FXML private VBox actionsForSelectedGameBox;\r\n  @FXML private TableColumn<BoardGame, String> titleColumn;\r\n  @FXML private TableColumn<BoardGame, String> descriptionColumn;\r\n  @FXML private TableColumn<BoardGame, String> genreColumn;\r\n  @FXML private TableColumn<BoardGame, String> statusColumn;\r\n  @FXML private TableColumn<BoardGame, String> IDColumn;\r\n  @FXML private TableColumn<BoardGame, String> ratingColumn;\r\n\r\n  public void initialize()\r\n  {\r\n\r\n    titleColumn.setCellValueFactory(\r\n        new PropertyValueFactory<BoardGame, String>(\"title\"));\r\n    descriptionColumn.setCellValueFactory(\r\n        new PropertyValueFactory<BoardGame, String>(\"description\"));\r\n    genreColumn.setCellValueFactory(\r\n        new PropertyValueFactory<BoardGame, String>(\"genre\"));\r\n    statusColumn.setCellValueFactory(\r\n        new PropertyValueFactory<BoardGame, String>(\"gameAction\"));\r\n    IDColumn.setCellValueFactory(\r\n        new PropertyValueFactory<BoardGame, String>(\"ownerID\"));\r\n    ratingColumn.setCellValueFactory(\r\n        new PropertyValueFactory<BoardGame, String>(\"ratings.average()\"));\r\n\r\n    updateTable();\r\n  }\r\n\r\n  public void handleAction(ActionEvent e)\r\n  {\r\n    if (e.getSource() == editGameButton)\r\n    {\r\n      //Dialog window opens\r\n    }\r\n    else if (e.getSource() == deleteGameButton)\r\n    {\r\n      BoardGame game = catalogueTable.getSelectionModel().getSelectedItem();\r\n      AssociationModelManager.getAssociation().getCatalogue()\r\n          .removeBoardGame(game);\r\n    }\r\n    else if (e.getSource() == addGameButton)\r\n    {\r\n      String title = titleField.getText();\r\n      String description = textArea.getText();\r\n      int ownerID = Integer.parseInt(ownerIDField.getText());\r\n      Genre genre = genreChoiceBox.getSelectionModel().getSelectedItem();\r\n\r\n      AssociationModelManager.getAssociation().getCatalogue()\r\n          .addBoardGame(new BoardGame(title, ownerID, description, genre));\r\n    }\r\n    else if (e.getSource() == borrowGameButton)\r\n    {\r\n\r\n    }\r\n    else if (e.getSource() == reserveGameButton)\r\n    {\r\n\r\n    }\r\n    else if (e.getSource() == returnGameButton)\r\n    {\r\n\r\n    }\r\n    else if (e.getSource() == addRateButton)\r\n    {\r\n\r\n    }\r\n  }\r\n\r\n  public void updateTable()\r\n  {\r\n\r\n  }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/GUI/CatalogueController.java b/src/GUI/CatalogueController.java
+--- a/src/GUI/CatalogueController.java	
++++ b/src/GUI/CatalogueController.java	
+@@ -54,8 +54,7 @@
+     else if (e.getSource() == deleteGameButton)
+     {
+       BoardGame game = catalogueTable.getSelectionModel().getSelectedItem();
+-      AssociationModelManager.getAssociation().getCatalogue()
+-          .removeBoardGame(game);
++      AssociationModelManager.getAssociation().getCatalogue().removeBoardGame(game);
+     }
+     else if (e.getSource() == addGameButton)
+     {
+@@ -65,11 +64,12 @@
+       Genre genre = genreChoiceBox.getSelectionModel().getSelectedItem();
+ 
+       AssociationModelManager.getAssociation().getCatalogue()
+-          .addBoardGame(new BoardGame(title, ownerID, description, genre));
++              .addBoardGame(new BoardGame(title, ownerID, description, genre));
+     }
+     else if (e.getSource() == borrowGameButton)
+     {
+-
++      BoardGame game = catalogueTable.getSelectionModel().getSelectedItem();
++//      AssociationModelManager.getAssociation().getBoardGameByTitle(game.getTitle()).borrow();
+     }
+     else if (e.getSource() == reserveGameButton)
+     {

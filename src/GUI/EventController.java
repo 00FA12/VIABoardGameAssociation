@@ -109,7 +109,7 @@ public class EventController
 
 
             Association association = AssociationModelManager.getAssociation();
-            association.getEventList().setEvent(new Event(title, description, date), eventsTable.getSelectionModel().getSelectedIndex());
+          //  association.getEventList().setEvent(new Event(title, description, date), eventsTable.getSelectionModel().getSelectedIndex());
             AssociationModelManager.saveAssociation(association);
             updateTable();
         }
