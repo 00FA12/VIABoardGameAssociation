@@ -1,11 +1,13 @@
 package GUI;
 
 import javafx.collections.FXCollections;
+import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
 import model.*;
 import model.lists.EventList;
@@ -14,6 +16,8 @@ import org.controlsfx.control.CheckComboBox;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Date;
 
 //Kateryna//
 public class EventController
@@ -50,6 +54,9 @@ public class EventController
 
     public void initialize()
     {
+        tableListener = new MyTableListener();
+        eventsTable.getSelectionModel().selectedItemProperty().addListener(tableListener);
+
         titleColumn.setCellValueFactory(
                 new PropertyValueFactory<>("title"));
         descriptionColumn.setCellValueFactory(
@@ -58,6 +65,7 @@ public class EventController
                 new PropertyValueFactory<Event, String>("date"));
         attendersColumn.setCellValueFactory(
                 new PropertyValueFactory<Event, String>("attenders"));
+
 
         updateTable();
     }
@@ -71,19 +79,33 @@ public class EventController
 
             MyDate date = new MyDate();
             LocalDate tempDate = datePicker.getValue();
-            date.setDay(tempDate.getDayOfMonth());
-            date.setMonth(tempDate.getMonthValue());
-            date.setYear(tempDate.getYear()); // date initialization
+            if(tempDate == null)
+                date = null;
+            else
+            {
+                date.setDay(tempDate.getDayOfMonth());
+                date.setMonth(tempDate.getMonthValue());
+                date.setYear(tempDate.getYear()); // date initialization
+            }
 
-
-
-            Event event = new Event(title, description, date);
+            Event event = null;
+            try
+            {
+                event = new Event(title, description, date);
+            }
+            catch (IllegalArgumentException exception)
+            {
+                Alert alert = new Alert(Alert.AlertType.ERROR, exception.getMessage());
+                alert.setHeaderText(null);
+                alert.show();
+                return;
+            }
 
             try
             {
-                for (Student attender : attenders.getItems())
+                for (int i = 0; i < checkComboBox.getCheckModel().getCheckedItems().size(); i++)
                 {
-                    event.addAttender(attender);
+                    event.addAttender(checkComboBox.getCheckModel().getCheckedItems().get(i));
                 }
             }
             catch (ArrayIndexOutOfBoundsException exception)
@@ -98,8 +120,7 @@ public class EventController
         }
         else if (e.getSource() == exportEventButton)
         {
-
-
+            //todo export
         }
         else if (e.getSource() == editEventButton)
         {
@@ -111,6 +132,7 @@ public class EventController
             Association association = AssociationModelManager.getAssociation();
           //  association.getEventList().setEvent(new Event(title, description, date), eventsTable.getSelectionModel().getSelectedIndex());
             AssociationModelManager.saveAssociation(association);
+
             updateTable();
         }
         else if (e.getSource() == deleteEventButton)
@@ -145,11 +167,10 @@ public class EventController
             eventsTable.getItems().add(event);
         }
 
-        ObservableList<Student> items = FXCollections.observableArrayList();
-        StudentList studentList = AssociationModelManager.getAssociation().getStudentList();
-        items.addAll(studentList.getArrayOfStudents());
-
-        attenders = new CheckComboBox<>(items);
+        System.out.println(checkComboBox.getItems().size());
+        checkComboBox.getItems().clear();
+        checkComboBox.getItems().addAll(AssociationModelManager.getAssociation().getStudentList().getArrayOfStudents());
+        System.out.println(checkComboBox.getItems().size());
     }
 
 }

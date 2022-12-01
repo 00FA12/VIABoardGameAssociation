@@ -14,6 +14,11 @@ public class Event implements Serializable
 
   public Event(String title, String description, MyDate date)
   {
+    if(title.isEmpty() || date == null || description.isEmpty())
+    {
+      throw new IllegalArgumentException("Some field has wrong data or it is empty");
+    }
+
     this.title = title;
     this.description = description;
     this.date = date;

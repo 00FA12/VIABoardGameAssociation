@@ -12,10 +12,10 @@ public class MainController
   @FXML private Tab voteTab;
   @FXML private Tab studentTab;
   @FXML private Tab eventTab;
-  @FXML private VoteController voteTabController;
-  @FXML private EventController eventTabController;
-  @FXML private CatalogueController catalogueTabController;
-  @FXML private StudentController studentTabController;
+  @FXML private VoteController voteTabContentController;
+  @FXML private EventController eventTabContentController;
+  @FXML private CatalogueController catalogueTabContentController;
+  @FXML private StudentController studentTabContentController;
 
   public void initialize()
   {
@@ -27,21 +27,21 @@ public class MainController
 
   public void tabChanged(Event event)
   {
-    if (studentTab.isSelected())
+    if (studentTab != null && studentTab.isSelected())
     {
-      studentTabController.updateTable();
+      studentTabContentController.updateTable();
     }
-    else if (eventTab.isSelected())
+    else if (eventTab != null && eventTab.isSelected())
     {
-      eventTabController.updateTable();
+      eventTabContentController.updateTable();
     }
-    else if (voteTab.isSelected())
+    else if (voteTab != null && voteTab.isSelected())
     {
-      voteTabController.updateTable();
+      voteTabContentController.updateTable();
     }
-    else if (catalogueTab.isSelected())
+    else if (catalogueTab != null && catalogueTab.isSelected())
     {
-      catalogueTabController.updateTable();
+      catalogueTabContentController.updateTable();
     }
   }
 
