@@ -106,11 +106,6 @@ public class EventController
             String title = titleField.getText();
             String description = descriptionColumn.getText();
 
-            MyDate date = new MyDate();
-            LocalDate tempDate = datePicker.getValue();
-            date.setDay(tempDate.getDayOfMonth());
-            date.setMonth(tempDate.getMonthValue());
-            date.setYear(tempDate.getYear()); // date initialization
 
 
             Association association = AssociationModelManager.getAssociation();
