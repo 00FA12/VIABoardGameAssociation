@@ -172,9 +172,9 @@ public class EventController
             date.setMonth(tempDate.getMonthValue());
             date.setYear(tempDate.getYear()); // date initialization
 
-
             Association association = AssociationModelManager.getAssociation();
             int index = eventsTable.getSelectionModel().getSelectedIndex();
+
 
             Event eventTemp = new Event(title, description, date);
             eventTemp.addAttenderList(checkComboBox.getCheckModel().getCheckedItems());

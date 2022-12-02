@@ -49,6 +49,11 @@ public class Catalogue implements Serializable
     return -1;
   }
 
+  public int getSize()
+  {
+    return catalogue.size();
+  }
+
   public void setBoardGame(int index, BoardGame boardGame)
   {
     this.catalogue.set(index, boardGame);

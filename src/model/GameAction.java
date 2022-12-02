@@ -13,8 +13,7 @@ public abstract class GameAction implements Serializable
     //find the student by static method. if student is not existent, create a new one
     try
     {
-      student = AssociationModelManager.getStudentList().getStudentById(ID)
-          .copy();
+      student = AssociationModelManager.getStudentList().getStudentById(ID).copy();
     }
     catch (NullPointerException e)
     {
