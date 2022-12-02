@@ -16,6 +16,15 @@ public class BoardGame implements Serializable
 
   public BoardGame(String title, int ownerID, String description, Genre genre)
   {
+    if(title.isEmpty() || ownerID < 100000 || ownerID > 999999 || genre == null)
+      throw new IllegalArgumentException("Some field is empty or has wrong data.");
+
+    for (Character ch:title.toCharArray())
+    {
+      if(!Character.isLetterOrDigit(ch))
+        throw new IllegalArgumentException("Field \"Title\" can only consist of digits and letters!");
+    }
+
     this.title = title;
     this.ownerID = ownerID;
     this.description = description;
@@ -44,7 +53,12 @@ public class BoardGame implements Serializable
     return genre;
   }
 
-  public GameAction getStateOfGame()
+  public void setStatusOfGame(GameAction status)
+  {
+    this.gameAction = status;
+  }
+
+  public GameAction getStatusOfGame()
   {
     return gameAction;
   }
@@ -54,7 +68,7 @@ public class BoardGame implements Serializable
     this.title = title;
   }
 
-  public String getStatus()
+  public String getStatusToString()
   {
     if(gameAction == null)
       return "None";
@@ -62,7 +76,7 @@ public class BoardGame implements Serializable
   }
   public String getAverage()
   {
-    return ratings.average();
+    return ratings.averageToString();
   }
 
   public void setGenre(Genre genre)

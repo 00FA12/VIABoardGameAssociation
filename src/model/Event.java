@@ -21,6 +21,12 @@ public class Event implements Serializable
       throw new IllegalArgumentException("Some field has wrong data or it is empty");
     }
 
+    for (Character ch:title.toCharArray())
+    {
+      if(!Character.isLetterOrDigit(ch))
+        throw new IllegalArgumentException("Field \"Title\" can only consist of digits and letters!");
+    }
+
     this.title = title;
     this.description = description;
     this.date = date;

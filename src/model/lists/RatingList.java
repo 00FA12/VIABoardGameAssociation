@@ -3,6 +3,7 @@ package model.lists;
 import java.io.Serializable;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.Collections;
 
 //Hugo
 public class RatingList implements Serializable
@@ -11,21 +12,20 @@ public class RatingList implements Serializable
 
   public RatingList()
   {
-    ratings = new ArrayList<Integer>();
+    ratings = new ArrayList<>();
   }
 
   public void addRating(int rating)
   {
-    if (rating <= 5
-        && rating >= 0) //We don't want super high or super low values
+    if (rating >= 1 && rating <= 5) //We don't want super high or super low values
     {
       ratings.add(rating);
     }
     else
-      throw new IllegalArgumentException("Rating has to be between 0 and 5");
+      throw new IllegalArgumentException("Rating has to be between 1 and 5");
   }
 
-  public String average()
+  public String averageToString()
   {
     DecimalFormat lol = new DecimalFormat("#.#");
     int sum = 0;
@@ -36,9 +36,21 @@ public class RatingList implements Serializable
     if(ratings.size() == 0)
       return lol.format(sum);
     else
-      return lol.format(sum / ratings.size());
+      return lol.format((double) sum / ratings.size());
   }
 
+  public double getAverage()
+  {
+    int sum = 0;
+    for (int i = 0; i < ratings.size(); i++)
+    {
+      sum += ratings.get(i);
+    }
+    if(ratings.size() == 0)
+      return sum;
+    else
+      return (double) sum / ratings.size();
+  }
   public int getRating(int index)
   {
     return ratings.get(index);

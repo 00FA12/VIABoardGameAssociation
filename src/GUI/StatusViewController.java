@@ -38,9 +38,9 @@ public class StatusViewController
     }
 
 
-    public void passData(BoardGame game, boolean isBorrowing, int indexOfGame)
+    public void passData(int indexOfGame, boolean isBorrowing)
     {
-        this.game = game;
+        this.game = AssociationModelManager.getAssociation().getBoardGame(indexOfGame);
         this.isBorrowing = isBorrowing;
         this.indexOfGame = indexOfGame;
 

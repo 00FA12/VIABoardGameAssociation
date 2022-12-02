@@ -5,18 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e87b550e-3d6a-4d86-a721-c06a7156f051" name="Changes" comment="01.12 event works">
+      <change afterPath="$PROJECT_DIR$/src/GUI/RateController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/association.bin" beforeDir="false" afterPath="$PROJECT_DIR$/association.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/CatalogueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/CatalogueController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/StatusViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/StatusViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/StatusViewsHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/StatusViewsHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/set_status_dialog_window.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/set_status_dialog_window.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/catalogue_tab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/catalogue_tab.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/student_tab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/student_tab.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/BoardGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/BoardGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Event.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/lists/RatingList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/lists/RatingList.java" afterDir="false" />
     </list>
-    <list id="68818cb0-604d-4df6-bbf4-d4fc4052d36d" name="Changes by hugom" comment="">
-      <change beforePath="$PROJECT_DIR$/src/GUI/StartGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/StartGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/StatusViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/StatusViewController.java" afterDir="false" />
-    </list>
+    <list id="68818cb0-604d-4df6-bbf4-d4fc4052d36d" name="Changes by hugom" comment="" />
     <list id="333ad59c-8813-4286-8c6e-d021d683be6e" name="Changes by micha" comment="Changes by micha" />
     <list id="d1a99415-edf2-468f-a9e2-b3fdf658817e" name="Changes by Севастиан" comment="Changes by Севастиан" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,8 +28,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="AnnotationType" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -41,18 +42,6 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/LoadInitialData.java" root0="FORCE_HIGHLIGHTING" />
   </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/GUI/StatusViewController.java">
-      <ranges>
-        <range start1="4" end1="7" start2="4" end2="14" changelist="e87b550e-3d6a-4d86-a721-c06a7156f051" />
-        <range start1="12" end1="16" start2="19" end2="33" changelist="e87b550e-3d6a-4d86-a721-c06a7156f051" />
-        <range start1="18" end1="18" start2="35" end2="45" changelist="e87b550e-3d6a-4d86-a721-c06a7156f051" />
-        <range start1="20" end1="20" start2="47" end2="49" changelist="e87b550e-3d6a-4d86-a721-c06a7156f051" />
-        <range start1="22" end1="22" start2="51" end2="108" changelist="68818cb0-604d-4df6-bbf4-d4fc4052d36d" />
-        <range start1="24" end1="30" start2="110" end2="110" changelist="e87b550e-3d6a-4d86-a721-c06a7156f051" />
-      </ranges>
-    </file>
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -61,25 +50,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "TODO_SCOPE": "All Places",
-    "WebServerToolWindowFactoryState": "false",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "last_opened_file_path": "D:/Programs/SceneBuilder/SceneBuilder.exe",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.General",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;TODO_SCOPE&quot;: &quot;All Places&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Programs/SceneBuilder/SceneBuilder.exe&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.General&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="GUI" />
@@ -138,6 +127,7 @@
       <updated>1669629032715</updated>
       <workItem from="1669734724410" duration="5174000" />
       <workItem from="1669968834843" duration="15393000" />
+      <workItem from="1670004844483" duration="6793000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1669637929031</created>
@@ -356,7 +346,21 @@
       <option name="project" value="LOCAL" />
       <updated>1669978830857</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="01.12 event works">
+      <created>1669988595269</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1669988595269</updated>
+    </task>
+    <task id="LOCAL-00033" summary="01.12 event works">
+      <created>1669988604065</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1669988604065</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -381,10 +385,10 @@
     <MESSAGE value="event done" />
     <MESSAGE value="123" />
     <MESSAGE value="Changes by micha" />
-    <MESSAGE value="01.12 event works" />
     <MESSAGE value="Changes by hmadrid" />
     <MESSAGE value="Changes by pind9" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes by pind9" />
+    <MESSAGE value="01.12 event works" />
+    <option name="LAST_COMMIT_MESSAGE" value="01.12 event works" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -394,14 +398,14 @@
           <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/GUI/CatalogueController.java</url>
-          <line>195</line>
-          <option name="timeStamp" value="44" />
+          <url>file://$PROJECT_DIR$/src/GUI/RateController.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="52" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/GUI/CatalogueController.java</url>
-          <line>178</line>
-          <option name="timeStamp" value="45" />
+          <url>file://$PROJECT_DIR$/src/GUI/RateController.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="53" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
