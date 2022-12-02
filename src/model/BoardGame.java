@@ -65,6 +65,11 @@ public class BoardGame implements Serializable
     return ratings.average();
   }
 
+  public void setGenre(Genre genre)
+  {
+    this.genre = genre;
+  }
+
   public void setOwnerID(int ownerID)
   {
     this.ownerID = ownerID;

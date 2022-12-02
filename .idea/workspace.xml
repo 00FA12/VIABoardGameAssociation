@@ -8,30 +8,16 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/association.bin" beforeDir="false" afterPath="$PROJECT_DIR$/association.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/CatalogueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/CatalogueController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/catalogue_tab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/catalogue_tab.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/vote_tab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/vote_tab.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Association.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Association.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/StatusViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/StatusViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/StatusViewsHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/StatusViewsHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/set_status_dialog_window.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/set_status_dialog_window.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/BoardGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/BoardGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Borrow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Borrow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/GameAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/GameAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/MyDate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/MyDate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Reserve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Reserve.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/lists/GenreList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/lists/GenreList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/lists/RatingList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/lists/RatingList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/lists/VotingList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/lists/VotingList.java" afterDir="false" />
     </list>
-    <list id="b567d9a3-3259-46f6-bbb0-8fd1dbc54ee4" name="Changes by hmadrid" comment="">
-      <change beforePath="$PROJECT_DIR$/src/GUI/CatalogueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/CatalogueController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/EventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/EventController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/GameAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/GameAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/lists/Catalogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/lists/Catalogue.java" afterDir="false" />
+    <list id="68818cb0-604d-4df6-bbf4-d4fc4052d36d" name="Changes by hugom" comment="">
+      <change beforePath="$PROJECT_DIR$/src/GUI/StartGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/StartGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/StatusViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/StatusViewController.java" afterDir="false" />
     </list>
     <list id="333ad59c-8813-4286-8c6e-d021d683be6e" name="Changes by micha" comment="Changes by micha" />
-    <list id="89e98b79-40fb-49b5-b509-314e2ade9067" name="Changes by pind9" comment="">
-      <change beforePath="$PROJECT_DIR$/src/GUI/VoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/VoteController.java" afterDir="false" />
-    </list>
     <list id="d1a99415-edf2-468f-a9e2-b3fdf658817e" name="Changes by Севастиан" comment="Changes by Севастиан" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,26 +42,14 @@
     <setting file="file://$PROJECT_DIR$/src/main/LoadInitialData.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/GUI/CatalogueController.java">
+    <file path="$PROJECT_DIR$/src/GUI/StatusViewController.java">
       <ranges>
-        <range start1="2" end1="2" start2="2" end2="4" changelist="b567d9a3-3259-46f6-bbb0-8fd1dbc54ee4" />
-        <range start1="7" end1="10" start2="9" end2="17" changelist="b567d9a3-3259-46f6-bbb0-8fd1dbc54ee4" />
-        <range start1="17" end1="18" start2="24" end2="25" changelist="b567d9a3-3259-46f6-bbb0-8fd1dbc54ee4" />
-        <range start1="27" end1="27" start2="34" end2="35" changelist="e87b550e-3d6a-4d86-a721-c06a7156f051" />
-        <range start1="28" end1="28" start2="36" end2="57" changelist="b567d9a3-3259-46f6-bbb0-8fd1dbc54ee4" />
-        <range start1="30" end1="30" start2="59" end2="62" changelist="e87b550e-3d6a-4d86-a721-c06a7156f051" />
-        <range start1="38" end1="39" start2="70" end2="71" changelist="e87b550e-3d6a-4d86-a721-c06a7156f051" />
-        <range start1="42" end1="43" start2="74" end2="77" changelist="e87b550e-3d6a-4d86-a721-c06a7156f051" />
-        <range start1="49" end1="50" start2="83" end2="109" changelist="e87b550e-3d6a-4d86-a721-c06a7156f051" />
-        <range start1="51" end1="52" start2="110" end2="137" changelist="b567d9a3-3259-46f6-bbb0-8fd1dbc54ee4" />
-        <range start1="58" end1="68" start2="143" end2="143" changelist="b567d9a3-3259-46f6-bbb0-8fd1dbc54ee4" />
-        <range start1="89" end1="89" start2="164" end2="177" changelist="b567d9a3-3259-46f6-bbb0-8fd1dbc54ee4" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/model/GameAction.java">
-      <ranges>
-        <range start1="15" end1="17" start2="15" end2="16" changelist="b567d9a3-3259-46f6-bbb0-8fd1dbc54ee4" />
-        <range start1="42" end1="42" start2="41" end2="43" changelist="e87b550e-3d6a-4d86-a721-c06a7156f051" />
+        <range start1="4" end1="7" start2="4" end2="14" changelist="e87b550e-3d6a-4d86-a721-c06a7156f051" />
+        <range start1="12" end1="16" start2="19" end2="33" changelist="e87b550e-3d6a-4d86-a721-c06a7156f051" />
+        <range start1="18" end1="18" start2="35" end2="45" changelist="e87b550e-3d6a-4d86-a721-c06a7156f051" />
+        <range start1="20" end1="20" start2="47" end2="49" changelist="e87b550e-3d6a-4d86-a721-c06a7156f051" />
+        <range start1="22" end1="22" start2="51" end2="108" changelist="68818cb0-604d-4df6-bbf4-d4fc4052d36d" />
+        <range start1="24" end1="30" start2="110" end2="110" changelist="e87b550e-3d6a-4d86-a721-c06a7156f051" />
       </ranges>
     </file>
   </component>
@@ -102,7 +76,7 @@
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.General",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -163,7 +137,7 @@
       <option name="presentableId" value="Default" />
       <updated>1669629032715</updated>
       <workItem from="1669734724410" duration="5174000" />
-      <workItem from="1669968834843" duration="6981000" />
+      <workItem from="1669968834843" duration="15393000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1669637929031</created>
@@ -361,7 +335,28 @@
       <option name="project" value="LOCAL" />
       <updated>1669911709523</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="01.12 event works">
+      <created>1669978811093</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1669978811093</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Changes by hmadrid">
+      <created>1669978822721</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1669978822721</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Changes by pind9">
+      <created>1669978830857</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1669978830857</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -384,26 +379,35 @@
     <MESSAGE value="It's me HUGO, I fixed all the mistakes" />
     <MESSAGE value="test" />
     <MESSAGE value="event done" />
-    <MESSAGE value="Changes by pind9" />
-    <MESSAGE value="01.12 event works" />
     <MESSAGE value="123" />
     <MESSAGE value="Changes by micha" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes by micha" />
+    <MESSAGE value="01.12 event works" />
+    <MESSAGE value="Changes by hmadrid" />
+    <MESSAGE value="Changes by pind9" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes by pind9" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/GUI/EventController.java</url>
-          <line>76</line>
           <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/GUI/EventController.java</url>
-          <line>81</line>
-          <option name="timeStamp" value="40" />
+          <url>file://$PROJECT_DIR$/src/GUI/CatalogueController.java</url>
+          <line>195</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/GUI/CatalogueController.java</url>
+          <line>178</line>
+          <option name="timeStamp" value="45" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
