@@ -35,8 +35,6 @@ public class StatusViewController
 
     public void initialize()
     {
-//        Scene scene = new Scene(root);
-//        window.setScene(scene);
     }
 
 

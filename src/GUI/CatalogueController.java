@@ -66,8 +66,6 @@ public class CatalogueController
                 genreChoiceBox.getItems().clear();
                 genreChoiceBox.getItems().addAll(AssociationModelManager.getAssociation().getGenreList().getArrayOfGenres());
                 genreChoiceBox.setValue(boardGameTemp.getGenre());
-                statusColumn.setText(boardGameTemp.getStatus());
-                ratingColumn.setText(boardGameTemp.getAverage());
             }
         }
     }
