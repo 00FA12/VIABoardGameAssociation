@@ -151,6 +151,10 @@ public class Association implements Serializable
   {
     this.studentList.removeStudent(student);
   }
+  public void removeStudent(int index)
+  {
+    this.studentList.removeStudent(studentList.getStudent(index));
+  }
 
   public void removeEvent(int index)
   {

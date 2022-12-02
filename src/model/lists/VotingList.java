@@ -10,6 +10,11 @@ public class VotingList implements Serializable
 {
   private ArrayList<GameCandidate> votes;
 
+  public VotingList()
+  {
+    this.votes = new ArrayList<>();
+  }
+
   public void addVote(GameCandidate vote)
   {
     this.votes.add(vote);
@@ -34,7 +39,9 @@ public class VotingList implements Serializable
 
   public int getSize()
   {
-    return votes.size();
+    if(votes != null)
+      return votes.size();
+    else return -1;
   }
 
   public GameCandidate getVote(int index)

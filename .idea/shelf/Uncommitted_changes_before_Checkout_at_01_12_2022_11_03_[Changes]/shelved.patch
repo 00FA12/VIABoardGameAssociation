@@ -1,0 +1,340 @@
+Index: src/GUI/EventController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package GUI;\r\n\r\nimport javafx.collections.FXCollections;\r\nimport javafx.collections.ObservableList;\r\nimport javafx.event.ActionEvent;\r\nimport javafx.fxml.FXML;\r\nimport javafx.scene.control.*;\r\nimport javafx.scene.control.cell.PropertyValueFactory;\r\nimport javafx.scene.layout.VBox;\r\nimport model.*;\r\nimport model.lists.EventList;\r\nimport model.lists.StudentList;\r\nimport org.controlsfx.control.CheckComboBox;\r\n\r\nimport java.time.LocalDate;\r\nimport java.util.ArrayList;\r\n\r\n//Kateryna//\r\npublic class EventController\r\n{\r\n    // todo delete all modelManager fields in astah!!\r\n    @FXML\r\n    private TableView<Event> eventsTable;\r\n    @FXML\r\n    private TextField titleField;\r\n    @FXML\r\n    private TextArea descriptionArea;\r\n    @FXML\r\n    private DatePicker datePicker;\r\n    @FXML\r\n    private VBox actionsForSelectedEventBox;\r\n    @FXML\r\n    private CheckComboBox<Student> attenders;//todo change in class diagram \"participants\"\r\n    @FXML\r\n    private Button editEventButton;\r\n    @FXML\r\n    private Button deleteEventButton;\r\n    @FXML\r\n    private Button addEventButton;\r\n    @FXML\r\n    private Button exportEventButton;\r\n    @FXML\r\n    private TableColumn<Event, String> titleColumn;\r\n    @FXML\r\n    private TableColumn<Event, String> descriptionColumn;\r\n    @FXML\r\n    private TableColumn<Event, String> dateColumn;\r\n    @FXML\r\n    private TableColumn<Event, String> attendersColumn;\r\n\r\n    public void initialize()\r\n    {\r\n        titleColumn.setCellValueFactory(\r\n                new PropertyValueFactory<>(\"title\"));\r\n        descriptionColumn.setCellValueFactory(\r\n                new PropertyValueFactory<Event, String>(\"description\"));\r\n        dateColumn.setCellValueFactory(\r\n                new PropertyValueFactory<Event, String>(\"date\"));\r\n        attendersColumn.setCellValueFactory(\r\n                new PropertyValueFactory<Event, String>(\"attenders\"));\r\n\r\n        updateTable();\r\n    }\r\n\r\n    public void handleAction(ActionEvent e)\r\n    {\r\n        if (e.getSource() == addEventButton)\r\n        {\r\n            String title = titleField.getText();\r\n            String description = descriptionColumn.getText();\r\n\r\n            MyDate date = new MyDate();\r\n            LocalDate tempDate = datePicker.getValue();\r\n            date.setDay(tempDate.getDayOfMonth());\r\n            date.setMonth(tempDate.getMonthValue());\r\n            date.setYear(tempDate.getYear()); // date initialization\r\n\r\n\r\n\r\n            Event event = new Event(title, description, date);\r\n\r\n            try\r\n            {\r\n                for (Student attender : attenders.getItems())\r\n                {\r\n                    event.addAttender(attender);\r\n                }\r\n            }\r\n            catch (ArrayIndexOutOfBoundsException exception)\r\n            {\r\n                System.err.println(\"Student list is empty in event tab\");\r\n            }\r\n\r\n            Association association = AssociationModelManager.getAssociation();\r\n            association.addEvent(event);\r\n            AssociationModelManager.saveAssociation(association);\r\n            updateTable();\r\n        }\r\n        else if (e.getSource() == exportEventButton)\r\n        {\r\n\r\n\r\n        }\r\n        else if (e.getSource() == editEventButton)\r\n        {\r\n            String title = titleField.getText();\r\n            String description = descriptionColumn.getText();\r\n\r\n            MyDate date = new MyDate();\r\n            LocalDate tempDate = datePicker.getValue();\r\n            date.setDay(tempDate.getDayOfMonth());\r\n            date.setMonth(tempDate.getMonthValue());\r\n            date.setYear(tempDate.getYear()); // date initialization\r\n\r\n\r\n            Association association = AssociationModelManager.getAssociation();\r\n            association.getEventList().setEvent(new Event(title, description, date), eventsTable.getSelectionModel().getSelectedIndex());\r\n            AssociationModelManager.saveAssociation(association);\r\n            updateTable();\r\n        }\r\n        else if (e.getSource() == deleteEventButton)\r\n        {\r\n            Association association = AssociationModelManager.getAssociation();\r\n            int temp = eventsTable.getSelectionModel().getSelectedIndex();\r\n            association.removeEvent(temp);\r\n            AssociationModelManager.saveAssociation(association);\r\n            updateTable();\r\n        }\r\n        else if (e.getSource() == eventsTable)\r\n        {\r\n            titleField.setText(titleColumn.getText());\r\n            descriptionArea.setText(descriptionColumn.getText());\r\n            String tempDate = dateColumn.getText();\r\n            MyDate eDate = new MyDate();\r\n            //eDate.setDay(dateColumn.getText());\r\n            //datePicker.setValue();\r\n\r\n        }\r\n    }/**/\r\n\r\n    public void updateTable()\r\n    {\r\n        EventList eventList = AssociationModelManager.getAssociation()\r\n                .getEventList();\r\n        eventsTable.getItems().clear();\r\n\r\n        for (int i = 0; i < eventList.getSize(); i++)\r\n        {\r\n            Event event = eventList.getEvent(i);\r\n            eventsTable.getItems().add(event);\r\n        }\r\n\r\n        ObservableList<Student> items = FXCollections.observableArrayList();\r\n        StudentList studentList = AssociationModelManager.getAssociation().getStudentList();\r\n        items.addAll(studentList.getArrayOfStudents());\r\n\r\n        attenders = new CheckComboBox<>(items);\r\n    }\r\n\r\n}\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/GUI/EventController.java b/src/GUI/EventController.java
+--- a/src/GUI/EventController.java	
++++ b/src/GUI/EventController.java	
+@@ -58,7 +58,7 @@
+                 new PropertyValueFactory<Event, String>("date"));
+         attendersColumn.setCellValueFactory(
+                 new PropertyValueFactory<Event, String>("attenders"));
+-
++        attenders = new CheckComboBox<>();
+         updateTable();
+     }
+ 
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"e87b550e-3d6a-4d86-a721-c06a7156f051\" name=\"Changes\" comment=\"It's me HUGO, podio\">\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/association.bin\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/association.bin\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/GUI/EventController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/GUI/EventController.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/GUI/StartGUI.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/GUI/StartGUI.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/model/Student.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/model/Student.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/model/lists/StudentList.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/model/lists/StudentList.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/utils/MyFileHandler.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/utils/MyFileHandler.java\" afterDir=\"false\" />\r\n    </list>\r\n    <list id=\"a1055603-fdfc-43a7-8c71-a6acc9a60709\" name=\"Changes by hmadrid\" comment=\"\">\r\n      <change beforePath=\"$PROJECT_DIR$/src/model/Association.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/model/Association.java\" afterDir=\"false\" />\r\n    </list>\r\n    <list id=\"333ad59c-8813-4286-8c6e-d021d683be6e\" name=\"Changes by micha\" comment=\"Changes by micha\">\r\n      <change beforePath=\"$PROJECT_DIR$/src/GUI/CatalogueController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/GUI/CatalogueController.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/model/AssociationModelManager.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/model/AssociationModelManager.java\" afterDir=\"false\" />\r\n    </list>\r\n    <list id=\"92cf072f-ff04-4727-ac15-cab332498a51\" name=\"Changes by pind9\" comment=\"\" />\r\n    <list id=\"d1a99415-edf2-468f-a9e2-b3fdf658817e\" name=\"Changes by Севастиан\" comment=\"Changes by Севастиан\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"AnnotationType\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2IAetqpdlMcvNNFQ6phxNnkXqO9\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"WebServerToolWindowFactoryState\": \"false\",\r\n    \"codeWithMe.voiceChat.enabledByDefault\": \"false\",\r\n    \"last_opened_file_path\": \"C:/Users/Sevastian/OneDrive - ViaUC/SEP1/VIABoardGameAssociation\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"project.structure.last.edited\": \"Libraries\",\r\n    \"project.structure.proportion\": \"0.15\",\r\n    \"project.structure.side.proportion\": \"0.2\",\r\n    \"settings.editor.selected.configurable\": \"preferences.pluginManager\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CreateClassDialog.RecentsKey\">\r\n      <recent name=\"GUI\" />\r\n      <recent name=\"main\" />\r\n      <recent name=\"model\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\GU301\\IdeaProjects\\VIABoardGameAssociation\\src\\GUI\" />\r\n      <recent name=\"C:\\Users\\GU301\\IdeaProjects\\VIABoardGameAssociation\\Diagrams\" />\r\n    </key>\r\n    <key name=\"CopyClassDialog.RECENTS_KEY\">\r\n      <recent name=\"utils\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Application.StartGUI\">\r\n    <configuration name=\"StartGUI\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"GUI.StartGUI\" />\r\n      <module name=\"VIABoardGameAssociation\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"GUI.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"test\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"main.test\" />\r\n      <module name=\"VIABoardGameAssociation\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"main.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.StartGUI\" />\r\n        <item itemvalue=\"Application.test\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"e87b550e-3d6a-4d86-a721-c06a7156f051\" name=\"Changes\" comment=\"\" />\r\n      <created>1669629032715</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1669629032715</updated>\r\n      <workItem from=\"1669734724410\" duration=\"5174000\" />\r\n      <workItem from=\"1669882927566\" duration=\"4517000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"1\">\r\n      <created>1669637929031</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669637929031</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"1\">\r\n      <created>1669638255017</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669638255017</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"1\">\r\n      <created>1669638813869</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669638813869</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"1\">\r\n      <created>1669643517329</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669643517329</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"1\">\r\n      <created>1669645046977</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669645046977</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"1\">\r\n      <created>1669645455337</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669645455337</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"Changes by pind9\">\r\n      <created>1669645469638</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669645469638</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"1\">\r\n      <created>1669645479967</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669645479967</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"1\">\r\n      <created>1669740966795</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669740966795</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"1\">\r\n      <created>1669741022978</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669741022978</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"Changes by micha\">\r\n      <created>1669741037281</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669741037281</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00012\" summary=\"Changes by Севастиан\">\r\n      <created>1669741046652</created>\r\n      <option name=\"number\" value=\"00012\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669741046652</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00013\" summary=\"1\">\r\n      <created>1669741057908</created>\r\n      <option name=\"number\" value=\"00013\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669741057908</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00014\" summary=\"1\">\r\n      <created>1669836710539</created>\r\n      <option name=\"number\" value=\"00014\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00014\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669836710539</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00015\" summary=\"1\">\r\n      <created>1669836971340</created>\r\n      <option name=\"number\" value=\"00015\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00015\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669836971340</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00016\" summary=\"It's me HUGO, I fixed all the mistakes\">\r\n      <created>1669837610816</created>\r\n      <option name=\"number\" value=\"00016\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00016\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669837610816</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00017\" summary=\"It's me HUGO, I fixed all the mistakes\">\r\n      <created>1669881985468</created>\r\n      <option name=\"number\" value=\"00017\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00017\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669881985484</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"18\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Changes by pind9\" />\r\n    <MESSAGE value=\"Changes by micha\" />\r\n    <MESSAGE value=\"Changes by Севастиан\" />\r\n    <MESSAGE value=\"1\" />\r\n    <MESSAGE value=\"It's me HUGO, I fixed all the mistakes\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"It's me HUGO, I fixed all the mistakes\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <line-breakpoint enabled=\"true\" type=\"java-method\">\r\n          <url>file://$PROJECT_DIR$/src/model/Event.java</url>\r\n          <line>47</line>\r\n          <properties class=\"model.Event\" method=\"setDescription\">\r\n            <option name=\"EMULATED\" value=\"true\" />\r\n            <option name=\"WATCH_EXIT\" value=\"false\" />\r\n          </properties>\r\n          <option name=\"timeStamp\" value=\"8\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/main/LoadInitialData.java</url>\r\n          <line>26</line>\r\n          <option name=\"timeStamp\" value=\"9\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/main/LoadInitialData.java</url>\r\n          <line>27</line>\r\n          <option name=\"timeStamp\" value=\"10\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/model/AssociationModelManager.java</url>\r\n          <line>36</line>\r\n          <option name=\"timeStamp\" value=\"13\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/utils/MyFileHandler.java</url>\r\n          <line>157</line>\r\n          <option name=\"timeStamp\" value=\"14\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/utils/MyFileHandler.java</url>\r\n          <line>156</line>\r\n          <option name=\"timeStamp\" value=\"15\" />\r\n        </line-breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\r\n    <expand />\r\n    <select />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -4,14 +4,11 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="e87b550e-3d6a-4d86-a721-c06a7156f051" name="Changes" comment="It's me HUGO, podio">
+-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
++    <list default="true" id="e87b550e-3d6a-4d86-a721-c06a7156f051" name="Changes" comment="test">
++      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/association.bin" beforeDir="false" afterPath="$PROJECT_DIR$/association.bin" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/GUI/EventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/EventController.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/GUI/StartGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/StartGUI.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Student.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/model/lists/StudentList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/lists/StudentList.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/utils/MyFileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/MyFileHandler.java" afterDir="false" />
+     </list>
+     <list id="a1055603-fdfc-43a7-8c71-a6acc9a60709" name="Changes by hmadrid" comment="">
+@@ -19,6 +16,7 @@
+     </list>
+     <list id="333ad59c-8813-4286-8c6e-d021d683be6e" name="Changes by micha" comment="Changes by micha">
+       <change beforePath="$PROJECT_DIR$/src/GUI/CatalogueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/CatalogueController.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/GUI/EventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/EventController.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/model/AssociationModelManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/AssociationModelManager.java" afterDir="false" />
+     </list>
+     <list id="92cf072f-ff04-4727-ac15-cab332498a51" name="Changes by pind9" comment="" />
+@@ -37,8 +35,46 @@
+     </option>
+   </component>
+   <component name="Git.Settings">
++    <option name="RECENT_BRANCH_BY_REPOSITORY">
++      <map>
++        <entry key="$PROJECT_DIR$" value="master" />
++      </map>
++    </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
++  <component name="GitToolBoxStore">
++    <option name="recentBranches">
++      <RecentBranches>
++        <option name="branchesForRepo">
++          <list>
++            <RecentBranchesForRepo>
++              <option name="branches">
++                <list>
++                  <RecentBranch>
++                    <option name="branchName" value="test" />
++                    <option name="lastUsedInstant" value="1669887718" />
++                  </RecentBranch>
++                  <RecentBranch>
++                    <option name="branchName" value="master" />
++                    <option name="lastUsedInstant" value="1669887717" />
++                  </RecentBranch>
++                </list>
++              </option>
++              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
++            </RecentBranchesForRepo>
++          </list>
++        </option>
++      </RecentBranches>
++    </option>
++  </component>
++  <component name="LineStatusTrackerManager">
++    <file path="$PROJECT_DIR$/src/GUI/EventController.java">
++      <ranges>
++        <range start1="60" end1="61" start2="60" end2="61" changelist="e87b550e-3d6a-4d86-a721-c06a7156f051" />
++        <range start1="156" end1="157" start2="156" end2="158" changelist="333ad59c-8813-4286-8c6e-d021d683be6e" />
++      </ranges>
++    </file>
++  </component>
+   <component name="MarkdownSettingsMigration">
+     <option name="stateVersion" value="1" />
+   </component>
+@@ -47,25 +83,25 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+-    "WebServerToolWindowFactoryState": "false",
+-    "codeWithMe.voiceChat.enabledByDefault": "false",
+-    "last_opened_file_path": "C:/Users/Sevastian/OneDrive - ViaUC/SEP1/VIABoardGameAssociation",
+-    "node.js.detected.package.eslint": "true",
+-    "node.js.detected.package.tslint": "true",
+-    "node.js.selected.package.eslint": "(autodetect)",
+-    "node.js.selected.package.tslint": "(autodetect)",
+-    "project.structure.last.edited": "Libraries",
+-    "project.structure.proportion": "0.15",
+-    "project.structure.side.proportion": "0.2",
+-    "settings.editor.selected.configurable": "preferences.pluginManager",
+-    "vue.rearranger.settings.migration": "true"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
++    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
++    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
++    &quot;last_opened_file_path&quot;: &quot;C:/Users/Sevastian/OneDrive - ViaUC/SEP1/VIABoardGameAssociation&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
++    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
++    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
++    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="RecentsManager">
+     <key name="CreateClassDialog.RecentsKey">
+       <recent name="GUI" />
+@@ -124,6 +160,7 @@
+       <updated>1669629032715</updated>
+       <workItem from="1669734724410" duration="5174000" />
+       <workItem from="1669882927566" duration="4517000" />
++      <workItem from="1669887501985" duration="1279000" />
+     </task>
+     <task id="LOCAL-00001" summary="1">
+       <created>1669637929031</created>
+@@ -244,7 +281,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1669881985484</updated>
+     </task>
+-    <option name="localTasksCounter" value="18" />
++    <task id="LOCAL-00018" summary="test">
++      <created>1669887765441</created>
++      <option name="number" value="00018" />
++      <option name="presentableId" value="LOCAL-00018" />
++      <option name="project" value="LOCAL" />
++      <updated>1669887765441</updated>
++    </task>
++    <option name="localTasksCounter" value="19" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -267,7 +311,8 @@
+     <MESSAGE value="Changes by Севастиан" />
+     <MESSAGE value="1" />
+     <MESSAGE value="It's me HUGO, I fixed all the mistakes" />
+-    <option name="LAST_COMMIT_MESSAGE" value="It's me HUGO, I fixed all the mistakes" />
++    <MESSAGE value="test" />
++    <option name="LAST_COMMIT_MESSAGE" value="test" />
+   </component>
+   <component name="XDebuggerManager">
+     <breakpoint-manager>
+@@ -282,29 +327,9 @@
+           <option name="timeStamp" value="8" />
+         </line-breakpoint>
+         <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/main/LoadInitialData.java</url>
+-          <line>26</line>
+-          <option name="timeStamp" value="9" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/main/LoadInitialData.java</url>
+-          <line>27</line>
+-          <option name="timeStamp" value="10" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/model/AssociationModelManager.java</url>
+-          <line>36</line>
+-          <option name="timeStamp" value="13" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/utils/MyFileHandler.java</url>
+-          <line>157</line>
+-          <option name="timeStamp" value="14" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/utils/MyFileHandler.java</url>
+-          <line>156</line>
+-          <option name="timeStamp" value="15" />
++          <url>file://$PROJECT_DIR$/src/GUI/EventController.java</url>
++          <line>158</line>
++          <option name="timeStamp" value="20" />
+         </line-breakpoint>
+       </breakpoints>
+     </breakpoint-manager>
+Index: .idea/git_toolbox_prj.xml
+===================================================================
+diff --git a/.idea/git_toolbox_prj.xml b/.idea/git_toolbox_prj.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/git_toolbox_prj.xml	
+@@ -0,0 +1,15 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="GitToolBoxProjectSettings">
++    <option name="commitMessageIssueKeyValidationOverride">
++      <BoolValueOverride>
++        <option name="enabled" value="true" />
++      </BoolValueOverride>
++    </option>
++    <option name="commitMessageValidationEnabledOverride">
++      <BoolValueOverride>
++        <option name="enabled" value="true" />
++      </BoolValueOverride>
++    </option>
++  </component>
++</project>
+\ No newline at end of file
+Index: association.bin
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>��\u0000\u0005sr\u0000\u0011model.Association:�\u0019L�e��\u0002\u0000\u0005L\u0000\tcataloguet\u0000\u0017Lmodel/lists/Catalogue;L\u0000\teventListt\u0000\u0017Lmodel/lists/EventList;L\u0000\tgenreListt\u0000\u0017Lmodel/lists/GenreList;L\u0000\u000BstudentListt\u0000\u0019Lmodel/lists/StudentList;L\u0000\nvotingListt\u0000\u0018Lmodel/lists/VotingList;xpsr\u0000\u0015model.lists.Cataloguec��A��{�\u0002\u0000\u0001L\u0000\tcataloguet\u0000\u0015Ljava/util/ArrayList;xpsr\u0000\u0013java.util.ArrayListx��\u001D��a�\u0003\u0000\u0001I\u0000\u0004sizexp\u0000\u0000\u0000\u0000w\u0004\u0000\u0000\u0000\u0000xsr\u0000\u0015model.lists.EventListq;4�A:�\u0004\u0002\u0000\u0001L\u0000\u0006eventsq\u0000~\u0000\bxpsq\u0000~\u0000\n\u0000\u0000\u0000#w\u0004\u0000\u0000\u0000#sr\u0000\u000Bmodel.Event9��kÌ}�\u0002\u0000\u0004L\u0000\tattendersq\u0000~\u0000\u0004L\u0000\u0004datet\u0000\u000ELmodel/MyDate;L\u0000\u000Bdescriptiont\u0000\u0012Ljava/lang/String;L\u0000\u0005titleq\u0000~\u0000\u0011xpsr\u0000\u0017model.lists.StudentList9�\u0015�a�\u001E\u000F\u0002\u0000\u0001L\u0000\bstudentsq\u0000~\u0000\bxpsq\u0000~\u0000\n\u0000\u0000\u0000\u0000w\u0004\u0000\u0000\u0000\u0000xsr\u0000\fmodel.MyDate\\g���Ze�\u0002\u0000\u0003I\u0000\u0003dayI\u0000\u0005monthI\u0000\u0004yearxp\u0000\u0000\u0000\u000F\u0000\u0000\u0000\u000B\u0000\u0000\u0007�t\u0000\u000BDescriptiont\u0000\fshjhgmj,hmhhsq\u0000~\u0000\u000Fsq\u0000~\u0000\u0013sq\u0000~\u0000\n\u0000\u0000\u0000\u0000w\u0004\u0000\u0000\u0000\u0000xsq\u0000~\u0000\u0016\u0000\u0000\u0000\u000F\u0000\u0000\u0000\u000B\u0000\u0000\u0007�t\u0000\u000BDescriptiont\u0000\fshjhgmj,hmhhsq\u0000~\u0000\u000Fsq\u0000~\u0000\u0013sq\u0000~\u0000\n\u0000\u0000\u0000\u0000w\u0004\u0000\u0000\u0000\u0000xsq\u0000~\u0000\u0016\u0000\u0000\u0000\u000F\u0000\u0000\u0000\u000B\u0000\u0000\u0007�t\u0000\u000BDescriptiont\u0000\fshjhgmj,hmhhsq\u0000~\u0000\u000Fsq\u0000~\u0000\u0013sq\u0000~\u0000\n\u0000\u0000\u0000\u0000w\u0004\u0000\u0000\u0000\u0000xsq\u0000~\u0000\u0016\u0000\u0000\u0000\u000F\u0000\u0000\u0000\u000B\u0000\u0000\u0007�t\u0000\u000BDescriptiont\u0000\fshjhgmj,hmhhsq\u0000~\u0000\u000Fsq\u0000~\u0000\u0013sq\u0000~\u0000\n\u0000\u0000\u0000\u0000w\u0004\u0000\u0000\u0000\u0000xsq\u0000~\u0000\u0016\u0000\u0000\u0000\u000F\u0000\u0000\u0000\u000B\u0000\u0000\u0007�t\u0000\u000BDescriptiont\u0000\fshjhgmj,hmhhsq\u0000~\u0000\u000Fsq\u0000~\u0000\u0013sq\u0000~\u0000\n\u0000\u0000\u0000\u0000w\u0004\u0000\u0000\u0000\u0000xsq\u0000~\u0000\u0016\u0000\u0000\u0000\u000F\u0000\u0000\u0000\u000B\u0000\u0000\u0007�t\u0000\u000BDescriptiont\u0000\fshjhgmj,hmhhsq\u0000~\u0000\u000Fsq\u0000~\u0000\u0013sq\u0000~\u0000\n\u0000\u0000\u0000\u0000w\u0004\u0000\u0000\u0000\u0000xsq\u0000~\u0000\u0016\u0000\u0000\u0000\u000F\u0000\u0000\u0000\u000B\u0000\u0000\u0007�t\u0000\u000BDescriptiont\u0000\fshjhgmj,hmhhsq\u0000~\u0000\u000Fsq\u0000~\u0000\u0013sq\u0000~\u0000\n\u0000\u0000\u0000\u0000w\u0004\u0000\u0000\u0000\u0000xsq\u0000~\u0000\u0016\u0000\u0000\u0000\u000F\u0000\u0000\u0000\u000B\u0000\u0000\u0007�t\u0000\u000BDescriptiont\u0000\fshjhgmj,hmhhsq\u0000~\u0000\u000Fsq\u0000~\u0000\u0013sq\u0000~\u0000\n\u0000\u0000\u0000\u0000w\u0004\u0000\u0000\u0000\u0000xsq\u0000~\u0000\u0016\u0000\u0000\u0000\u000F\u0000\u0000\u0000\u000B\u0000\u0000\u0007�t\u0000\u000BDescriptiont\u0000\fshjhgmj,hmhhsq\u0000~\u0000\u000Fsq\u0000~\u0000\u0013sq\u0000~\u0000\n\u0000\u0000\u0000\u0000w\u0004\u0000\u0000\u0000\u0000xsq\u0000~\u0000\u0016\u0000\u0000\u0000\u000F\u0000\u0000\u0000\u000B\u0000\u0000\u0007�t\u0000\u000BDescriptiont\u0000\fshjhgmj,hmhhsq\u0000~\u0000\u000Fsq\u0000~\u0000\u0013sq\u0000~\u0000\n\u0000\u0000\u0000\u0000w\u0004\u0000\u0000\u0000\u0000xsq\u0000~\u0000\u0016\u0000\u0000\u0000\u000F\u0000\u0000\u0000\u000B\u0000\u0000\u0007�t\u0000\u000BDescriptiont\u0000\fshjhgmj,hmhhsq\u0000~\u0000\u000Fsq\u0000~\u0000\u0013sq\u0000~\u0000\n\u0000\u0000\u0000\u0000w\u0004\u0000\u0000\u0000\u0000xsq\u0000~\u0000\u0016\u0000\u0000\u0000\u000F\u0000\u0000\u0000\u000B\u0000\u0000\u0007�t\u0000\u000BDescriptiont\u0000\fshjhgmj,hmhhsq\u0000~\u0000\u000Fsq\u0000~\u0000\u0013sq\u0000~\u0000\n\u0000\u0000\u0000\u0000w\u0004\u0000\u0000\u0000\u0000xsq\u0000~\u0000\u0016\u0000\u0000\u0000\u000F\u0000\u0000\u0000\u000B\u0000\u0000\u0007�t\u0000\u000BDescriptiont\u0000\fshjhgmj,hmhhsq\u0000~\u0000\u000Fsq\u0000~\u0000\u0013sq\u0000~\u0000\n\u0000\u0000\u0000\u0000w\u0004\u0000\u0000\u0000\u0000xsq\u0000~\u0000\u0016\u0000\u0000\u0000\u000F\u0000\u0000\u0000\u000B\u0000\u0000\u0007�t\u0000\u000BDescriptiont\u0000\fshjhgmj,hmhhsq\u0000~\u0000\u000Fsq\u0000~\u0000\u0013sq\u0000~\u0000\n\u0000\u0000\u0000\u0000w\u0004\u0000\u0000\u0000\u0000xsq\u0000~\u0000\u0016\u0000\u0000\u0000\u000F\u0000\u0000\u0000\u000B\u0000\u0000\u0007�t\u0000\u000BDescriptiont\u0000\fshjhgmj,hmhhsq\u0000~\u0000\u000Fsq\u0000~\u0000\u0013sq\u0000~\u0000\n\u0000\u0000\u0000\u0000w\u0004\u0000\u0000\u0000\u0000xsq\u0000~\u0000\u0016\u0000\u0000\u0000\u000F\u0000\u0000\u0000\u000B\u0000\u0000\u0007�t\u0000\u000BDescriptiont\u0000\fshjhgmj,hmhhsq\u0000~\u0000\u000Fsq\u0000~\u0000\u0013sq\u0000~\u0000\n\u0000\u0000\u0000\u0000w\u0004\u0000\u0000\u0000\u0000xsq\u0000~\u0000\u0016\u0000\u0000\u0000\u000F\u0000\u0000\u0000\u000B\u0000\u0000\u0007�t\u0000\u000BDescriptiont\u0000\fshjhgmj,hmhhsq\u0000~\u0000\u000Fsq\u0000~\u0000\u0013sq\u0000~\u0000\n\u0000\u0000\u0000\u0000w\u0004\u0000\u0000\u0000\u0000xsq\u0000~\u0000\u0016\u0000\u0000\u0000\u000F\u0000\u0000\u0000\u000B\u0000\u0000\u0007�t\u0000\u000BDescriptiont\u0000\fshjhgmj,hmhhsq\u0000~\u0000\u000Fsq\u0000~\u0000\u0013sq\u0000~\u0000\n\u0000\u0000\u0000\u0000w\u0004\u0000\u0000\u0000\u0000xsq\u0000~\u0000\u0016\u0000\u0000\u0000\u000F\u0000\u0000\u0000\u000B\u0000\u0000\u0007�t\u0000\u000BDescriptiont\u0000\fshjhgmj,hmhhsq\u0000~\u0000\u000Fsq\u0000~\u0000\u0013sq\u0000~\u0000\n\u0000\u0000\u0000\u0000w\u0004\u0000\u0000\u0000\u0000xsq\u0000~\u0000\u0016\u0000\u0000\u0000\u000F\u0000\u0000\u0000\u000B\u0000\u0000\u0007�t\u0000\u000BDescriptiont\u0000\fshjhgmj,hmhhsq\u0000~\u0000\u000Fsq\u0000~\u0000\u0013sq\u0000~\u0000\n\u0000\u0000\u0000\u0000w\u0004\u0000\u0000\u0000\u0000xsq\u0000~\u0000\u0016\u0000\u0000\u0000\u000F\u0000\u0000\u0000\u000B\u0000\u0000\u0007�t\u0000\u000BDescriptiont\u0000\fshjhgmj,hmhhsq\u0000~\u0000\u000Fsq\u0000~\u0000\u0013sq\u0000~\u0000\n\u0000\u0000\u0000\u0000w\u0004\u0000\u0000\u0000\u0000xsq\u0000~\u0000\u0016\u0000\u0000\u0000\u000F\u0000\u0000\u0000\u000B\u0000\u0000\u0007�t\u0000\u000BDescriptiont\u0000\fshjhgmj,hmhhsq\u0000~\u0000\u000Fsq\u0000~\u0000\u0013sq\u0000~\u0000\n\u0000\u0000\u0000\u0000w\u0004\u0000\u0000\u0000\u0000xsq\u0000~\u0000\u0016\u0000\u0000\u0000\u000F\u0000\u0000\u0000\u000B\u0000\u0000\u0007�t\u0000\u000BDescriptiont\u0000\fshjhgmj,hmhhsq\u0000~\u0000\u000Fsq\u0000~\u0000\u0013sq\u0000~\u0000\n\u0000\u0000\u0000\u0000w\u0004\u0000\u0000\u0000\u0000xsq\u0000~\u0000\u0016\u0000\u0000\u0000\u000F\u0000\u0000\u0000\u000B\u0000\u0000\u0007�t\u0000\u000BDescriptiont\u0000\fshjhgmj,hmhhsq\u0000~\u0000\u000Fsq\u0000~\u0000\u0013sq\u0000~\u0000\n\u0000\u0000\u0000\u0000w\u0004\u0000\u0000\u0000\u0000xsq\u0000~\u0000\u0016\u0000\u0000\u0000\u000F\u0000\u0000\u0000\u000B\u0000\u0000\u0007�t\u0000\u000BDescriptiont\u0000\fshjhgmj,hmhhsq\u0000~\u0000\u000Fsq\u0000~\u0000\u0013sq\u0000~\u0000\n\u0000\u0000\u0000\u0000w\u0004\u0000\u0000\u0000\u0000xsq\u0000~\u0000\u0016\u0000\u0000\u0000\u000F\u0000\u0000\u0000\u000B\u0000\u0000\u0007�t\u0000\u000BDescriptiont\u0000\fshjhgmj,hmhhsq\u0000~\u0000\u000Fsq\u0000~\u0000\u0013sq\u0000~\u0000\n\u0000\u0000\u0000\u0000w\u0004\u0000\u0000\u0000\u0000xsq\u0000~\u0000\u0016\u0000\u0000\u0000\u000F\u0000\u0000\u0000\u000B\u0000\u0000\u0007�t\u0000\u000BDescriptiont\u0000\fshjhgmj,hmhhsq\u0000~\u0000\u000Fsq\u0000~\u0000\u0013sq\u0000~\u0000\n\u0000\u0000\u0000\u0000w\u0004\u0000\u0000\u0000\u0000xsq\u0000~\u0000\u0016\u0000\u0000\u0000\u000F\u0000\u0000\u0000\u000B\u0000\u0000\u0007�t\u0000\u000BDescriptiont\u0000\fshjhgmj,hmhhsq\u0000~\u0000\u000Fsq\u0000~\u0000\u0013sq\u0000~\u0000\n\u0000\u0000\u0000\u0000w\u0004\u0000\u0000\u0000\u0000xsq\u0000~\u0000\u0016\u0000\u0000\u0000\u000F\u0000\u0000\u0000\u000B\u0000\u0000\u0007�t\u0000\u000BDescriptiont\u0000\fshjhgmj,hmhhsq\u0000~\u0000\u000Fsq\u0000~\u0000\u0013sq\u0000~\u0000\n\u0000\u0000\u0000\u0000w\u0004\u0000\u0000\u0000\u0000xsq\u0000~\u0000\u0016\u0000\u0000\u0000\u000F\u0000\u0000\u0000\u000B\u0000\u0000\u0007�t\u0000\u000BDescriptiont\u0000\fshjhgmj,hmhhsq\u0000~\u0000\u000Fsq\u0000~\u0000\u0013sq\u0000~\u0000\n\u0000\u0000\u0000\u0000w\u0004\u0000\u0000\u0000\u0000xsq\u0000~\u0000\u0016\u0000\u0000\u0000\u000F\u0000\u0000\u0000\u000B\u0000\u0000\u0007�t\u0000\u000BDescriptiont\u0000\fshjhgmj,hmhhsq\u0000~\u0000\u000Fsq\u0000~\u0000\u0013sq\u0000~\u0000\n\u0000\u0000\u0000\u0000w\u0004\u0000\u0000\u0000\u0000xsq\u0000~\u0000\u0016\u0000\u0000\u0000\u000F\u0000\u0000\u0000\u000B\u0000\u0000\u0007�t\u0000\u000BDescriptiont\u0000\fshjhgmj,hmhhsq\u0000~\u0000\u000Fsq\u0000~\u0000\u0013sq\u0000~\u0000\n\u0000\u0000\u0000\u0000w\u0004\u0000\u0000\u0000\u0000xsq\u0000~\u0000\u0016\u0000\u0000\u0000\u000F\u0000\u0000\u0000\u000B\u0000\u0000\u0007�t\u0000\u000BDescriptiont\u0000\fshjhgmj,hmhhsq\u0000~\u0000\u000Fsq\u0000~\u0000\u0013sq\u0000~\u0000\n\u0000\u0000\u0000\u0000w\u0004\u0000\u0000\u0000\u0000xsq\u0000~\u0000\u0016\u0000\u0000\u0000\u000F\u0000\u0000\u0000\u000B\u0000\u0000\u0007�t\u0000\u000BDescriptiont\u0000\fshjhgmj,hmhhsq\u0000~\u0000\u000Fsq\u0000~\u0000\u0013sq\u0000~\u0000\n\u0000\u0000\u0000\u0000w\u0004\u0000\u0000\u0000\u0000xsq\u0000~\u0000\u0016\u0000\u0000\u0000\u000F\u0000\u0000\u0000\u000B\u0000\u0000\u0007�t\u0000\u000BDescriptiont\u0000\fshjhgmj,hmhhxsr\u0000\u0015model.lists.GenreList\u0017\u0012)�53>D\u0002\u0000\u0001L\u0000\u0006genresq\u0000~\u0000\bxpsq\u0000~\u0000\n\u0000\u0000\u0000\u0005w\u0004\u0000\u0000\u0000\u0005sr\u0000\u000Bmodel.GenreD��6��\u0005G\u0002\u0000\u0001L\u0000\u0004nameq\u0000~\u0000\u0011xpt\u0000\bAbstractsq\u0000~\u0000�t\u0000\bBluffingsq\u0000~\u0000�t\u0000\nCard Gamessq\u0000~\u0000�t\u0000\u0011Children’s Gamesq\u0000~\u0000�t\u0000\nCity Buildingxsq\u0000~\u0000\u0013sq\u0000~\u0000\n\u0000\u0000\u0000\u0002w\u0004\u0000\u0000\u0000\u0002sr\u0000\nmodel.Student\n%���'�o\u0002\u0000\u0003I\u0000\u0002IDZ\u0000\bisMemberL\u0000\u0004nameq\u0000~\u0000\u0011xp\u0000\u0001�@\u0001t\u0000\u0007Michaelsq\u0000~\u0000�\u0000\u0001�A\u0000t\u0000\tSevastianxsr\u0000\u0016model.lists.VotingList�H8�zYl\u0001\u0002\u0000\u0001L\u0000\u0005votesq\u0000~\u0000\bxpp
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/association.bin b/association.bin
+--- a/association.bin	
++++ b/association.bin	
+@@ -1,44 +1,10 @@
+ �� sr model.Association:�L�e�� L 	cataloguet Lmodel/lists/Catalogue;L 	eventListt Lmodel/lists/EventList;L 	genreListt Lmodel/lists/GenreList;L studentListt Lmodel/lists/StudentList;L 
+ votingListt Lmodel/lists/VotingList;xpsr model.lists.Cataloguec��A��{� L 	cataloguet Ljava/util/ArrayList;xpsr java.util.ArrayListx����a� I sizexp    w    xsr model.lists.EventListq;4�A:� L eventsq ~ xpsq ~ 
+-   #w   #sr model.Event9��kÌ}� L 	attendersq ~ L datet Lmodel/MyDate;L descriptiont Ljava/lang/String;L titleq ~ xpsr model.lists.StudentList9��a� L studentsq ~ xpsq ~ 
+-    w    xsr model.MyDate\g���Ze� I dayI monthI yearxp        �t Descriptiont shjhgmj,hmhhsq ~ sq ~ sq ~ 
+-    w    xsq ~         �t Descriptiont shjhgmj,hmhhsq ~ sq ~ sq ~ 
+-    w    xsq ~         �t Descriptiont shjhgmj,hmhhsq ~ sq ~ sq ~ 
+-    w    xsq ~         �t Descriptiont shjhgmj,hmhhsq ~ sq ~ sq ~ 
+-    w    xsq ~         �t Descriptiont shjhgmj,hmhhsq ~ sq ~ sq ~ 
+-    w    xsq ~         �t Descriptiont shjhgmj,hmhhsq ~ sq ~ sq ~ 
+-    w    xsq ~         �t Descriptiont shjhgmj,hmhhsq ~ sq ~ sq ~ 
+-    w    xsq ~         �t Descriptiont shjhgmj,hmhhsq ~ sq ~ sq ~ 
+-    w    xsq ~         �t Descriptiont shjhgmj,hmhhsq ~ sq ~ sq ~ 
+-    w    xsq ~         �t Descriptiont shjhgmj,hmhhsq ~ sq ~ sq ~ 
+-    w    xsq ~         �t Descriptiont shjhgmj,hmhhsq ~ sq ~ sq ~ 
+-    w    xsq ~         �t Descriptiont shjhgmj,hmhhsq ~ sq ~ sq ~ 
+-    w    xsq ~         �t Descriptiont shjhgmj,hmhhsq ~ sq ~ sq ~ 
+-    w    xsq ~         �t Descriptiont shjhgmj,hmhhsq ~ sq ~ sq ~ 
+-    w    xsq ~         �t Descriptiont shjhgmj,hmhhsq ~ sq ~ sq ~ 
+-    w    xsq ~         �t Descriptiont shjhgmj,hmhhsq ~ sq ~ sq ~ 
+-    w    xsq ~         �t Descriptiont shjhgmj,hmhhsq ~ sq ~ sq ~ 
+-    w    xsq ~         �t Descriptiont shjhgmj,hmhhsq ~ sq ~ sq ~ 
+-    w    xsq ~         �t Descriptiont shjhgmj,hmhhsq ~ sq ~ sq ~ 
+-    w    xsq ~         �t Descriptiont shjhgmj,hmhhsq ~ sq ~ sq ~ 
+-    w    xsq ~         �t Descriptiont shjhgmj,hmhhsq ~ sq ~ sq ~ 
+-    w    xsq ~         �t Descriptiont shjhgmj,hmhhsq ~ sq ~ sq ~ 
+-    w    xsq ~         �t Descriptiont shjhgmj,hmhhsq ~ sq ~ sq ~ 
+-    w    xsq ~         �t Descriptiont shjhgmj,hmhhsq ~ sq ~ sq ~ 
+-    w    xsq ~         �t Descriptiont shjhgmj,hmhhsq ~ sq ~ sq ~ 
+-    w    xsq ~         �t Descriptiont shjhgmj,hmhhsq ~ sq ~ sq ~ 
+-    w    xsq ~         �t Descriptiont shjhgmj,hmhhsq ~ sq ~ sq ~ 
+-    w    xsq ~         �t Descriptiont shjhgmj,hmhhsq ~ sq ~ sq ~ 
+-    w    xsq ~         �t Descriptiont shjhgmj,hmhhsq ~ sq ~ sq ~ 
+-    w    xsq ~         �t Descriptiont shjhgmj,hmhhsq ~ sq ~ sq ~ 
+-    w    xsq ~         �t Descriptiont shjhgmj,hmhhsq ~ sq ~ sq ~ 
+-    w    xsq ~         �t Descriptiont shjhgmj,hmhhsq ~ sq ~ sq ~ 
+-    w    xsq ~         �t Descriptiont shjhgmj,hmhhsq ~ sq ~ sq ~ 
+-    w    xsq ~         �t Descriptiont shjhgmj,hmhhsq ~ sq ~ sq ~ 
+-    w    xsq ~         �t Descriptiont shjhgmj,hmhhxsr model.lists.GenreList)�53>D L genresq ~ xpsq ~ 
+-   w   sr model.GenreD��6��G L nameq ~ xpt Abstractsq ~ �t Bluffingsq ~ �t 
+-Card Gamessq ~ �t Children’s Gamesq ~ �t 
++   w   sr model.Event9��kÌ}� L 	attendersq ~ L datet Lmodel/MyDate;L descriptiont Ljava/lang/String;L titleq ~ xpsr model.lists.StudentListΦEAd7y L studentsq ~ xpsq ~ 
++    w    xsr model.MyDate\g���Ze� I dayI monthI yearxp        �t Descriptiont cvbnm,omilknubjhvctvydbufngmh,lxsr model.lists.GenreList)�53>D L genresq ~ xpsq ~ 
++   w   sr model.GenreD��6��G L nameq ~ xpt Abstractsq ~ t Bluffingsq ~ t 
++Card Gamessq ~ t Children’s Gamesq ~ t 
+ City Buildingxsq ~ sq ~ 
+    w   sr 
+ model.Student
+-%���'�o I IDZ isMemberL nameq ~ xp �@t Michaelsq ~ � �A t 	Sevastianxsr model.lists.VotingList�H8�zYl L votesq ~ xpp
+\ No newline at end of file
++%���'�o I IDZ isMemberL nameq ~ xp  	t Michael Leosq ~ *  � t Hugoxsr model.lists.VotingList�H8�zYl L votesq ~ xpp
+\ No newline at end of file
+Index: src/utils/MyFileHandler.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package utils;\r\n\r\nimport java.io.*;\r\nimport java.util.ArrayList;\r\nimport java.util.Scanner;\r\n\r\npublic class MyFileHandler\r\n{\r\n  public static void writeToTextFile(String name, String str)\r\n      throws FileNotFoundException\r\n  {\r\n    PrintWriter write = null;\r\n    try\r\n    {\r\n      FileOutputStream fileOut = new FileOutputStream(name);\r\n      write = new PrintWriter(fileOut);\r\n      write.print(str);\r\n    }\r\n    finally\r\n    {\r\n      if (write != null)\r\n        write.close();\r\n    }\r\n  }\r\n\r\n  public static void appendToTextFile(String name, String str)\r\n      throws FileNotFoundException\r\n  {\r\n    PrintWriter write = null;\r\n    try\r\n    {\r\n      FileOutputStream fileOut = new FileOutputStream(name, true);\r\n      write = new PrintWriter(fileOut);\r\n      write.print(str);\r\n    }\r\n    finally\r\n    {\r\n      if (write != null)\r\n        write.close();\r\n    }\r\n  }\r\n\r\n  public static void appendArrayToTextFile(String name, String[] str)\r\n      throws FileNotFoundException\r\n  {\r\n    PrintWriter write = null;\r\n    try\r\n    {\r\n      FileOutputStream fileOut = new FileOutputStream(name, true);\r\n      write = new PrintWriter(fileOut);\r\n      write.print(str);\r\n    }\r\n    finally\r\n    {\r\n      if (write != null)\r\n        write.close();\r\n    }\r\n  }\r\n\r\n  public static String[] readFromTextFile(String fileName)\r\n      throws FileNotFoundException\r\n  {\r\n    Scanner readFromFile = null;\r\n    ArrayList<String> strs = new ArrayList<String>();\r\n\r\n    try\r\n    {\r\n      FileInputStream fileInStream = new FileInputStream(fileName);\r\n      readFromFile = new Scanner(fileInStream);\r\n\r\n      while (readFromFile.hasNext())\r\n      {\r\n        strs.add(readFromFile.nextLine());\r\n      }\r\n    }\r\n    finally\r\n    {\r\n      if (readFromFile != null)\r\n      {\r\n        readFromFile.close();\r\n      }\r\n    }\r\n\r\n    String[] strsArray = new String[strs.size()];\r\n    return strs.toArray(strsArray);\r\n  }\r\n\r\n  public static void writeToBinaryFile(String name, Object obj)\r\n      throws FileNotFoundException, IOException\r\n  {\r\n    ObjectOutputStream write = null;\r\n    System.out.println(\"Write to binary file was called!\");\r\n\r\n    try\r\n    {\r\n      FileOutputStream fileOut = new FileOutputStream(name);\r\n      write = new ObjectOutputStream(fileOut);\r\n      write.writeObject(obj);\r\n    }\r\n    finally\r\n    {\r\n      if (write != null)\r\n      {\r\n        try\r\n        {\r\n          write.close();\r\n        }\r\n        catch (IOException e)\r\n        {\r\n          System.out.println(\"IO Error closing file \" + name);\r\n        }\r\n      }\r\n    }\r\n  }\r\n  public static Object readFromBinaryFile(String fileName) throws FileNotFoundException, IOException, ClassNotFoundException\r\n  {\r\n    Object obj = null;\r\n    ObjectInputStream readFromFile = null;\r\n    try\r\n    {\r\n      FileInputStream fileInStream = new FileInputStream(fileName);\r\n      readFromFile = new ObjectInputStream(fileInStream);\r\n      try\r\n      {\r\n        obj = readFromFile.readObject();\r\n      }\r\n      catch (EOFException eof)\r\n      {\r\n        //Done reading\r\n      }\r\n    }\r\n    finally\r\n    {\r\n      if (readFromFile != null)\r\n      {\r\n        try\r\n        {\r\n          readFromFile.close();\r\n        }\r\n        catch (IOException e)\r\n        {\r\n          System.out.println(\"IO Error closing file \" + fileName);\r\n        }\r\n      }\r\n    }\r\n\r\n    return obj;\r\n\r\n//  public static Object readFromBinaryFile(String name)\r\n//      throws FileNotFoundException, IOException, ClassNotFoundException\r\n//  {\r\n//    ObjectInputStream read = null;\r\n//    Object obj = null;\r\n//    try\r\n//    {\r\n//      FileInputStream fileIn = new FileInputStream(name);\r\n//      read = new ObjectInputStream(fileIn);\r\n//      obj = read.readObject();\r\n//    }\r\n//    finally\r\n//    {\r\n//      if (read != null)\r\n//      {\r\n//        try\r\n//        {\r\n//          read.close();\r\n//        }\r\n//        catch (IOException e)\r\n//        {\r\n//          System.out.println(\"IO Error closing file \" + name);\r\n//        }\r\n//      }\r\n//      return obj;\r\n//    }\r\n  }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/utils/MyFileHandler.java b/src/utils/MyFileHandler.java
+--- a/src/utils/MyFileHandler.java	
++++ b/src/utils/MyFileHandler.java	
+@@ -145,32 +145,5 @@
+     }
+ 
+     return obj;
+-
+-//  public static Object readFromBinaryFile(String name)
+-//      throws FileNotFoundException, IOException, ClassNotFoundException
+-//  {
+-//    ObjectInputStream read = null;
+-//    Object obj = null;
+-//    try
+-//    {
+-//      FileInputStream fileIn = new FileInputStream(name);
+-//      read = new ObjectInputStream(fileIn);
+-//      obj = read.readObject();
+-//    }
+-//    finally
+-//    {
+-//      if (read != null)
+-//      {
+-//        try
+-//        {
+-//          read.close();
+-//        }
+-//        catch (IOException e)
+-//        {
+-//          System.out.println("IO Error closing file " + name);
+-//        }
+-//      }
+-//      return obj;
+-//    }
+   }
+ }

@@ -54,6 +54,22 @@ public class BoardGame implements Serializable
     this.title = title;
   }
 
+  public String getStatus()
+  {
+    if(gameAction == null)
+      return "None";
+    return gameAction.toString();
+  }
+  public String getAverage()
+  {
+    return ratings.average();
+  }
+
+  public void setGenre(Genre genre)
+  {
+    this.genre = genre;
+  }
+
   public void setOwnerID(int ownerID)
   {
     this.ownerID = ownerID;

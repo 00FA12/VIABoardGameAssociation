@@ -1,7 +1,13 @@
 package model;
 
+import javax.swing.text.DateFormatter;
 import java.io.Serializable;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
 
 //Kateryna
 public class MyDate implements Serializable
@@ -86,7 +92,11 @@ public class MyDate implements Serializable
 
   public String toString()
   {
-    return day + "/" + month + "/" + year;
+    LocalDate myDateObj = LocalDate.of(year, month, day);
+    DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd.MM.yyyy");
+
+    String formattedDate = myDateObj.format(myFormatObj);
+    return formattedDate;
   }
 
 }

@@ -1,49 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
 <?import javafx.scene.layout.VBox?>
-<VBox xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="GUI.MainController">
+
+<VBox xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.MainController">
     <children>
         <MenuBar>
             <menus>
                 <Menu mnemonicParsing="false" text="Export">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="Catalogue"/>
-                        <MenuItem mnemonicParsing="false" text="Events"/>
-                        <MenuItem mnemonicParsing="false" text="Votes"/>
+                        <MenuItem mnemonicParsing="false" text="Catalogue" />
+                        <MenuItem mnemonicParsing="false" text="Events" />
+                        <MenuItem mnemonicParsing="false" text="Votes" />
                     </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Help">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="Help"/>
-                        <MenuItem mnemonicParsing="false" text="About"/>
+                        <MenuItem mnemonicParsing="false" text="Help" />
+                        <MenuItem mnemonicParsing="false" text="About" />
                     </items>
                 </Menu>
             </menus>
         </MenuBar>
-        <TabPane fx:id="tabs" maxHeight="-Infinity" maxWidth="-Infinity"
-                 minHeight="-Infinity" minWidth="-Infinity" prefWidth="600.0"
-                 tabClosingPolicy="UNAVAILABLE">
+        <TabPane fx:id="tabs" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
             <tabs>
-                <Tab fx:id="catalogueTab" text="Catalogue">
+                <Tab fx:id="catalogueTab" onSelectionChanged="#tabChanged" text="Catalogue">
                     <content>
-                        <fx:include source="catalogue_tab.fxml"/>
+                        <fx:include fx:id="catalogueTabContent" source="catalogue_tab.fxml" />
                     </content>
                 </Tab>
-                <Tab fx:id="studentTab" text="Students">
+                <Tab fx:id="studentTab" onSelectionChanged="#tabChanged" text="Students">
                     <content>
-                        <fx:include source="student_tab.fxml"/>
+                        <fx:include fx:id="studentTabContent" source="student_tab.fxml" />
                     </content>
                 </Tab>
-                <Tab fx:id="eventTab" text="Events">
+                <Tab fx:id="eventTab" onSelectionChanged="#tabChanged" text="Events">
                     <content>
-                        <fx:include source="event_tab.fxml"/>
+                        <fx:include fx:id="eventTabContent" source="event_tab.fxml" />
                     </content>
                 </Tab>
-                <Tab fx:id="voteTab" text="Vote">
+                <Tab fx:id="voteTab" onSelectionChanged="#tabChanged" text="Vote">
                     <content>
-                        <fx:include source="vote_tab.fxml"/>
+                        <fx:include fx:id="voteTabContent" source="vote_tab.fxml" />
                     </content>
                 </Tab>
             </tabs>

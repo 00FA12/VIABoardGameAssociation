@@ -50,6 +50,9 @@ public class AssociationModelManager implements Serializable
       System.err.println(
           String.format("Class is not found in %s file", fileName));
     }
+    catch (Exception e){
+      System.err.println("some other mistakes");
+    }
     return association;
   }
 

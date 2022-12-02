@@ -9,4 +9,9 @@ public class Borrow extends GameAction implements Serializable
   {
     super(ID, startDate, endDate);
   }
+
+  public String toString()
+  {
+    return "Borrowed";
+  }
 }

@@ -1,8 +1,10 @@
 package model;
 
 import model.lists.StudentList;
+import org.controlsfx.control.CheckComboBox;
 
 import java.io.Serializable;
+import java.util.List;
 
 //Kateryna
 public class Event implements Serializable
@@ -14,6 +16,11 @@ public class Event implements Serializable
 
   public Event(String title, String description, MyDate date)
   {
+    if(title.isEmpty() || date == null || description.isEmpty())
+    {
+      throw new IllegalArgumentException("Some field has wrong data or it is empty");
+    }
+
     this.title = title;
     this.description = description;
     this.date = date;
@@ -43,6 +50,14 @@ public class Event implements Serializable
   public void addAttender(Student student)
   {
     attenders.addStudent(student);
+  }
+
+  public void addAttenderList(List<Student> students)
+  {
+    for (Student student:students)
+    {
+      attenders.addStudent(student);
+    }
   }
 
   public void setDescription(String description)

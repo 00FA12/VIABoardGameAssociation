@@ -25,6 +25,10 @@ public class LoadInitialData
         genreList.addGenre(new Genre(genresArray[i]));
       }
       Association association = AssociationModelManager.getAssociation();
+
+      if(association == null)
+        association = new Association();
+
       association.setGenreList(genreList);
       AssociationModelManager.saveAssociation(association);
     }
