@@ -51,6 +51,64 @@ public class StatusViewController
 
     public void handleActions(ActionEvent e)
     {
+        int ID = Integer.parseInt(statusBorrowerIDField.getText());
+        MyDate endDate = new MyDate();
+        MyDate startDate = new MyDate();
+        LocalDate localEndDate = statusEndDatePicker.getValue();
+        LocalDate localStartDate = statusStartDatePicker.getValue();
+        if (localStartDate == null)
+        {
+            startDate = null;
+        }
+        else
+        {
+            startDate.setDay(localStartDate.getDayOfMonth());
+            startDate.setMonth(localStartDate.getMonthValue());
+            startDate.setYear(localStartDate.getYear());
+        }
+        if (localEndDate == null)
+        {
+            endDate = null;
+        }
+        else
+        {
+            endDate.setDay(localEndDate.getDayOfMonth());
+            endDate.setMonth(localEndDate.getMonthValue());
+            endDate.setYear(localEndDate.getYear());
+        }
+        if (localEndDate.isBefore(localStartDate))
+        {
+            Alert alert = new Alert(Alert.AlertType.ERROR, "End date can't be before the start date");
+            alert.setHeaderText(null);
+            alert.show();
+        }
 
+
+
+        try
+        {
+            if (isBorrowing)
+            {
+                game.borrow(ID, startDate, endDate);
+            }
+            else
+            {
+                game.reserve(ID, startDate, endDate);
+            }
+        } catch (NullPointerException exception)
+        {
+            Alert alert = new Alert(Alert.AlertType.ERROR, exception.getMessage());
+            alert.setHeaderText(null);
+            alert.show();
+            return;
+        }
+
+        Association association = AssociationModelManager.getAssociation();
+        association.getCatalogue().setBoardGame(indexOfGame, game);
+        AssociationModelManager.saveAssociation(association);
+
+        Node source = (Node) e.getSource();
+        Stage stage = (Stage) source.getScene().getWindow();
+        stage.close();
     }
 }

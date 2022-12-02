@@ -12,7 +12,7 @@ public class StartGUI extends Application
   public void start(Stage window) throws Exception
   {
     LoadInitialData.load(); //todo event.tab.fxml
-    window.setTitle("Association");
+    window.setTitle("VIA Board Games Association");
     FXMLLoader loader = new FXMLLoader();
     loader.setLocation(getClass().getResource("/GUI/main.fxml"));
     Scene scene = new Scene(loader.load());
