@@ -51,6 +51,11 @@ public class StudentList implements Serializable
     students.remove(student);
   }
 
+  public void removeStudent(int index)
+  {
+    students.remove(index);
+  }
+
   public Student[] getArrayOfStudents()
   {
     return students.toArray(new Student[students.size()]);
