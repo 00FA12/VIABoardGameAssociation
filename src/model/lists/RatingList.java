@@ -27,13 +27,16 @@ public class RatingList implements Serializable
 
   public String average()
   {
-    DecimalFormat lol = new DecimalFormat("0.00");
+    DecimalFormat lol = new DecimalFormat("#.#");
     int sum = 0;
     for (int i = 0; i < ratings.size(); i++)
     {
       sum += ratings.get(i);
     }
-    return "" + lol.format(sum / ratings.size());
+    if(ratings.size() == 0)
+      return lol.format(sum);
+    else
+      return lol.format(sum / ratings.size());
   }
 
   public int getRating(int index)

@@ -40,4 +40,6 @@ public abstract class GameAction implements Serializable
   {
     return endDate.copy();
   }
+
+  public abstract String toString();
 }

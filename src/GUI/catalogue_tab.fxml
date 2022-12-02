@@ -26,7 +26,6 @@
                 <TableColumn fx:id="ratingColumn" minWidth="0.0" prefWidth="55.199951171875" text="Rating" />
             </columns>
         </TableView>
-        <Button fx:id="editGameButton" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleAction" text="Edit game" />
         <HBox alignment="CENTER" prefHeight="294.0" prefWidth="600.0" spacing="100.0">
             <children>
                 <VBox alignment="TOP_CENTER" prefHeight="206.0" prefWidth="325.0" spacing="20.0">
@@ -72,7 +71,12 @@
                                 <Insets top="10.0" />
                             </padding>
                         </GridPane>
-                        <Button fx:id="addGameButton" alignment="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleAction" text="Add game" />
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+                     <children>
+                              <Button fx:id="addGameButton" alignment="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleAction" prefWidth="150.0" text="Add game" />
+                          <Button fx:id="editGameButton" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleAction" prefWidth="150.0" text="Edit game" />
+                     </children>
+                  </HBox>
                     </children>
                 </VBox>
                 <VBox fx:id="actionsForSelectedGameBox" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0">

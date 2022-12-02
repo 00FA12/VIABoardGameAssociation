@@ -13,8 +13,8 @@
     <children>
         <TableView fx:id="votesTable" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="600.0">
             <columns>
-                <TableColumn prefWidth="214.39998817443848" text="Title" />
-                <TableColumn minWidth="0.0" prefWidth="99.20001220703125" text="Number of votes" />
+                <TableColumn fx:id="titleColumn" prefWidth="214.39998817443848" text="Title" />
+                <TableColumn fx:id="votesColumn" minWidth="0.0" prefWidth="99.20001220703125" text="Number of votes" />
             </columns>
             <columnResizePolicy>
                 <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />

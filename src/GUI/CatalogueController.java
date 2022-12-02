@@ -25,9 +25,13 @@ public class CatalogueController
   @FXML private TableColumn<BoardGame, String> statusColumn;
   @FXML private TableColumn<BoardGame, String> IDColumn;
   @FXML private TableColumn<BoardGame, String> ratingColumn;
+  private MyTableListener tableListener;
 
   public void initialize()
   {
+    tableListener = new MyTableListener();
+    catalogueTable.getSelectionModel().selectedItemProperty().addListener(tableListener);
+    genreChoiceBox.getItems().addAll(AssociationModelManager.getAssociation().getGenreList().getArrayOfGenres());
 
     titleColumn.setCellValueFactory(
         new PropertyValueFactory<BoardGame, String>("title"));
@@ -36,18 +40,45 @@ public class CatalogueController
     genreColumn.setCellValueFactory(
         new PropertyValueFactory<BoardGame, String>("genre"));
     statusColumn.setCellValueFactory(
-        new PropertyValueFactory<BoardGame, String>("gameAction"));
+        new PropertyValueFactory<BoardGame, String>("status"));
     IDColumn.setCellValueFactory(
         new PropertyValueFactory<BoardGame, String>("ownerID"));
     ratingColumn.setCellValueFactory(
-        new PropertyValueFactory<BoardGame, String>("ratings.average()"));
+        new PropertyValueFactory<BoardGame, String>("average"));
+
+    catalogueTable.getSelectionModel().selectFirst();
 
     updateTable();
   }
 
   public void handleAction(ActionEvent e)
   {
-    if (e.getSource() == editGameButton)
+    if (e.getSource() == addGameButton)
+    {
+      String title = titleField.getText();
+      String description = descriptionArea.getText();
+      int ownerID = 0;
+
+      try
+      {
+        ownerID = Integer.parseInt(ownerIDField.getText());
+      }
+      catch (Exception exception)
+      {
+        Alert alert = new Alert(Alert.AlertType.ERROR, exception.getMessage());
+        alert.setHeaderText(null);
+        alert.show();
+        return;
+      }
+
+      Genre genre = genreChoiceBox.getSelectionModel().getSelectedItem();
+
+      Association association = AssociationModelManager.getAssociation();
+      association.getCatalogue().addBoardGame(new BoardGame(title, ownerID, description, genre));
+      AssociationModelManager.saveAssociation(association);
+      updateTable();
+    }
+    else if (e.getSource() == editGameButton)
     {
       //Dialog window opens
     }

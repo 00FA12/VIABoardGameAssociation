@@ -53,7 +53,11 @@ public class StudentController
     }
     else if (e.getSource() == deleteStudentButton)
     {
-
+      Association association = AssociationModelManager.getAssociation();
+      int temp = studentTable.getSelectionModel().getSelectedIndex();
+      association.removeStudent(temp);
+      AssociationModelManager.saveAssociation(association);
+      updateTable();
     }
   }
 

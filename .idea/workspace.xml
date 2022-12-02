@@ -4,23 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e87b550e-3d6a-4d86-a721-c06a7156f051" name="Changes" comment="event done">
+    <list default="true" id="e87b550e-3d6a-4d86-a721-c06a7156f051" name="Changes" comment="01.12 event works">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/association.bin" beforeDir="false" afterPath="$PROJECT_DIR$/association.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/DialogViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/StatusViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/DialogViewsHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/StatusViewsHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/CatalogueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/CatalogueController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/StudentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/catalogue_tab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/catalogue_tab.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/vote_tab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/vote_tab.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Association.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Association.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/BoardGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/BoardGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Borrow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Borrow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/GameAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/GameAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/MyDate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/MyDate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Reserve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Reserve.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/lists/GenreList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/lists/GenreList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/lists/RatingList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/lists/RatingList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/lists/VotingList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/lists/VotingList.java" afterDir="false" />
+    </list>
+    <list id="b567d9a3-3259-46f6-bbb0-8fd1dbc54ee4" name="Changes by hmadrid" comment="">
+      <change beforePath="$PROJECT_DIR$/src/GUI/CatalogueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/CatalogueController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/EventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/EventController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/GameAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/GameAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/lists/Catalogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/lists/Catalogue.java" afterDir="false" />
+    </list>
+    <list id="333ad59c-8813-4286-8c6e-d021d683be6e" name="Changes by micha" comment="Changes by micha" />
+    <list id="89e98b79-40fb-49b5-b509-314e2ade9067" name="Changes by pind9" comment="">
       <change beforePath="$PROJECT_DIR$/src/GUI/VoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/VoteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/event_tab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/event_tab.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/LoadInitialData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/LoadInitialData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Event.java" afterDir="false" />
-    </list>
-    <list id="6e3206ca-64e3-4e9c-99d6-4c3b7961e154" name="Changes by hmadrid" comment="123">
-      <change beforePath="$PROJECT_DIR$/src/GUI/EventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/EventController.java" afterDir="false" />
-    </list>
-    <list id="333ad59c-8813-4286-8c6e-d021d683be6e" name="Changes by micha" comment="Changes by micha">
-      <change beforePath="$PROJECT_DIR$/src/GUI/EventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/EventController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Event.java" afterDir="false" />
     </list>
     <list id="d1a99415-edf2-468f-a9e2-b3fdf658817e" name="Changes by Севастиан" comment="Changes by Севастиан" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,30 +49,33 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/LoadInitialData.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/model/Event.java">
+    <file path="$PROJECT_DIR$/src/GUI/CatalogueController.java">
       <ranges>
-        <range start1="3" end1="3" start2="3" end2="4" changelist="333ad59c-8813-4286-8c6e-d021d683be6e" />
-        <range start1="5" end1="5" start2="6" end2="7" changelist="e87b550e-3d6a-4d86-a721-c06a7156f051" />
-        <range start1="51" end1="51" start2="53" end2="61" changelist="e87b550e-3d6a-4d86-a721-c06a7156f051" />
+        <range start1="2" end1="2" start2="2" end2="4" changelist="b567d9a3-3259-46f6-bbb0-8fd1dbc54ee4" />
+        <range start1="7" end1="10" start2="9" end2="17" changelist="b567d9a3-3259-46f6-bbb0-8fd1dbc54ee4" />
+        <range start1="17" end1="18" start2="24" end2="25" changelist="b567d9a3-3259-46f6-bbb0-8fd1dbc54ee4" />
+        <range start1="27" end1="27" start2="34" end2="35" changelist="e87b550e-3d6a-4d86-a721-c06a7156f051" />
+        <range start1="28" end1="28" start2="36" end2="57" changelist="b567d9a3-3259-46f6-bbb0-8fd1dbc54ee4" />
+        <range start1="30" end1="30" start2="59" end2="62" changelist="e87b550e-3d6a-4d86-a721-c06a7156f051" />
+        <range start1="38" end1="39" start2="70" end2="71" changelist="e87b550e-3d6a-4d86-a721-c06a7156f051" />
+        <range start1="42" end1="43" start2="74" end2="77" changelist="e87b550e-3d6a-4d86-a721-c06a7156f051" />
+        <range start1="49" end1="50" start2="83" end2="109" changelist="e87b550e-3d6a-4d86-a721-c06a7156f051" />
+        <range start1="51" end1="52" start2="110" end2="137" changelist="b567d9a3-3259-46f6-bbb0-8fd1dbc54ee4" />
+        <range start1="58" end1="68" start2="143" end2="143" changelist="b567d9a3-3259-46f6-bbb0-8fd1dbc54ee4" />
+        <range start1="89" end1="89" start2="164" end2="177" changelist="b567d9a3-3259-46f6-bbb0-8fd1dbc54ee4" />
       </ranges>
     </file>
-    <file path="$PROJECT_DIR$/src/GUI/EventController.java">
+    <file path="$PROJECT_DIR$/src/model/GameAction.java">
       <ranges>
-        <range start1="23" end1="24" start2="23" end2="24" changelist="333ad59c-8813-4286-8c6e-d021d683be6e" />
-        <range start1="38" end1="39" start2="38" end2="39" changelist="e87b550e-3d6a-4d86-a721-c06a7156f051" />
-        <range start1="76" end1="76" start2="76" end2="85" changelist="333ad59c-8813-4286-8c6e-d021d683be6e" />
-        <range start1="95" end1="95" start2="104" end2="107" changelist="e87b550e-3d6a-4d86-a721-c06a7156f051" />
-        <range start1="97" end1="97" start2="109" end2="110" changelist="e87b550e-3d6a-4d86-a721-c06a7156f051" />
-        <range start1="153" end1="154" start2="166" end2="167" changelist="6e3206ca-64e3-4e9c-99d6-4c3b7961e154" />
-        <range start1="163" end1="164" start2="176" end2="181" changelist="e87b550e-3d6a-4d86-a721-c06a7156f051" />
-        <range start1="178" end1="183" start2="195" end2="195" changelist="333ad59c-8813-4286-8c6e-d021d683be6e" />
-        <range start1="186" end1="186" start2="198" end2="202" changelist="e87b550e-3d6a-4d86-a721-c06a7156f051" />
-        <range start1="196" end1="196" start2="212" end2="213" changelist="333ad59c-8813-4286-8c6e-d021d683be6e" />
-        <range start1="200" end1="200" start2="217" end2="220" changelist="e87b550e-3d6a-4d86-a721-c06a7156f051" />
+        <range start1="15" end1="17" start2="15" end2="16" changelist="b567d9a3-3259-46f6-bbb0-8fd1dbc54ee4" />
+        <range start1="42" end1="42" start2="41" end2="43" changelist="e87b550e-3d6a-4d86-a721-c06a7156f051" />
       </ranges>
     </file>
   </component>
@@ -83,11 +96,14 @@
     "WebServerToolWindowFactoryState": "false",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "last_opened_file_path": "D:/Programs/SceneBuilder/SceneBuilder.exe",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -147,6 +163,7 @@
       <option name="presentableId" value="Default" />
       <updated>1669629032715</updated>
       <workItem from="1669734724410" duration="5174000" />
+      <workItem from="1669968834843" duration="6981000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1669637929031</created>
@@ -323,7 +340,28 @@
       <option name="project" value="LOCAL" />
       <updated>1669904852356</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="01.12 event works">
+      <created>1669911674560</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1669911674560</updated>
+    </task>
+    <task id="LOCAL-00027" summary="01.12 event works">
+      <created>1669911696725</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1669911696725</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Changes by micha">
+      <created>1669911709523</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1669911709523</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -346,18 +384,24 @@
     <MESSAGE value="It's me HUGO, I fixed all the mistakes" />
     <MESSAGE value="test" />
     <MESSAGE value="event done" />
+    <MESSAGE value="Changes by pind9" />
+    <MESSAGE value="01.12 event works" />
     <MESSAGE value="123" />
     <MESSAGE value="Changes by micha" />
-    <MESSAGE value="Changes by pind9" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes by pind9" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes by micha" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/GUI/EventController.java</url>
-          <line>126</line>
-          <option name="timeStamp" value="32" />
+          <line>76</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/GUI/EventController.java</url>
+          <line>81</line>
+          <option name="timeStamp" value="40" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

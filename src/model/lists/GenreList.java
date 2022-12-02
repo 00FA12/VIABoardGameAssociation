@@ -25,6 +25,11 @@ public class GenreList implements Serializable
     genres.set(index, genre);
   }
 
+  public Genre[] getArrayOfGenres()
+  {
+    return genres.toArray(new Genre[genres.size()]);
+  }
+
   public Genre getGenre(int index)
   {
     return genres.get(index);
