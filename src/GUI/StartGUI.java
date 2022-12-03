@@ -17,6 +17,7 @@ public class StartGUI extends Application
     loader.setLocation(getClass().getResource("/GUI/main.fxml"));
     Scene scene = new Scene(loader.load());
     window.setScene(scene);
+    window.setResizable(false);
     window.show();
   }
 }

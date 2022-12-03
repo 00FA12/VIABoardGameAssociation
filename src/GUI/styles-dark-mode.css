@@ -1,0 +1,93 @@
+*{
+    -fx-font-weight: bold;
+}
+
+.menu-item .label, .menu-bar .label, .menu{
+    -fx-text-fill: black;
+}
+
+.tab{
+    -fx-background-color: #171333;
+}
+
+.tab-label{
+    -fx-text-fill: white;
+}
+
+.tab:selected{
+    -fx-background-color: #e53170;
+}
+
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-background-color: #171333;
+    -fx-effect: null;
+}
+
+.tab-pane .tab-header-area .label {
+    -fx-text-fill: white;
+}
+
+.table-view .column-header{
+    -fx-background-color: #f25f4c;
+    -fx-border-style: hidden solid hidden solid;
+    -fx-border-width: 1;
+    -fx-border-color: white;
+}
+
+.table-row-cell:odd{
+    -fx-background-color: #37334D;
+}
+
+.table-row-cell .text{
+    -fx-fill: white;
+}
+
+
+.table-row-cell:even{
+    -fx-background-color: #5B5580;
+}
+
+.table-row-cell:selected{
+    -fx-background-color: white;
+}
+
+.table-row-cell:selected .text {
+    -fx-fill: black;
+}
+
+.button{
+    -fx-background-color: #ff8906;
+    -fx-text-fill: #fffffe;
+}
+
+.tab-pane, .table-view{
+    -fx-background-color: #171333;
+    -fx-text-fill: #a7a9be;
+}
+
+.label, .check-box {
+    -fx-text-fill: #ffffff;
+}
+
+.text-area, .text-field, .combo-box{
+    -fx-background-color: #fffffe;
+    -fx-text-fill: black;
+}
+
+.button:hover{
+    -fx-opacity: 0.6;
+}
+
+/*Edit Normal Cell color */
+#genreChoiceBox .list-cell, .context-menu{
+    -fx-background-color: #fffffe;
+    -fx-text-fill: black;
+}
+
+
+/*Edit Cell Color Only when cursor hover cell */
+#genreChoiceBox .list-cell:hover{
+    -fx-opacity: 0.6;
+    -fx-text-fill: black;
+}
+

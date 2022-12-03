@@ -4,28 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" name="Tasks" comment="Tasks">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/jfoenix_9_0_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/AutoCompletionTextField.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/Styles.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/charm_glisten_6_2_2.xml" beforeDir="false" />
+    <list default="true" id="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" name="Tasks" comment="Was added auto completion text field, little changes in CatalogueController.java &amp; EventController.java, preventing of errors">
+      <change afterPath="$PROJECT_DIR$/src/GUI/styles-dark-mode.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GUI/styles-light-mode.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VIABoardGameAssociation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/VIABoardGameAssociation.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/association.bin" beforeDir="false" afterPath="$PROJECT_DIR$/association.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/AutoCompletionTextField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/AutoCompletionTextField.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/CatalogueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/CatalogueController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/EventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/EventController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/StudentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/StartGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/StartGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Styles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Styles.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/VoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/VoteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/vote_tab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/vote_tab.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Association.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Association.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/GameCandidate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/GameCandidate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/lists/Catalogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/lists/Catalogue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/lists/VotingList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/lists/VotingList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/catalogue_tab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/catalogue_tab.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/event_tab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/event_tab.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/student_tab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/student_tab.fxml" afterDir="false" />
     </list>
-    <list id="e87b550e-3d6a-4d86-a721-c06a7156f051" name="Changes" comment="01.12 event works">
-      <change beforePath="$PROJECT_DIR$/src/GUI/EventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/EventController.java" afterDir="false" />
-    </list>
+    <list id="e87b550e-3d6a-4d86-a721-c06a7156f051" name="Changes" comment="1master" />
     <list id="68818cb0-604d-4df6-bbf4-d4fc4052d36d" name="Changes by hugom" comment="" />
     <list id="333ad59c-8813-4286-8c6e-d021d683be6e" name="Changes by micha" comment="Changes by micha" />
     <list id="d1a99415-edf2-468f-a9e2-b3fdf658817e" name="Changes by Севастиан" comment="Changes by Севастиан" />
@@ -39,6 +33,7 @@
       <list>
         <option value="AnnotationType" />
         <option value="Class" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -80,22 +75,6 @@
     <setting file="file://$PROJECT_DIR$/src/GUI/VoteController.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/LoadInitialData.java" root0="FORCE_HIGHLIGHTING" />
   </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/GUI/EventController.java">
-      <ranges>
-        <range start1="113" end1="117" start2="113" end2="119" changelist="e87b550e-3d6a-4d86-a721-c06a7156f051" />
-        <range start1="118" end1="128" start2="120" end2="130" changelist="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" />
-        <range start1="129" end1="141" start2="131" end2="143" changelist="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" />
-        <range start1="142" end1="153" start2="144" end2="155" changelist="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" />
-        <range start1="154" end1="167" start2="156" end2="169" changelist="e87b550e-3d6a-4d86-a721-c06a7156f051" />
-        <range start1="168" end1="173" start2="170" end2="175" changelist="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" />
-        <range start1="174" end1="176" start2="176" end2="178" changelist="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" />
-        <range start1="178" end1="182" start2="180" end2="184" changelist="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" />
-        <range start1="183" end1="192" start2="185" end2="195" changelist="e87b550e-3d6a-4d86-a721-c06a7156f051" />
-        <range start1="193" end1="193" start2="196" end2="200" changelist="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" />
-      </ranges>
-    </file>
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -113,13 +92,14 @@
     "WebServerToolWindowFactoryState": "false",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "last_opened_file_path": "C:/Users/Sevastian/Downloads/jfoenix-9.0.10.jar",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -443,9 +423,24 @@
       <workItem from="1670017954455" duration="1247000" />
       <workItem from="1670019226493" duration="29000" />
       <workItem from="1670019271775" duration="4360000" />
-      <workItem from="1670023678997" duration="3361000" />
+      <workItem from="1670023678997" duration="3599000" />
+      <workItem from="1670069436307" duration="12081000" />
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Was added auto completion text field, little changes in CatalogueController.java &amp; EventController.java, preventing of errors">
+      <created>1670027238045</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1670027238045</updated>
+    </task>
+    <task id="LOCAL-00038" summary="1master">
+      <created>1670027258721</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1670027258721</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -476,7 +471,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Changes by Севастиан" />
-    <MESSAGE value="1" />
     <MESSAGE value="It's me HUGO, I fixed all the mistakes" />
     <MESSAGE value="test" />
     <MESSAGE value="event done" />
@@ -485,18 +479,10 @@
     <MESSAGE value="Changes by hmadrid" />
     <MESSAGE value="Changes by pind9" />
     <MESSAGE value="01.12 event works" />
-    <option name="LAST_COMMIT_MESSAGE" value="01.12 event works" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/GUI/VoteController.java</url>
-          <line>111</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Was added auto completion text field, little changes in CatalogueController.java &amp; EventController.java, preventing of errors" />
+    <MESSAGE value="1" />
+    <MESSAGE value="1master" />
+    <option name="LAST_COMMIT_MESSAGE" value="1master" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

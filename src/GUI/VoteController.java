@@ -2,6 +2,8 @@ package GUI;
 
 import com.jfoenix.controls.JFXAutoCompletePopup;
 import impl.org.controlsfx.autocompletion.AutoCompletionTextFieldBinding;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -11,10 +13,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.HBox;
-import model.Association;
-import model.AssociationModelManager;
-import model.GameCandidate;
-import model.Student;
+import model.*;
 import model.lists.StudentList;
 import model.lists.VotingList;
 import org.controlsfx.control.textfield.AutoCompletionBinding;
@@ -40,15 +39,32 @@ public class VoteController implements Initializable
   private TableColumn<GameCandidate, String> votesColumn;
 
   @FXML private HBox HBoxField;
-  private AutoCompletionBinding autoCompletionBinding;
   @FXML
   private Button voteButton;
 
-  private AutoCompletionTextField autoCompletionTextField;
+  private AutoCompletionTextField autoCompletionTextField = new AutoCompletionTextField();
+
+  private MyTableListener tableListener;
+
+  private class MyTableListener implements ChangeListener<GameCandidate>
+  {
+    public void changed(ObservableValue<? extends GameCandidate> gameCandidate, GameCandidate oldVote, GameCandidate newVote)
+    {
+      GameCandidate gameCandidateTemp = votesTable.getSelectionModel().getSelectedItem();
+
+      if (gameCandidateTemp != null)
+      {
+          autoCompletionTextField.setText(gameCandidateTemp.getTitleOfGame());
+      }
+    }
+  }
 
   @Override
   public void initialize(URL location, ResourceBundle resources)
   {
+    tableListener = new MyTableListener();
+    votesTable.getSelectionModel().selectedItemProperty().addListener(tableListener);
+
     titleColumn.setCellValueFactory(
             new PropertyValueFactory<>("titleOfGame"));
     votesColumn.setCellValueFactory(
@@ -64,14 +80,24 @@ public class VoteController implements Initializable
     autoCompletionTextField.setPrefHeight(height);
     autoCompletionTextField.setLayoutY(titleField.getLayoutY());
     autoCompletionTextField.setLayoutX(titleField.getLayoutX());
+    String str = titleField.getText();
+    autoCompletionTextField.setText(str);
     titleField.setManaged(false);
     HBoxField.getChildren().add(autoCompletionTextField);
 
+
+
+    votesTable.getSelectionModel().selectFirst();
     updateTable();
   }
 
   public void updateTable()
   {
+    int indexSelected = votesTable.getSelectionModel().getSelectedIndex();
+    if (indexSelected == -1)
+      indexSelected = 0;
+
+
     VotingList votingList = AssociationModelManager.getAssociation().getVotingList();
     votesTable.getItems().clear();
 
@@ -83,6 +109,9 @@ public class VoteController implements Initializable
 
     String[] titles = AssociationModelManager.getVotingList().getGameTitlesToArray();
     autoCompletionTextField.getEntries().addAll(List.of(titles));
+
+
+    votesTable.getSelectionModel().select(indexSelected);
 
   }
 

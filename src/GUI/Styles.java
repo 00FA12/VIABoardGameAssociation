@@ -10,13 +10,5 @@ import javafx.scene.text.TextFlow;
 // the author: Ruslan Gabbazov
 public class Styles
 {
-    public static TextFlow buildTextFlow(String text, String filter) {
-        int filterIndex = text.toLowerCase().indexOf(filter.toLowerCase());
-        Text textBefore = new Text(text.substring(0, filterIndex));
-        Text textAfter = new Text(text.substring(filterIndex + filter.length()));
-        Text textFilter = new Text(text.substring(filterIndex,  filterIndex + filter.length())); //instead of "filter" to keep all "case sensitive"
-        textFilter.setFill(Color.ORANGE);
-        textFilter.setFont(Font.font("Helvetica", FontWeight.BOLD, 12));
-        return new TextFlow(textBefore, textFilter, textAfter);
-    }
+
 }

@@ -5,6 +5,11 @@ import javafx.scene.control.ContextMenu;
 import javafx.scene.control.CustomMenuItem;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
+import javafx.scene.text.Text;
+import javafx.scene.text.TextFlow;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -53,8 +58,17 @@ public class AutoCompletionTextField extends TextField
                 if (!filteredEntries.isEmpty()) {
                     //build popup - list of "CustomMenuItem"
                     populatePopup(filteredEntries, enteredText);
-                    if (!entriesPopup.isShowing()) { //optional
-                        entriesPopup.show(AutoCompletionTextField.this, Side.BOTTOM, 0, 0); //position of popup
+                    try
+                    {
+
+                        if (!entriesPopup.isShowing())
+                        { //optional
+                            entriesPopup.show(AutoCompletionTextField.this, Side.BOTTOM, 0, 0); //position of popup
+                        }
+                    }
+                    catch (NullPointerException exception)
+                    {
+                        // first time it won't load
                     }
                     //no suggestions -> hide
                 } else {
@@ -86,7 +100,7 @@ public class AutoCompletionTextField extends TextField
             final String result = searchResult.get(i);
             //label with graphic (text flow) to highlight founded subtext in suggestions
             Label entryLabel = new Label();
-            entryLabel.setGraphic(Styles.buildTextFlow(result, searchReauest));
+            entryLabel.setGraphic(buildTextFlow(result, searchReauest));
             entryLabel.setPrefHeight(10);  //don't sure why it's changed with "graphic"
             CustomMenuItem item = new CustomMenuItem(entryLabel, true);
             menuItems.add(item);
@@ -104,6 +118,16 @@ public class AutoCompletionTextField extends TextField
         entriesPopup.getItems().addAll(menuItems);
     }
 
+
+    private static TextFlow buildTextFlow(String text, String filter) {
+        int filterIndex = text.toLowerCase().indexOf(filter.toLowerCase());
+        Text textBefore = new Text(text.substring(0, filterIndex));
+        Text textAfter = new Text(text.substring(filterIndex + filter.length()));
+        Text textFilter = new Text(text.substring(filterIndex,  filterIndex + filter.length())); //instead of "filter" to keep all "case sensitive"
+        textFilter.setFill(Color.ORANGE);
+        textFilter.setFont(Font.font("Helvetica", FontWeight.BOLD, 12));
+        return new TextFlow(textBefore, textFilter, textAfter);
+    }
 
     /**
      * Get the existing set of autocomplete entries.

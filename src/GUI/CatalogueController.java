@@ -27,7 +27,7 @@ public class CatalogueController
     @FXML
     private TextArea descriptionArea;
     @FXML
-    private ChoiceBox<Genre> genreChoiceBox; //todo add to astah
+    private ComboBox<Genre> genreChoiceBox; //todo add to astah
     @FXML
     private Button editGameButton, deleteGameButton, addGameButton, borrowGameButton, reserveGameButton, returnGameButton, addRateButton;
     @FXML
@@ -86,6 +86,7 @@ public class CatalogueController
                 new PropertyValueFactory<BoardGame, String>("average"));
 
         catalogueTable.getSelectionModel().selectFirst();
+
 
         updateTable();
     }
