@@ -24,7 +24,7 @@
             <children>
                 <VBox alignment="CENTER" prefHeight="206.0" prefWidth="325.0">
                     <children>
-                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                        <HBox fx:id="HBoxField" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
                             <children>
                                 <Label text="Title of game" />
                         <TextField fx:id="titleField" />

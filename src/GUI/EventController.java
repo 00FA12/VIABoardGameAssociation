@@ -116,41 +116,41 @@ public class EventController
             String title = titleField.getText();
             String description = descriptionArea.getText();
 
-            MyDate date = new MyDate();
-            LocalDate tempDate = datePicker.getValue();
-            if(tempDate == null)
-                date = null;
-            else
-            {
-                date.setDay(tempDate.getDayOfMonth());
-                date.setMonth(tempDate.getMonthValue());
-                date.setYear(tempDate.getYear()); // date initialization
-            }
-
-            Event event = null;
-            try
-            {
-                event = new Event(title, description, date);
-            }
-            catch (IllegalArgumentException exception)
-            {
-                Alert alert = new Alert(Alert.AlertType.ERROR, exception.getMessage());
-                alert.setHeaderText(null);
-                alert.show();
-                return;
-            }
-
-            try
-            {
-                for (int i = 0; i < checkComboBox.getCheckModel().getCheckedItems().size(); i++)
+                MyDate date = new MyDate();
+                LocalDate tempDate = datePicker.getValue();
+                if(tempDate == null)
+                    date = null;
+                else
                 {
-                    event.addAttender(checkComboBox.getCheckModel().getCheckedItems().get(i));
+                    date.setDay(tempDate.getDayOfMonth());
+                    date.setMonth(tempDate.getMonthValue());
+                    date.setYear(tempDate.getYear()); // date initialization
                 }
-            }
-            catch (ArrayIndexOutOfBoundsException exception)
-            {
-                System.err.println("Student list is empty in event tab");
-            }
+
+                Event event = null;
+                try
+                {
+                    event = new Event(title, description, date);
+                }
+                catch (IllegalArgumentException exception)
+                {
+                    Alert alert = new Alert(Alert.AlertType.ERROR, exception.getMessage());
+                    alert.setHeaderText(null);
+                    alert.show();
+                    return;
+                }
+
+                try
+                {
+                    for (int i = 0; i < checkComboBox.getCheckModel().getCheckedItems().size(); i++)
+                    {
+                        event.addAttender(checkComboBox.getCheckModel().getCheckedItems().get(i));
+                    }
+                }
+                catch (ArrayIndexOutOfBoundsException exception)
+                {
+                    System.err.println("Student list is empty in event tab");
+                }
 
             Association association = AssociationModelManager.getAssociation();
             association.addEvent(event);
@@ -166,20 +166,20 @@ public class EventController
             String title = titleField.getText();
             String description = descriptionArea.getText();
 
-            MyDate date = new MyDate();
-            LocalDate tempDate = datePicker.getValue();
-            date.setDay(tempDate.getDayOfMonth());
-            date.setMonth(tempDate.getMonthValue());
-            date.setYear(tempDate.getYear()); // date initialization
+                MyDate date = new MyDate();
+                LocalDate tempDate = datePicker.getValue();
+                date.setDay(tempDate.getDayOfMonth());
+                date.setMonth(tempDate.getMonthValue());
+                date.setYear(tempDate.getYear()); // date initialization
 
-            Association association = AssociationModelManager.getAssociation();
-            int index = eventsTable.getSelectionModel().getSelectedIndex();
+                Association association = AssociationModelManager.getAssociation();
+                int index = eventsTable.getSelectionModel().getSelectedIndex();
 
 
-            Event eventTemp = new Event(title, description, date);
-            eventTemp.addAttenderList(checkComboBox.getCheckModel().getCheckedItems());
-            association.getEventList().setEvent(eventTemp, index);
-            AssociationModelManager.saveAssociation(association);
+                Event eventTemp = new Event(title, description, date);
+                eventTemp.addAttenderList(checkComboBox.getCheckModel().getCheckedItems());
+                association.getEventList().setEvent(eventTemp, index);
+                AssociationModelManager.saveAssociation(association);
 
             updateTable();
         }
@@ -190,6 +190,10 @@ public class EventController
             association.removeEvent(temp);
             AssociationModelManager.saveAssociation(association);
             updateTable();
+        }
+        catch (IndexOutOfBoundsException exception)
+        {
+            System.err.println("The event wasn't chosen");
         }
 
     }/**/

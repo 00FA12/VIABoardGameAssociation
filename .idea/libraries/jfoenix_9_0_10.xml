@@ -1,7 +1,7 @@
 <component name="libraryTable">
-  <library name="charm-glisten-6.2.2">
+  <library name="jfoenix-9.0.10">
     <CLASSES>
-      <root url="jar://$USER_HOME$/Downloads/charm-glisten-6.2.2.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/jfoenix-9.0.10.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

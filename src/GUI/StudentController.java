@@ -37,27 +37,34 @@ public class StudentController
 
   public void handleAction(ActionEvent e)
   {
-    if (e.getSource() == addStudentButton)
+    try
     {
-      Student student = null;
-      String name = nameField.getText();
-      int ID = Integer.parseInt(IDField.getText());
-      boolean isMember = isMemberCheckBox.isSelected();
+      if (e.getSource() == addStudentButton)
+      {
+        Student student = null;
+        String name = nameField.getText();
+        int ID = Integer.parseInt(IDField.getText());
+        boolean isMember = isMemberCheckBox.isSelected();
 
-      student = new Student(name, ID, isMember);
+        student = new Student(name, ID, isMember);
 
-      Association association = AssociationModelManager.getAssociation();
-      association.addStudent(student);
-      AssociationModelManager.saveAssociation(association);
-      updateTable();
+        Association association = AssociationModelManager.getAssociation();
+        association.addStudent(student);
+        AssociationModelManager.saveAssociation(association);
+        updateTable();
+      }
+      else if (e.getSource() == deleteStudentButton)
+      {
+        Association association = AssociationModelManager.getAssociation();
+        int temp = studentTable.getSelectionModel().getSelectedIndex();
+        association.removeStudent(temp);
+        AssociationModelManager.saveAssociation(association);
+        updateTable();
+      }
     }
-    else if (e.getSource() == deleteStudentButton)
+    catch (IndexOutOfBoundsException exception)
     {
-      Association association = AssociationModelManager.getAssociation();
-      int temp = studentTable.getSelectionModel().getSelectedIndex();
-      association.removeStudent(temp);
-      AssociationModelManager.saveAssociation(association);
-      updateTable();
+      System.err.println("The student wasn't chosen");
     }
   }
 

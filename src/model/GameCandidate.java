@@ -3,6 +3,7 @@ package model;
 import model.lists.VotingList;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 //Kateryna
 public class GameCandidate implements Serializable
@@ -12,30 +13,13 @@ public class GameCandidate implements Serializable
 
   public GameCandidate(String titleOfGame)
   {
-    VotingList votes = AssociationModelManager.getVotingList();
-    boolean flag = false;
-    if (votes != null)
-    {
-      for (int i = 0; i < votes.getSize(); i++)
-      {
-        if (votes.getVote(i).getTitleOfGame().equals(titleOfGame))
-        {
-          vote();
-          flag = true;
-          break;
-        }
-      }
-      if (!flag)
-      {
-        numberOfVotes = 1;
-        this.titleOfGame = titleOfGame;
-      }
-    }
-    else
-    {
-      numberOfVotes = 1;
-      this.titleOfGame = titleOfGame;
-    }
+    this.titleOfGame = titleOfGame;
+    numberOfVotes = 0;
+  }
+
+  public String getNumberOfVotesToString()
+  {
+    return Integer.toString(numberOfVotes);
   }
 
   public void vote()

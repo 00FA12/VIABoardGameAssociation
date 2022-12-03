@@ -20,6 +20,7 @@ public class VotingList implements Serializable
     this.votes.add(vote);
   }
 
+
   public void clear()
   {
     votes.clear();
@@ -35,6 +36,27 @@ public class VotingList implements Serializable
       }
     }
     return null;
+  }
+
+  public GameCandidate[] getVotingListToArray()
+  {
+    return this.votes.toArray(new GameCandidate[votes.size()]);
+  }
+
+  public ArrayList<GameCandidate> getVotes()
+  {
+    return this.votes;
+  }
+
+  public String[] getGameTitlesToArray()
+  {
+    ArrayList<String> titles = new ArrayList<>();
+
+    for (int i = 0; i < votes.size(); i++)
+    {
+      titles.add(votes.get(i).getTitleOfGame());
+    }
+    return titles.toArray(new String[titles.size()]);
   }
 
   public int getSize()

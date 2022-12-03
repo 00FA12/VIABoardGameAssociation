@@ -134,12 +134,12 @@ public class Association implements Serializable
 
   public void addVote(String titleOfGame)
   {
-    GameCandidate candidateGame = new GameCandidate(titleOfGame);
+    votingList.addVote(new GameCandidate(titleOfGame));
   }
 
   public void removeBoardGame(int index)
   {
-    catalogue.removeBoardGame(getBoardGame(index));
+    catalogue.removeBoardGame(index);
   }
 
   public void setGenre(Genre genre, int index)
@@ -153,7 +153,7 @@ public class Association implements Serializable
   }
   public void removeStudent(int index)
   {
-    this.studentList.removeStudent(studentList.getStudent(index));
+    this.studentList.removeStudent(index);
   }
 
   public void removeEvent(int index)

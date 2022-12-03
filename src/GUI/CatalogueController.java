@@ -92,151 +92,152 @@ public class CatalogueController
 
     public void handleAction(ActionEvent e) throws IOException
     {
-        if (e.getSource() == addGameButton)
+        try
         {
-            String title = titleField.getText();
-            String description = descriptionArea.getText();
-            int ownerID = 0;
-
-            try
+            if (e.getSource() == addGameButton)
             {
-                ownerID = Integer.parseInt(ownerIDField.getText());
+                String title = titleField.getText();
+                String description = descriptionArea.getText();
+                int ownerID = 0;
+
+                try
+                {
+                    ownerID = Integer.parseInt(ownerIDField.getText());
+                }
+                catch (Exception exception)
+                {
+                    Alert alert = new Alert(Alert.AlertType.ERROR, "Enter VIA ID in \"Owner ID\" field!");
+                    alert.setHeaderText(null);
+                    alert.show();
+                    return;
+                }
+
+                Genre genre = genreChoiceBox.getSelectionModel().getSelectedItem();
+
+                Association association = AssociationModelManager.getAssociation();
+                try
+                {
+                    association.getCatalogue().addBoardGame(new BoardGame(title, ownerID, description, genre));
+                }
+                catch (IllegalArgumentException exception)
+                {
+                    Alert alert = new Alert(Alert.AlertType.ERROR, exception.getMessage());
+                    alert.setHeaderText(null);
+                    alert.show();
+                    return;
+                }
+                AssociationModelManager.saveAssociation(association);
+                updateTable();
             }
-            catch (Exception exception)
+            else if (e.getSource() == editGameButton)
             {
-                Alert alert = new Alert(Alert.AlertType.ERROR, "Enter VIA ID in \"Owner ID\" field!");
-                alert.setHeaderText(null);
-                alert.show();
-                return;
+                String title = titleField.getText();
+                String description = descriptionArea.getText();
+                int ownerID = 0;
+                try
+                {
+                    ownerID = Integer.parseInt(ownerIDField.getText());
+                } catch (Exception exception)
+                {
+                    Alert alert = new Alert(Alert.AlertType.ERROR, "Enter VIA ID in \"Owner ID\" field!");
+                    alert.setHeaderText(null);
+                    alert.show();
+                    return;
+                }
+
+                Genre genre = genreChoiceBox.getSelectionModel().getSelectedItem();
+
+
+                Association association = AssociationModelManager.getAssociation();
+                int index = catalogueTable.getSelectionModel().getSelectedIndex();
+                BoardGame boardGameTemp;
+                try
+                {
+                    boardGameTemp = new BoardGame(title, ownerID, description, genre);
+                }
+                catch (IllegalArgumentException exception)
+                {
+                    Alert alert = new Alert(Alert.AlertType.ERROR, exception.getMessage());
+                    alert.setHeaderText(null);
+                    alert.show();
+                    return;
+                }
+                association.getCatalogue().setBoardGame(index, boardGameTemp);
+                AssociationModelManager.saveAssociation(association);
+                updateTable();
+
             }
-
-            Genre genre = genreChoiceBox.getSelectionModel().getSelectedItem();
-
-            Association association = AssociationModelManager.getAssociation();
-            try
+            else if (e.getSource() == deleteGameButton)
             {
-                association.getCatalogue().addBoardGame(new BoardGame(title, ownerID, description, genre));
+                int index = catalogueTable.getSelectionModel().getSelectedIndex();
+                Association association = AssociationModelManager.getAssociation();
+                association.removeBoardGame(index);
+                AssociationModelManager.saveAssociation(association);
+                updateTable();
             }
-            catch (IllegalArgumentException exception)
+            else if (e.getSource() == borrowGameButton)
             {
-                Alert alert = new Alert(Alert.AlertType.ERROR, exception.getMessage());
-                alert.setHeaderText(null);
-                alert.show();
-                return;
+                int index = catalogueTable.getSelectionModel().getSelectedIndex();
+                BoardGame game = AssociationModelManager.getAssociation().getCatalogue().getBoardGame(index);
+
+
+                Stage window = new Stage();
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/set_status_dialog_window.fxml"));
+                Parent root = (Parent) loader.load();
+                StatusViewController statusViewController = loader.getController();
+                statusViewController.passData(index, true);
+                Scene scene = new Scene(root);
+                window.setScene(scene);
+                window.showAndWait();
+
+
+                updateTable();
             }
-            AssociationModelManager.saveAssociation(association);
-            updateTable();
-        }
-        else if (e.getSource() == editGameButton)
-        {
-            String title = titleField.getText();
-            String description = descriptionArea.getText();
-            int ownerID = 0;
-            try
+            else if (e.getSource() == reserveGameButton)
             {
-                ownerID = Integer.parseInt(ownerIDField.getText());
-            } catch (Exception exception)
-            {
-                Alert alert = new Alert(Alert.AlertType.ERROR, "Enter VIA ID in \"Owner ID\" field!");
-                alert.setHeaderText(null);
-                alert.show();
-                return;
+                int index = catalogueTable.getSelectionModel().getSelectedIndex();
+                BoardGame game = AssociationModelManager.getAssociation().getCatalogue().getBoardGame(index);
+
+
+                Stage window = new Stage();
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/set_status_dialog_window.fxml"));
+                Parent root = (Parent) loader.load();
+                StatusViewController statusViewController = loader.getController();
+                statusViewController.passData(index, false);
+                Scene scene = new Scene(root);
+                window.setScene(scene);
+                window.showAndWait();
+
+                updateTable();
             }
-
-            Genre genre = genreChoiceBox.getSelectionModel().getSelectedItem();
-
-
-            Association association = AssociationModelManager.getAssociation();
-            int index = catalogueTable.getSelectionModel().getSelectedIndex();
-            BoardGame boardGameTemp;
-            try
+            else if (e.getSource() == returnGameButton)
             {
-                boardGameTemp = new BoardGame(title, ownerID, description, genre);
+                int index = catalogueTable.getSelectionModel().getSelectedIndex();
+                Association association = AssociationModelManager.getAssociation();
+                association.getCatalogue().getBoardGame(index).setStatusOfGame(null);
+                AssociationModelManager.saveAssociation(association);
+                updateTable();
             }
-            catch (IllegalArgumentException exception)
+            else if (e.getSource() == addRateButton)
             {
-                Alert alert = new Alert(Alert.AlertType.ERROR, exception.getMessage());
-                alert.setHeaderText(null);
-                alert.show();
-                return;
+                int index = catalogueTable.getSelectionModel().getSelectedIndex();
+                BoardGame game = AssociationModelManager.getAssociation().getCatalogue().getBoardGame(index);
+
+
+                Stage window = new Stage();
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/rate_dialog_window.fxml"));
+                Parent root = (Parent) loader.load();
+                RateController rateController = loader.getController();
+                rateController.passData(index);
+                Scene scene = new Scene(root);
+                window.setScene(scene);
+                window.showAndWait();
+                updateTable();
             }
-            association.getCatalogue().setBoardGame(index, boardGameTemp);
-            AssociationModelManager.saveAssociation(association);
-            updateTable();
-
         }
-        else if (e.getSource() == deleteGameButton)
+        catch (IndexOutOfBoundsException exception)
         {
-            BoardGame game = catalogueTable.getSelectionModel().getSelectedItem();
-            AssociationModelManager.getAssociation().getCatalogue().removeBoardGame(game);
-            updateTable();
-        }
-        else if (e.getSource() == borrowGameButton)
-        {
-            int index = catalogueTable.getSelectionModel().getSelectedIndex();
-            BoardGame game = AssociationModelManager.getAssociation().getCatalogue().getBoardGame(index);
-
-
-            Stage window = new Stage();
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/set_status_dialog_window.fxml"));
-            Parent root = (Parent) loader.load();
-            StatusViewController statusViewController = loader.getController();
-            statusViewController.passData(index, true);
-            Scene scene = new Scene(root);
-            window.setScene(scene);
-            window.showAndWait();
-
-
-            updateTable();
-        }
-        else if (e.getSource() == reserveGameButton)
-        {
-            int index = catalogueTable.getSelectionModel().getSelectedIndex();
-            BoardGame game = AssociationModelManager.getAssociation().getCatalogue().getBoardGame(index);
-
-
-            Stage window = new Stage();
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/set_status_dialog_window.fxml"));
-            Parent root = (Parent) loader.load();
-            StatusViewController statusViewController = loader.getController();
-            statusViewController.passData(index, false);
-            Scene scene = new Scene(root);
-            window.setScene(scene);
-            window.showAndWait();
-
-            updateTable();
-        }
-        else if (e.getSource() == returnGameButton)
-        {
-            int index = catalogueTable.getSelectionModel().getSelectedIndex();
-            Association association = AssociationModelManager.getAssociation();
-            association.getCatalogue().getBoardGame(index).setStatusOfGame(null);
-            AssociationModelManager.saveAssociation(association);
-            updateTable();
-        }
-        else if (e.getSource() == addRateButton)
-        {
-            int index = catalogueTable.getSelectionModel().getSelectedIndex();
-            BoardGame game = AssociationModelManager.getAssociation().getCatalogue().getBoardGame(index);
-
-
-            Stage window = new Stage();
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/rate_dialog_window.fxml"));
-            Parent root = (Parent) loader.load();
-            RateController rateController = loader.getController();
-            rateController.passData(index);
-            Scene scene = new Scene(root);
-            window.setScene(scene);
-            window.showAndWait();
-            updateTable();
-        }
-        else if (e.getSource() == deleteGameButton)
-        {
-            int index = catalogueTable.getSelectionModel().getSelectedIndex();
-            Association association = AssociationModelManager.getAssociation();
-            association.removeBoardGame(index);
-            AssociationModelManager.saveAssociation(association);
-            updateTable();
+            System.err.println("The game wasn't chosen");
         }
     }
 
