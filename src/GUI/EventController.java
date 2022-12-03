@@ -111,10 +111,12 @@ public class EventController
 
     public void handleAction(ActionEvent e)
     {
-        if (e.getSource() == addEventButton)
+        try
         {
-            String title = titleField.getText();
-            String description = descriptionArea.getText();
+            if (e.getSource() == addEventButton)
+            {
+                String title = titleField.getText();
+                String description = descriptionArea.getText();
 
                 MyDate date = new MyDate();
                 LocalDate tempDate = datePicker.getValue();
@@ -152,19 +154,19 @@ public class EventController
                     System.err.println("Student list is empty in event tab");
                 }
 
-            Association association = AssociationModelManager.getAssociation();
-            association.addEvent(event);
-            AssociationModelManager.saveAssociation(association);
-            updateTable();
-        }
-        else if (e.getSource() == exportEventButton)
-        {
-            //todo export
-        }
-        else if (e.getSource() == editEventButton)
-        {
-            String title = titleField.getText();
-            String description = descriptionArea.getText();
+                Association association = AssociationModelManager.getAssociation();
+                association.addEvent(event);
+                AssociationModelManager.saveAssociation(association);
+                updateTable();
+            }
+            else if (e.getSource() == exportEventButton)
+            {
+                //TODO export
+            }
+            else if (e.getSource() == editEventButton)
+            {
+                String title = titleField.getText();
+                String description = descriptionArea.getText();
 
                 MyDate date = new MyDate();
                 LocalDate tempDate = datePicker.getValue();
@@ -181,15 +183,16 @@ public class EventController
                 association.getEventList().setEvent(eventTemp, index);
                 AssociationModelManager.saveAssociation(association);
 
-            updateTable();
-        }
-        else if (e.getSource() == deleteEventButton)
-        {
-            Association association = AssociationModelManager.getAssociation();
-            int temp = eventsTable.getSelectionModel().getSelectedIndex();
-            association.removeEvent(temp);
-            AssociationModelManager.saveAssociation(association);
-            updateTable();
+                updateTable();
+            }
+            else if (e.getSource() == deleteEventButton)
+            {
+                Association association = AssociationModelManager.getAssociation();
+                int temp = eventsTable.getSelectionModel().getSelectedIndex();
+                association.removeEvent(temp);
+                AssociationModelManager.saveAssociation(association);
+                updateTable();
+            }
         }
         catch (IndexOutOfBoundsException exception)
         {
