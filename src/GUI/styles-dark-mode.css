@@ -88,6 +88,10 @@
 /*Edit Cell Color Only when cursor hover cell */
 #genreChoiceBox .list-cell:hover{
     -fx-opacity: 0.6;
+    -fx-text-fill: blue;
+}
+
+.toggle-switch .label{
     -fx-text-fill: black;
 }
 

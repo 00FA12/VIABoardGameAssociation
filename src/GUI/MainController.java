@@ -1,9 +1,15 @@
 package GUI;
 
+import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
+import javafx.scene.Scene;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
+import org.controlsfx.control.ToggleSwitch;
 
 public class MainController
 {
@@ -25,6 +31,10 @@ public class MainController
     private CatalogueController catalogueTabContentController;
     @FXML
     private StudentController studentTabContentController;
+    @FXML
+    private ToggleSwitch darkModeToggleSwitch;
+    @FXML
+    private VBox mainPane;
 
     public void initialize()
     {
@@ -51,6 +61,25 @@ public class MainController
         else if (catalogueTab != null && catalogueTab.isSelected())
         {
             catalogueTabContentController.updateTable();
+        }
+    }
+
+    public void handleAction(MouseEvent e)
+    {
+        if(e.getSource() == darkModeToggleSwitch)
+        {
+            String darkTheme = "GUI/styles-dark-mode.css";
+            String lightTheme = "GUI/styles-light-mode.css";
+            if(darkModeToggleSwitch.isSelected())
+            {
+                mainPane.getStylesheets().remove(lightTheme);
+                mainPane.getStylesheets().add(darkTheme);
+            }
+            else
+            {
+                mainPane.getStylesheets().remove(darkTheme);
+                mainPane.getStylesheets().add(lightTheme);
+            }
         }
     }
 

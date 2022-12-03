@@ -39,24 +39,24 @@
 }
 
 .table-row-cell:odd{
-    -fx-background-color: #37334D;
+    -fx-background-color: #A18FC3;
 }
 
 .table-row-cell .text{
-    -fx-fill: #FEF9EF;
+    -fx-fill: black;
 }
 
 
 .table-row-cell:even{
-    -fx-background-color: #5B5580;
+    -fx-background-color: #F8EBFF;
 }
 
 .table-row-cell:selected{
-    -fx-background-color: #FEF9EF;
+    -fx-background-color: black;
 }
 
 .table-row-cell:selected .text {
-    -fx-fill: black;
+    -fx-fill: white;
 }
 
 .button{
@@ -64,8 +64,12 @@
     -fx-text-fill: #FEF9EF;
 }
 
-.tab-pane, .table-view{
+.table-view{
     -fx-background-color: #dde4e6;
+}
+
+.menu-bar{
+    -fx-background-color: transparent;
 }
 
 .label, .check-box {
@@ -94,3 +98,6 @@
     -fx-text-fill: blue;
 }
 
+.toggle-switch:selected .thumb-area{
+    -fx-background-color: black;
+}
