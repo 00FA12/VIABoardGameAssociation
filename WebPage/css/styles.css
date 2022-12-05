@@ -1,0 +1,452 @@
+/* MAIN PAGE Sevastian Bahynskyi*/ 
+body{
+    /* display: flex; */
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+nav .container-fluid{
+    position: relative;
+    background-color: #639FAB;
+}
+
+nav .container-fluid a{
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+}
+
+.align-middle{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.carousel-control-next-icon{
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%234610F4' width='5' height='5' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5L3.75 4l-2.5 2.5L2.75 8l4-4-4-4z'/%3e%3c/svg%3e") !important;
+}
+
+.carousel-control-prev-icon{
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%234610F4' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='M5.25 0l-4 4 4 4 1.5-1.5L4.25 4l2.5-2.5L5.25 0z'/%3e%3c/svg%3e") !important;
+}
+
+.main-block p{
+    font-size: large;
+    font-weight: 500;
+}
+
+.main-block h2{
+    color: #84DF9D;
+    font-size: 250%;
+}
+
+.main-block .align-btn-center{
+    position: relative !important;
+}
+
+.main-block a{
+    text-decoration: none;
+}
+
+.main-block a[role="button"]{
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color:#8c00ff;
+    color: white;
+    font-weight: 600;
+    font-size: x-large;
+    border: none;
+    border-radius: 100px;
+    padding: 0.2rem 1rem;
+    transition: 0.7s;
+}
+
+.main-block a[role="button"]:hover{
+    background-color: #3f0073;
+    color: white;
+}
+
+.main-block input[value*="Contact"]{
+    display: flex;
+    border-radius: 100px;
+    border: none;
+    background-color: #B9EE86;
+    font-size: 200%;
+    color: #57B6B4;
+    padding: 0rem 1rem;
+    font-weight: 600;
+    margin: 5% 0;
+    transition: 0.4s;
+}
+
+.main-block input[value*="Contact"]:hover{
+    transform: scale(1.1) translateX(20px);
+    background-color: #F9F871;
+}
+
+.footer{
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #639FAB;
+}
+
+.footer .work-hours{
+    color: white;
+    font-weight: bold;
+    font-size: small;
+}
+
+.footer .networks{
+    display: flex;
+    align-items: center;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-instagram {
+    color: white;
+    background: #f09433;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+}
+
+.fa {
+    padding: 10px;
+    font-size: 50px !important;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.4s;
+    width: 5rem;
+    margin: 0.5rem;
+}
+
+.fa:hover {
+    opacity: 0.9;
+    transform: scale(1.1);
+    color: white
+}
+
+
+.navbar-logo:hover{
+    background-color: gainsboro;
+}
+
+#Logo{
+    width: 20%;
+    height: 20%;
+}
+/* MAIN PAGE */
+
+
+/* EVENT Kateryna*/
+.events-block{
+    background-color: #57B6B4;
+    padding: 0;
+}
+
+
+.events-block .row{
+    border: 5px solid white;
+    background-color: #60CCAF;
+
+
+}
+
+.events-block p{
+    margin: 5px;
+}
+/* EVENT */
+
+
+
+
+/* ABOUT GAMES Sevastian Bahynskyi*/
+.about-games-block .row .col-md{
+    border: 5px solid #324B50;
+    position: relative;
+}
+
+.about-games-block .row{
+    margin: 0 !important;
+}
+
+.about-games-block .row .row{
+    border-top: 0px;
+}
+
+.about-games-block h1{
+    text-align: center;
+}
+
+.about-games-block p{
+    margin-left: 1rem;
+}
+
+.about-games-block .col-md{
+    padding: 0 !important;
+}
+
+.about-games-block img{
+    object-fit: contain;
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.about-games-block input[value*="Open in"]{
+    color: white;
+    font-weight: 600;
+    font-size: large;
+    border: none;
+    border-radius: 100px;
+    padding: 0.2rem 1rem;
+    background: linear-gradient(45deg, #8c00ff, #8c00ff, #d151fb, #45cef1);
+    background-size: 300% 300%;
+    transition: 1.2s ease;
+    background-position: 0 0;
+    
+}
+
+
+.about-games-block input[value*="Open in"]:hover{
+    transform: scale(1.07);
+    color: #fff;
+    background-position: 100% 0;
+    transition: 1.2s ease;
+}
+/* ABOUT GAMES */
+
+
+
+/* CATALOGUE Michael Leo*/
+.filter-bar{
+    font-weight: bold;
+    font-size: large;
+}
+
+.filter-bar input[placeholder*="Search..."]{
+    width: -webkit-fill-available;
+    min-width: 10px;
+}
+
+.filter-bar a{
+    user-select: none;
+    cursor: pointer;
+}
+
+.filter-bar ul{
+    list-style-type: none;
+    display: inline;
+    margin-top: 1rem;
+}
+
+.filter-bar .dropdown-button{
+    background-color: #84DF9D;
+    border-radius: 50px;
+    padding: 0.2rem 1rem;
+    color: black;
+    font-size: large;
+    font-weight: 500;
+}
+
+.dropdown-button ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background: #ffffff;
+    border: solid 2px #000000;
+    min-width: 200px;
+    padding-left: 1rem;
+}
+
+.dropdown-button:focus-within > ul {
+    display: block;
+}
+
+.filter-bar p{
+    margin-top: 1rem;
+    margin-right: 1rem;
+}
+
+#min, #max{
+    margin-right: 5px;
+    height: 33px;
+    width: 60px;
+}
+
+/* CATALOGUE Checkbox*/
+
+.checkbox{
+    user-select: none;
+    width: 300px;
+}
+
+.checkbox input{
+    height: 0px;
+    width: 0px;
+}
+
+.checkbox label{
+    margin-right: 10px;
+}
+
+.checkmark {
+    position: static;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border: 1px solid #000000;
+}
+
+.checkbox:hover .checkmark {
+    background-color: #ccc;
+}
+
+.checkbox input:checked + .checkmark {
+    background-color: #2196F3;
+}
+
+.checkmark:after {
+    content: "";
+    position: relative;
+    display: none;
+  }
+
+.checkbox input:checked + .checkmark:after {
+    display: block;
+    left: 9px;
+    top: 6px;
+    width: 6px;
+    height: 11px;
+    border: solid rgb(41, 19, 19);
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+/* CATALOGUE rent-games-block */
+
+.CATALOGUE_rent-games-block-text{
+    padding: 1rem, 1rem, 1rem, 0;
+}
+
+.masking-box{
+    overflow: hidden;
+    border-radius: 15px;
+    height: 150px;
+    box-shadow: 0px 0px 4px #0000004b;
+}
+
+.masking-box img{
+    width: -webkit-fill-available;
+}
+
+.read-more-checkbox{
+    position: static;
+    display: block;
+    float: left;
+    padding: 0.6rem 1rem;
+    margin-top: 0.5rem;
+    margin-right: 1rem;
+
+    height: 40px;
+
+    border-width: 0px;
+    border-radius: 50px;
+
+    box-shadow: 0px 0px 6px #0000005b;
+    border-radius: 50px;
+    background-color: rgb(15, 252, 141);
+
+    text-decoration: none;
+    font-size: 12px;
+    color: rgb(0, 0, 0) !important;
+    font-weight: bold;
+    transition: 0.15s;
+
+    user-select: none;
+    cursor: pointer;
+}
+
+.read-more-checkbox:hover {
+    background-color: rgb(42, 223, 136);
+    box-shadow: 0px 0px 8px #0000005b;
+    transform: scale(105%);
+}
+
+.read-more-checkbox ~ div{
+    display: none;
+    position: relative;
+    /* top: 50px; */
+    width: 100%;
+    height: fit-content;
+    background-color: #f1f1f1;
+    box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    float: left;
+    background-color: #cacaca;
+    border-radius: 15px;
+}
+
+#read-more-checkbox-one:focus-within ~ div{
+    display: flex;
+    width: 200%;
+}
+
+#read-more-checkbox-two:focus-within ~ div{
+    display: flex;
+    width: 200%;
+}
+
+#read-more-checkbox-three:focus-within ~ div{
+    display: flex;
+    width: 200%;
+}
+
+#read-more-checkbox-four:focus-within ~ div{
+    display: flex;
+    width: 200%;
+}
+
+#read-more-checkbox-five:focus-within ~ div{
+    display: flex;
+    width: 200%;
+}
+
+#read-more-checkbox-six:focus-within ~ div{
+    display: flex;
+    width: 200%;
+}
+
+/* CATALOGUE */
+
+
+/* CONTACT Hugo Pennarubia*/
+.contact-block{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+iframe{
+    width: 100%;
+    height: 100%;
+    padding-right: 0 !important;
+    min-height: 400px;
+}
+.contact-block img
+{
+    width: 30%;
+    height: auto;
+    border-radius: 100%;
+}
+/* CONTACT */

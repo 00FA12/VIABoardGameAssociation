@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Catalogue>
+  <catalogue>
+    <ratings>
+      <ratings>5</ratings>
+    </ratings>
+    <genre>
+      <name>Card Games</name>
+    </genre>
+    <description>qethgweh</description>
+    <title>title1</title>
+    <ownerID>123458</ownerID>
+  </catalogue>
+  <catalogue>
+    <ratings/>
+    <genre>
+      <name>Card Games</name>
+    </genre>
+    <description>qethgweh</description>
+    <title>title1</title>
+    <ownerID>123458</ownerID>
+  </catalogue>
+  <catalogue>
+    <ratings/>
+    <genre>
+      <name>Card Games</name>
+    </genre>
+    <description>qethgweh</description>
+    <title>title1</title>
+    <ownerID>346343</ownerID>
+  </catalogue>
+  <catalogue>
+    <ratings>
+      <ratings>5</ratings>
+    </ratings>
+    <genre>
+      <name>Card Games</name>
+    </genre>
+    <description>qethgweh</description>
+    <title>title1</title>
+    <ownerID>546546</ownerID>
+  </catalogue>
+</Catalogue>
