@@ -54,10 +54,10 @@ public class MainController
     public void initialize()
     {
         parser = new XmlJsonParser();
-        // studentTabController.initialize(modelManager);
-        // voteTabController.initialize(modelManager);
-        // catalogueTabController.initialize(modelManager);
-        // eventTabController.initialize(modelManager);
+        String lightTheme = "GUI/styles-light-mode.css";
+        catalogueTabContentController.setTheme(lightTheme);
+
+
     }
 
     public void tabChanged(Event event)
@@ -90,11 +90,13 @@ public class MainController
             {
                 mainPane.getStylesheets().remove(lightTheme);
                 mainPane.getStylesheets().add(darkTheme);
+                catalogueTabContentController.setTheme(darkTheme);
             }
             else
             {
                 mainPane.getStylesheets().remove(darkTheme);
                 mainPane.getStylesheets().add(lightTheme);
+                catalogueTabContentController.setTheme(lightTheme);
             }
         }
 
@@ -114,6 +116,7 @@ public class MainController
         {
             File file = parser.toXml(AssociationModelManager.getAssociation().getEventList(), "WebPage/Export/events.xml");
         }
+        // todo about and help
     }
 
 }

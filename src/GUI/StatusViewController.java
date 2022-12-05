@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import model.Association;
 import model.AssociationModelManager;
@@ -20,6 +21,8 @@ public class StatusViewController
 
 {
     @FXML
+    private HBox setStatusDialogBox;
+    @FXML
     private TextField statusBorrowerIDField;
     @FXML
     private DatePicker statusStartDatePicker;
@@ -31,6 +34,7 @@ public class StatusViewController
     private int indexOfGame;
 
     private BoardGame game;
+    private String theme;
 
 
     public void initialize()
@@ -38,12 +42,15 @@ public class StatusViewController
     }
 
 
-    public void passData(int indexOfGame, boolean isBorrowing)
+    public void passData(int indexOfGame, boolean isBorrowing, String theme)
     {
         this.game = AssociationModelManager.getAssociation().getBoardGame(indexOfGame);
         this.isBorrowing = isBorrowing;
         this.indexOfGame = indexOfGame;
+        this.theme = theme;
 
+        setStatusDialogBox.getStylesheets().clear();
+        setStatusDialogBox.getStylesheets().add(theme);
     }
 
 

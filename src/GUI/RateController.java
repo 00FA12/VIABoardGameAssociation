@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import model.Association;
 import model.AssociationModelManager;
@@ -17,15 +18,19 @@ public class RateController
     @FXML private Button rateButton;
 
     @FXML private Rating rating;
+    @FXML private VBox rateDialogWindowBox;
 
     private int index;
-    public void passData(int index)
+    public void passData(int index, String theme)
     {
         this.index = index;
         Association association = AssociationModelManager.getAssociation();
-        
+
         String title = association.getBoardGame(index).getTitle();
         gameTitle.setText(title);
+        rateDialogWindowBox.getStylesheets().clear();
+        rateDialogWindowBox.getStylesheets().add(theme);
+
     }
 
     @FXML private void handleAction(ActionEvent e)

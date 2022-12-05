@@ -186,7 +186,7 @@ public class CatalogueController
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/set_status_dialog_window.fxml"));
                 Parent root = (Parent) loader.load();
                 StatusViewController statusViewController = loader.getController();
-                statusViewController.passData(index, true);
+                statusViewController.passData(index, true, theme);
                 Scene scene = new Scene(root);
                 window.setScene(scene);
                 window.showAndWait();
@@ -204,7 +204,7 @@ public class CatalogueController
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/set_status_dialog_window.fxml"));
                 Parent root = (Parent) loader.load();
                 StatusViewController statusViewController = loader.getController();
-                statusViewController.passData(index, false);
+                statusViewController.passData(index, false, theme);
                 Scene scene = new Scene(root);
                 window.setScene(scene);
                 window.showAndWait();
@@ -229,7 +229,7 @@ public class CatalogueController
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/rate_dialog_window.fxml"));
                 Parent root = (Parent) loader.load();
                 RateController rateController = loader.getController();
-                rateController.passData(index);
+                rateController.passData(index, theme);
                 Scene scene = new Scene(root);
                 window.setScene(scene);
                 window.showAndWait();
@@ -257,5 +257,12 @@ public class CatalogueController
         }
 
         catalogueTable.getSelectionModel().select(indexSelected);
+    }
+
+    private String theme;
+    public void setTheme(String theme)
+    {
+        this.theme = theme;
+
     }
 }

@@ -101,3 +101,11 @@
 .toggle-switch:selected .thumb-area{
     -fx-background-color: black;
 }
+
+#setStatusDialogBox{
+    -fx-background-color: #dde4e6;
+}
+
+#rating .button{
+    -fx-background-color: transparent;
+}

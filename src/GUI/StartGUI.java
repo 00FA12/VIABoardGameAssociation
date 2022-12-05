@@ -3,6 +3,7 @@ package GUI;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 import main.LoadInitialData;
@@ -18,6 +19,7 @@ public class StartGUI extends Application
     Scene scene = new Scene(loader.load());
     window.setScene(scene);
     window.setResizable(false);
+    window.getIcons().add(new Image("GUI/via-logo.jpg"));
     window.show();
   }
 }

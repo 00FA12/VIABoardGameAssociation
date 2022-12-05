@@ -95,3 +95,15 @@
     -fx-text-fill: black;
 }
 
+#setStatusDialogBox{
+    -fx-background-color: #171333;
+}
+
+#rateDialogWindowBox{
+    -fx-background-color: #171333;
+}
+
+#rating .button{
+    -fx-background-color: transparent;
+}
+

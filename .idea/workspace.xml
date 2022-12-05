@@ -6,9 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" name="Tasks" comment="dark mode added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/association.bin" beforeDir="false" afterPath="$PROJECT_DIR$/association.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/EventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/EventController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/CatalogueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/CatalogueController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/RateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/RateController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/StartGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/StartGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/StatusViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/StatusViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/rate_dialog_window.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/rate_dialog_window.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/set_status_dialog_window.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/set_status_dialog_window.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/styles-dark-mode.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/styles-dark-mode.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/styles-light-mode.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/styles-light-mode.css" afterDir="false" />
     </list>
     <list id="e87b550e-3d6a-4d86-a721-c06a7156f051" name="Changes" comment="1master" />
     <list id="6ea00eaf-909b-4489-9882-3420a22ddcea" name="Changes by hmadrid" comment="Changes by hmadrid" />
@@ -417,7 +423,7 @@
       <workItem from="1670019271775" duration="4360000" />
       <workItem from="1670023678997" duration="3599000" />
       <workItem from="1670069436307" duration="16515000" />
-      <workItem from="1670228687623" duration="16465000" />
+      <workItem from="1670228687623" duration="20961000" />
     </task>
     <task id="LOCAL-00037" summary="Was added auto completion text field, little changes in CatalogueController.java &amp; EventController.java, preventing of errors">
       <created>1670027238045</created>
@@ -496,7 +502,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670249016622</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="dark mode added">
+      <created>1670251154311</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1670251154311</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
