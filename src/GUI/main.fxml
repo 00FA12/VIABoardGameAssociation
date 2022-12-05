@@ -18,15 +18,15 @@
                   <menus>
                       <Menu mnemonicParsing="false" text="Export">
                           <items>
-                              <MenuItem mnemonicParsing="false" text="Catalogue" />
-                              <MenuItem mnemonicParsing="false" text="Events" />
-                              <MenuItem mnemonicParsing="false" text="Votes" />
+                              <MenuItem fx:id="catalogueMenuItem" mnemonicParsing="false" onAction="#handleAction" text="Catalogue" />
+                              <MenuItem fx:id="eventsMenuItem" mnemonicParsing="false" onAction="#handleAction" text="Events" />
+                              <MenuItem fx:id="votesMenuItem" mnemonicParsing="false" onAction="#handleAction" text="Votes" />
                           </items>
                       </Menu>
                       <Menu mnemonicParsing="false" text="Help">
                           <items>
-                              <MenuItem mnemonicParsing="false" text="Help" />
-                              <MenuItem mnemonicParsing="false" text="About" />
+                              <MenuItem fx:id="helpMenuItem" mnemonicParsing="false" onAction="#handleAction" text="Help" />
+                              <MenuItem fx:id="aboutMenuItem" mnemonicParsing="false" onAction="#handleAction" text="About" />
                           </items>
                       </Menu>
                   </menus>
@@ -34,7 +34,7 @@
                   <Insets right="30.0" />
                </HBox.margin>
               </MenuBar>
-            <ToggleSwitch fx:id="darkModeToggleSwitch" onMouseClicked="#handleAction" prefHeight="18.0" prefWidth="102.0" text="Dark mode" />
+            <ToggleSwitch fx:id="darkModeToggleSwitch" onMouseClicked="#handleMouseEvent" prefHeight="18.0" prefWidth="102.0" text="Dark mode" />
          </children>
       </HBox>
         <TabPane fx:id="tabs" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">

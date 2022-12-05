@@ -105,9 +105,9 @@ public class CatalogueController
                 {
                     ownerID = Integer.parseInt(ownerIDField.getText());
                 }
-                catch (Exception exception)
+                catch (NumberFormatException exception)
                 {
-                    Alert alert = new Alert(Alert.AlertType.ERROR, "Enter VIA ID in \"Owner ID\" field!");
+                    Alert alert = new Alert(Alert.AlertType.ERROR, "Enter only digits in \"Owner ID\" field!");
                     alert.setHeaderText(null);
                     alert.show();
                     return;

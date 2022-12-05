@@ -32,6 +32,8 @@ public class StudentController
     statusColumn.setCellValueFactory(
         new PropertyValueFactory<Student, String>("status"));
 
+    studentTable.getSelectionModel().selectFirst();
+
     updateTable();
   }
 
@@ -43,14 +45,38 @@ public class StudentController
       {
         Student student = null;
         String name = nameField.getText();
-        int ID = Integer.parseInt(IDField.getText());
+        int ID = 0;
+        try
+        {
+          ID = Integer.parseInt(IDField.getText());
+        }
+        catch (NumberFormatException exception)
+        {
+          Alert alert = new Alert(Alert.AlertType.ERROR, "Enter only digits in \"ID\" field!");
+          alert.setHeaderText(null);
+          alert.show();
+          return;
+        }
         boolean isMember = isMemberCheckBox.isSelected();
 
-        student = new Student(name, ID, isMember);
+        try
+        {
+          student = new Student(name, ID, isMember);
+          Association association = AssociationModelManager.getAssociation();
+          association.addStudent(student);
+          AssociationModelManager.saveAssociation(association);
 
-        Association association = AssociationModelManager.getAssociation();
-        association.addStudent(student);
-        AssociationModelManager.saveAssociation(association);
+        }
+        catch (IllegalArgumentException exception)
+        {
+          Alert alert = new Alert(Alert.AlertType.ERROR);
+          alert.setHeaderText(null);
+          alert.setContentText(exception.getMessage());
+          alert.show();
+          return;
+        }
+
+
         updateTable();
       }
       else if (e.getSource() == deleteStudentButton)
@@ -70,6 +96,9 @@ public class StudentController
 
   public void updateTable()
   {
+    int index = studentTable.getSelectionModel().getSelectedIndex();
+    if (index == -1)
+      index = 0;
     StudentList studentList = AssociationModelManager.getAssociation()
         .getStudentList();
     studentTable.getItems().clear();
@@ -80,6 +109,8 @@ public class StudentController
       studentTable.getItems().add(student);
     }
     // todo update table
+
+    studentTable.getSelectionModel().select(index);
 
   }
 }

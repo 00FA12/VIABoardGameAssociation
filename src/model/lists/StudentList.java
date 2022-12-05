@@ -1,5 +1,6 @@
 package model.lists;
 
+import model.AssociationModelManager;
 import model.Student;
 
 import java.io.Serializable;

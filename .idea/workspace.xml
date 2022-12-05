@@ -4,19 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" name="Tasks" comment="Was added auto completion text field, little changes in CatalogueController.java &amp; EventController.java, preventing of errors">
+    <list default="true" id="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" name="Tasks" comment="dark mode added">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/XmlJsonParser_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/VIABoardGameAssociation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/moon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/sun.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VIABoardGameAssociation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/VIABoardGameAssociation.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/association.bin" beforeDir="false" afterPath="$PROJECT_DIR$/association.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/CatalogueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/CatalogueController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/Styles.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/RateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/RateController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/StudentController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/main.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/styles-dark-mode.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/styles-dark-mode.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/styles-light-mode.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/styles-light-mode.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/lists/StudentList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/lists/StudentList.java" afterDir="false" />
     </list>
     <list id="e87b550e-3d6a-4d86-a721-c06a7156f051" name="Changes" comment="1master" />
+    <list id="6ea00eaf-909b-4489-9882-3420a22ddcea" name="Changes by hmadrid" comment="">
+      <change beforePath="$PROJECT_DIR$/src/GUI/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/StudentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/lists/StudentList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/lists/StudentList.java" afterDir="false" />
+    </list>
     <list id="68818cb0-604d-4df6-bbf4-d4fc4052d36d" name="Changes by hugom" comment="" />
     <list id="333ad59c-8813-4286-8c6e-d021d683be6e" name="Changes by micha" comment="Changes by micha" />
+    <list id="2041aa2a-1ab1-4109-a57c-377e7234af5b" name="Changes by pind9" comment="" />
     <list id="d1a99415-edf2-468f-a9e2-b3fdf658817e" name="Changes by Севастиан" comment="Changes by Севастиан" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,8 +36,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="AnnotationType" />
-        <option value="Class" />
         <option value="CSS File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -70,6 +79,29 @@
     <setting file="file://$PROJECT_DIR$/src/GUI/VoteController.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/LoadInitialData.java" root0="FORCE_HIGHLIGHTING" />
   </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/GUI/StudentController.java">
+      <ranges>
+        <range start1="2" end1="2" start2="2" end2="4" changelist="6ea00eaf-909b-4489-9882-3420a22ddcea" />
+        <range start1="8" end1="8" start2="10" end2="11" changelist="6ea00eaf-909b-4489-9882-3420a22ddcea" />
+        <range start1="11" end1="11" start2="14" end2="16" changelist="6ea00eaf-909b-4489-9882-3420a22ddcea" />
+        <range start1="24" end1="24" start2="29" end2="51" changelist="6ea00eaf-909b-4489-9882-3420a22ddcea" />
+        <range start1="27" end1="27" start2="54" end2="57" changelist="6ea00eaf-909b-4489-9882-3420a22ddcea" />
+        <range start1="34" end1="34" start2="64" end2="66" changelist="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" />
+        <range start1="45" end1="46" start2="77" end2="89" changelist="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" />
+        <range start1="48" end1="53" start2="91" end2="109" changelist="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" />
+        <range start1="55" end1="55" start2="111" end2="135" changelist="6ea00eaf-909b-4489-9882-3420a22ddcea" />
+        <range start1="72" end1="72" start2="152" end2="155" changelist="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" />
+        <range start1="82" end1="82" start2="165" end2="167" changelist="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/model/lists/StudentList.java">
+      <ranges>
+        <range start1="2" end1="2" start2="2" end2="3" changelist="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" />
+        <range start1="30" end1="31" start2="31" end2="49" changelist="6ea00eaf-909b-4489-9882-3420a22ddcea" />
+      </ranges>
+    </file>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -86,7 +118,7 @@
     "TODO_SCOPE": "All Places",
     "WebServerToolWindowFactoryState": "false",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "last_opened_file_path": "C:/Users/Sevastian/Downloads/jfoenix-9.0.10.jar",
+    "last_opened_file_path": "C:/Users/Sevastian/Downloads/XmlJsonParser-1.4.jar",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -94,7 +126,7 @@
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.new.ui",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -112,7 +144,7 @@
       <recent name="utils" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.StartGUI">
+  <component name="RunManager">
     <configuration name="StartGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GUI.StartGUI" />
       <module name="VIABoardGameAssociation" />
@@ -419,7 +451,8 @@
       <workItem from="1670019226493" duration="29000" />
       <workItem from="1670019271775" duration="4360000" />
       <workItem from="1670023678997" duration="3599000" />
-      <workItem from="1670069436307" duration="16369000" />
+      <workItem from="1670069436307" duration="16515000" />
+      <workItem from="1670228687623" duration="14719000" />
     </task>
     <task id="LOCAL-00037" summary="Was added auto completion text field, little changes in CatalogueController.java &amp; EventController.java, preventing of errors">
       <created>1670027238045</created>
@@ -449,7 +482,28 @@
       <option name="project" value="LOCAL" />
       <updated>1670095221473</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="dark mode added">
+      <created>1670099653277</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1670099653290</updated>
+    </task>
+    <task id="LOCAL-00042" summary="dark mode added">
+      <created>1670099658943</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1670099658943</updated>
+    </task>
+    <task id="LOCAL-00043" summary="dark mode added">
+      <created>1670099673610</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1670099673610</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -491,7 +545,19 @@
     <MESSAGE value="1" />
     <MESSAGE value="1master" />
     <MESSAGE value="Was added auto completion text field, little changes in CatalogueController.java &amp; EventController.java, preventing of errors" />
-    <option name="LAST_COMMIT_MESSAGE" value="Was added auto completion text field, little changes in CatalogueController.java &amp; EventController.java, preventing of errors" />
+    <MESSAGE value="dark mode added" />
+    <option name="LAST_COMMIT_MESSAGE" value="dark mode added" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/GUI/StudentController.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

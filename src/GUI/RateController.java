@@ -22,6 +22,10 @@ public class RateController
     public void passData(int index)
     {
         this.index = index;
+        Association association = AssociationModelManager.getAssociation();
+        
+        String title = association.getBoardGame(index).getTitle();
+        gameTitle.setText(title);
     }
 
     @FXML private void handleAction(ActionEvent e)
@@ -29,7 +33,7 @@ public class RateController
         if(e.getSource() == rateButton)
         {
             Association association = AssociationModelManager.getAssociation();
-            gameTitle.setText(association.getBoardGame(index).getTitle());
+
             association.getCatalogue().getBoardGame(index).addRating((int) Math.round(rating.getRating()));
             AssociationModelManager.saveAssociation(association);
 
