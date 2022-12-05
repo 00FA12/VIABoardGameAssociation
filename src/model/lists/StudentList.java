@@ -29,7 +29,24 @@ public class StudentList implements Serializable
 
   public void addStudent(Student student)
   {
-    this.students.add(student);
+    boolean repeat = false;
+    StudentList studentList = AssociationModelManager.getAssociation().getStudentList();
+    for (int i = 0; i < studentList.getSize(); i++)
+    {
+      if (studentList.getStudent(i).getID() == student.getID())
+      {
+        repeat = true;
+        break;
+      }
+    }
+    if (!repeat)
+    {
+      this.students.add(student);
+    }
+    else
+    {
+      throw new IllegalArgumentException("The ID introduced is already in use");
+    }
   }
 
   public Student getStudent(int index)

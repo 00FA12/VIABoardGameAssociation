@@ -1,6 +1,9 @@
 package model;
 
+import model.lists.StudentList;
+
 import java.io.Serializable;
+
 
 //Sevastian
 public class Student implements Serializable
@@ -11,21 +14,69 @@ public class Student implements Serializable
 
   public Student(String name, int ID)
   {
-    // StudentList studentList = AssociationModelManager.getStudentList();
-    // if (studentList.getStudentById(ID) == null)
-    // {
-    this.ID = ID;
-    this.name = name;
-    this.isMember = false;
-    // }
-    // else {
-    //  throw new IllegalArgumentException("ID is not unique!");
-    //  }
-    // todo ID check!
+    try
+    {
+      String[] splitString = name.split(" ");
+      if(splitString.length < 2 || splitString.length > 4)
+        throw new IllegalArgumentException("We are so restrictive that you can ony have a name of 2 to 4 words, we don't really care about your name");
+
+      for (int i = 0; i < splitString.length; i++)
+      {
+        if (!Character.isUpperCase(splitString[i].charAt(0)))
+          throw new IllegalArgumentException("Both name and surname should start with capital letter");
+        for (int j = 1; j < splitString[i].length(); j++)
+        {
+
+          if (!Character.isLowerCase(splitString[i].charAt(j)))
+            throw new IllegalArgumentException("Only the first letters of each word have to be in upper case, the rest have to be in lowe case");
+        }
+      } // bad HUGO, angry, furious, toxic, he is forcing me to cry
+    } // I wish I made him cry
+    catch (Exception e)
+    {
+      throw new IllegalArgumentException("Both name and surname should start with capital letter");
+    }
+
+     if (ID < 100000 || ID > 999999)
+     {
+       throw new IllegalArgumentException("Wrong ID format");
+     }
+      this.ID = ID;
+      this.name = name;
+      this.isMember = false;
+
   }
 
   public Student(String name, int ID, boolean isMember)
   {
+    try
+    {
+      String[] splitString = name.split(" ");
+      if(splitString.length < 2 || splitString.length > 4)
+        throw new IllegalArgumentException("We are so restrictive that you can ony have a name of 2 to 4 words, we don't really care about your name");
+
+      for (int i = 0; i < splitString.length; i++)
+      {
+        if (!Character.isUpperCase(splitString[i].charAt(0)))
+          throw new IllegalArgumentException("Both name and surname should start with capital letter");
+        for (int j = 1; j < splitString[i].length(); j++)
+        {
+
+          if (!Character.isLowerCase(splitString[i].charAt(j)))
+            throw new IllegalArgumentException("Only the first letters of each word have to be in upper case, the rest have to be in lowe case");
+        }
+      } // bad HUGO, angry, furious, toxic, he is forcing me to cry
+    } // I wish I made him cry
+    catch (Exception e)
+    {
+      throw new IllegalArgumentException("Both name and surname should start with capital letter");
+    }
+
+
+    if (ID < 100000 || ID > 999999)
+    {
+      throw new IllegalArgumentException("Wrong ID format");
+    }
     this.ID = ID;
     this.name = name;
     this.isMember = isMember;
