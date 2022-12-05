@@ -4,12 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" name="Tasks" comment="dark mode added" />
+    <list default="true" id="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" name="Tasks" comment="dark mode added">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/association.bin" beforeDir="false" afterPath="$PROJECT_DIR$/association.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/EventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/EventController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test.java" afterDir="false" />
+    </list>
     <list id="e87b550e-3d6a-4d86-a721-c06a7156f051" name="Changes" comment="1master" />
     <list id="6ea00eaf-909b-4489-9882-3420a22ddcea" name="Changes by hmadrid" comment="Changes by hmadrid" />
     <list id="68818cb0-604d-4df6-bbf4-d4fc4052d36d" name="Changes by hugom" comment="" />
     <list id="333ad59c-8813-4286-8c6e-d021d683be6e" name="Changes by micha" comment="Changes by micha" />
-    <list id="2041aa2a-1ab1-4109-a57c-377e7234af5b" name="Changes by pind9" comment="" />
     <list id="d1a99415-edf2-468f-a9e2-b3fdf658817e" name="Changes by Севастиан" comment="Changes by Севастиан" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +109,7 @@
       <recent name="utils" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.StartGUI">
     <configuration name="StartGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GUI.StartGUI" />
       <module name="VIABoardGameAssociation" />
@@ -413,7 +417,7 @@
       <workItem from="1670019271775" duration="4360000" />
       <workItem from="1670023678997" duration="3599000" />
       <workItem from="1670069436307" duration="16515000" />
-      <workItem from="1670228687623" duration="15348000" />
+      <workItem from="1670228687623" duration="16465000" />
     </task>
     <task id="LOCAL-00037" summary="Was added auto completion text field, little changes in CatalogueController.java &amp; EventController.java, preventing of errors">
       <created>1670027238045</created>
@@ -485,7 +489,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670246236898</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="dark mode added">
+      <created>1670249016622</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1670249016622</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

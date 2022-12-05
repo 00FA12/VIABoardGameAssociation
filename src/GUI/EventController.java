@@ -15,7 +15,10 @@ import model.*;
 import model.lists.EventList;
 import model.lists.StudentList;
 import org.controlsfx.control.CheckComboBox;
+import parser.ParserException;
+import parser.XmlJsonParser;
 
+import java.io.File;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -161,7 +164,8 @@ public class EventController
             }
             else if (e.getSource() == exportEventButton)
             {
-                //TODO export
+                XmlJsonParser parser = new XmlJsonParser();
+                File file = parser.toXml(AssociationModelManager.getAssociation().getEventList(), "WebPage/Export/events.xml");
             }
             else if (e.getSource() == editEventButton)
             {
@@ -198,8 +202,12 @@ public class EventController
         {
             System.err.println("The event wasn't chosen");
         }
+        catch (ParserException ex)
+        {
+            throw new RuntimeException(ex);
+        }
 
-    }/**/
+    }
 
     public void updateTable()
     {
