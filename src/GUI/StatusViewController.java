@@ -38,6 +38,8 @@ public class StatusViewController
 
     public void initialize()
     {
+        statusStartDatePicker.setPromptText(new MyDate(LocalDate.now().getDayOfMonth(), LocalDate.now().getMonthValue(),
+                LocalDate.now().getYear()).toString());
     }
 
 

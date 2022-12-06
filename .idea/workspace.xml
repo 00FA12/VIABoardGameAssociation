@@ -6,24 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" name="Tasks" comment="dark mode added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebPage/Export/catalogue.xml" beforeDir="false" afterPath="$PROJECT_DIR$/WebPage/Export/catalogue.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebPage/Export/events.xml" beforeDir="false" afterPath="$PROJECT_DIR$/WebPage/Export/events.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/association.bin" beforeDir="false" afterPath="$PROJECT_DIR$/association.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/CatalogueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/CatalogueController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/EventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/EventController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/StatusViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/StatusViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Event.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/MyDate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/MyDate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/lists/StudentList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/lists/StudentList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/StudentController.java" afterDir="false" />
     </list>
     <list id="e87b550e-3d6a-4d86-a721-c06a7156f051" name="Changes" comment="1master" />
     <list id="68818cb0-604d-4df6-bbf4-d4fc4052d36d" name="Changes by hugom" comment="" />
-    <list id="6323e09b-732e-4656-bc2c-154e7f31a3e3" name="Changes by micha" comment="">
-      <change beforePath="$PROJECT_DIR$/src/GUI/EventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/EventController.java" afterDir="false" />
-    </list>
-    <list id="241314fc-3c9e-4c30-b0c2-fdb591c15626" name="Changes by pind9" comment="">
-      <change beforePath="$PROJECT_DIR$/src/GUI/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/MainController.java" afterDir="false" />
-    </list>
+    <list id="6323e09b-732e-4656-bc2c-154e7f31a3e3" name="Changes by micha" comment="Changes by micha" />
     <list id="d1a99415-edf2-468f-a9e2-b3fdf658817e" name="Changes by Севастиан" comment="Changes by Севастиан" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,22 +68,6 @@
     <setting file="file://$PROJECT_DIR$/src/GUI/StatusViewController.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/GUI/VoteController.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/LoadInitialData.java" root0="FORCE_HIGHLIGHTING" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/GUI/MainController.java">
-      <ranges>
-        <range start1="5" end1="5" start2="5" end2="6" changelist="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" />
-        <range start1="58" end1="59" start2="59" end2="59" changelist="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" />
-        <range start1="118" end1="118" start2="118" end2="134" changelist="241314fc-3c9e-4c30-b0c2-fdb591c15626" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/GUI/EventController.java">
-      <ranges>
-        <range start1="125" end1="128" start2="125" end2="130" changelist="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" />
-        <range start1="129" end1="132" start2="131" end2="138" changelist="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" />
-        <range start1="156" end1="157" start2="162" end2="163" changelist="6323e09b-732e-4656-bc2c-154e7f31a3e3" />
-      </ranges>
-    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -184,27 +159,6 @@
       <workItem from="1669734724410" duration="5174000" />
       <workItem from="1669968834843" duration="15393000" />
       <workItem from="1670004844483" duration="8111000" />
-    </task>
-    <task id="LOCAL-00002" summary="1">
-      <created>1669638255017</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1669638255017</updated>
-    </task>
-    <task id="LOCAL-00003" summary="1">
-      <created>1669638813869</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1669638813869</updated>
-    </task>
-    <task id="LOCAL-00004" summary="1">
-      <created>1669643517329</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1669643517329</updated>
     </task>
     <task id="LOCAL-00005" summary="1">
       <created>1669645046977</created>
@@ -438,7 +392,7 @@
       <workItem from="1670023678997" duration="3599000" />
       <workItem from="1670069436307" duration="16515000" />
       <workItem from="1670228687623" duration="21209000" />
-      <workItem from="1670314967738" duration="6591000" />
+      <workItem from="1670314967738" duration="8255000" />
     </task>
     <task id="LOCAL-00037" summary="Was added auto completion text field, little changes in CatalogueController.java &amp; EventController.java, preventing of errors">
       <created>1670027238045</created>
@@ -538,7 +492,28 @@
       <option name="project" value="LOCAL" />
       <updated>1670257766252</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="dark mode added">
+      <created>1670328263262</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1670328263262</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Changes by micha">
+      <created>1670328273073</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1670328273073</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Changes by pind9">
+      <created>1670328279292</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1670328279292</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -573,15 +548,15 @@
     <MESSAGE value="test" />
     <MESSAGE value="event done" />
     <MESSAGE value="123" />
-    <MESSAGE value="Changes by micha" />
-    <MESSAGE value="Changes by pind9" />
     <MESSAGE value="01.12 event works" />
     <MESSAGE value="1" />
     <MESSAGE value="1master" />
     <MESSAGE value="Was added auto completion text field, little changes in CatalogueController.java &amp; EventController.java, preventing of errors" />
     <MESSAGE value="Changes by hmadrid" />
     <MESSAGE value="dark mode added" />
-    <option name="LAST_COMMIT_MESSAGE" value="dark mode added" />
+    <MESSAGE value="Changes by micha" />
+    <MESSAGE value="Changes by pind9" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes by pind9" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

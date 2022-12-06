@@ -109,6 +109,9 @@ public class EventController
         eventsTable.getSelectionModel().selectFirst();
 
         updateTable();
+
+        datePicker.setPromptText(new MyDate(LocalDate.now().getDayOfMonth(), LocalDate.now().getMonthValue(),
+                LocalDate.now().getYear()).toString());
     }
 
 
@@ -206,7 +209,7 @@ public class EventController
         }
         catch (IndexOutOfBoundsException exception)
         {
-            System.err.println("The event wasn't chosen");
+
         }
         catch (ParserException ex)
         {

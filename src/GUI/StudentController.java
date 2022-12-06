@@ -112,7 +112,15 @@ public class StudentController
       else if (e.getSource() == editStudentButton)
       {
         String name = nameField.getText();
-        int ID = studentTable.getSelectionModel().getSelectedItem().getID();
+        int ID = 0;
+        try
+        {
+          ID = studentTable.getSelectionModel().getSelectedItem().getID();
+        }
+        catch (Exception exception)
+        {
+          Alert alert = new Alert(Alert.AlertType.ERROR, "Enter proper ID in \"ID\" field.");
+        }
         boolean isMember = isMemberCheckBox.isSelected();
 
 
@@ -144,7 +152,7 @@ public class StudentController
     }
     catch (IndexOutOfBoundsException exception)
     {
-      System.err.println("The student wasn't chosen");
+      
     }
   }
 

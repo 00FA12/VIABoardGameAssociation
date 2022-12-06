@@ -238,7 +238,7 @@ public class CatalogueController
         }
         catch (IndexOutOfBoundsException exception)
         {
-            System.err.println("The game wasn't chosen");
+
         }
     }
 
