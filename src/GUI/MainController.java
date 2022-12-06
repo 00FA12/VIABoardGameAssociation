@@ -116,6 +116,22 @@ public class MainController
         {
             File file = parser.toXml(AssociationModelManager.getAssociation().getEventList(), "WebPage/Export/events.xml");
         }
+        else if (e.getSource()==helpMenuItem)
+        {
+            Alert alert =new Alert(Alert.AlertType.INFORMATION, "Please, contact to IT support\n nobody will help You, Bob!");
+            alert.setHeaderText(null);
+            alert.show();
+        }
+        else if(e.getSource()== aboutMenuItem)
+        {
+            Alert alert=new Alert(Alert.AlertType.INFORMATION,"IT assistance:" +
+                    " \nSevastian - 333425@via.dk " +
+                    "\n Michael- 332872@via.dk " +
+                    "\n Hugo -331335@via.dk " +
+                    "\n Kateryna-333469@via.dk");
+            alert.setHeaderText(null);
+            alert.show();
+        }
         // todo about and help
     }
 
