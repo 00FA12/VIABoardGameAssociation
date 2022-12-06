@@ -55,14 +55,14 @@ public class Event implements Serializable
 
   public void addAttender(Student student)
   {
-    attenders.addStudent(student);
+    attenders.addStudentAsAttender(student);
   }
 
   public void addAttenderList(List<Student> students)
   {
     for (Student student:students)
     {
-      attenders.addStudent(student);
+      attenders.addStudentAsAttender(student);
     }
   }
 

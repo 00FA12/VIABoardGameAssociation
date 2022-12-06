@@ -3,6 +3,7 @@
   <catalogue>
     <ratings>
       <ratings>5</ratings>
+      <ratings>4</ratings>
     </ratings>
     <genre>
       <name>Card Games</name>
@@ -12,7 +13,9 @@
     <ownerID>123458</ownerID>
   </catalogue>
   <catalogue>
-    <ratings/>
+    <ratings>
+      <ratings>5</ratings>
+    </ratings>
     <genre>
       <name>Card Games</name>
     </genre>

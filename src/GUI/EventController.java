@@ -123,13 +123,19 @@ public class EventController
 
                 MyDate date = new MyDate();
                 LocalDate tempDate = datePicker.getValue();
-                if(tempDate == null)
-                    date = null;
-                else
+                int day = tempDate.getDayOfMonth();
+                int month = tempDate.getMonthValue();
+                int year = tempDate.getYear();
+
+                try
                 {
-                    date.setDay(tempDate.getDayOfMonth());
-                    date.setMonth(tempDate.getMonthValue());
-                    date.setYear(tempDate.getYear()); // date initialization
+                    date = new MyDate(day, month, year);// date initialization
+                }
+                catch (IllegalArgumentException exception)
+                {
+                    Alert alert = new Alert(Alert.AlertType.ERROR, exception.getMessage());
+                    alert.setHeaderText(null);
+                    alert.show();
                 }
 
                 Event event = null;

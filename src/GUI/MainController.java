@@ -3,6 +3,7 @@ package GUI;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
@@ -56,7 +57,6 @@ public class MainController
         parser = new XmlJsonParser();
         String lightTheme = "GUI/styles-light-mode.css";
         catalogueTabContentController.setTheme(lightTheme);
-
 
     }
 

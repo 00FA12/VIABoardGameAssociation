@@ -34,7 +34,6 @@ public class StatusViewController
     private int indexOfGame;
 
     private BoardGame game;
-    private String theme;
 
 
     public void initialize()
@@ -47,7 +46,6 @@ public class StatusViewController
         this.game = AssociationModelManager.getAssociation().getBoardGame(indexOfGame);
         this.isBorrowing = isBorrowing;
         this.indexOfGame = indexOfGame;
-        this.theme = theme;
 
         setStatusDialogBox.getStylesheets().clear();
         setStatusDialogBox.getStylesheets().add(theme);
@@ -56,38 +54,41 @@ public class StatusViewController
 
     public void handleActions(ActionEvent e)
     {
-        int ID = Integer.parseInt(statusBorrowerIDField.getText());
+        int ID = 0;
+        try
+        {
+            ID = Integer.parseInt(statusBorrowerIDField.getText());
+        }
+        catch (NumberFormatException exception)
+        {
+            Alert alert = new Alert(Alert.AlertType.ERROR, "Enter proper ID in \"ID\" field!");
+            alert.setHeaderText(null);
+            alert.show();
+            return;
+        }
         MyDate endDate = new MyDate();
         MyDate startDate = new MyDate();
         LocalDate localEndDate = statusEndDatePicker.getValue();
         LocalDate localStartDate = statusStartDatePicker.getValue();
-        if (localStartDate == null)
+
+        try
         {
-            startDate = null;
+            int day = localStartDate.getDayOfMonth();
+            int month = localStartDate.getMonthValue();
+            int year = localStartDate.getYear();
+
+            startDate = new MyDate(day, month, year);
+
+            day = localEndDate.getDayOfMonth();
+            month = localEndDate.getMonthValue();
+            year = localEndDate.getYear();
         }
-        else
+        catch (IllegalArgumentException exception)
         {
-            startDate.setDay(localStartDate.getDayOfMonth());
-            startDate.setMonth(localStartDate.getMonthValue());
-            startDate.setYear(localStartDate.getYear());
-        }
-        if (localEndDate == null)
-        {
-            endDate = null;
-        }
-        else
-        {
-            endDate.setDay(localEndDate.getDayOfMonth());
-            endDate.setMonth(localEndDate.getMonthValue());
-            endDate.setYear(localEndDate.getYear());
-        }
-        if (localEndDate.isBefore(localStartDate))
-        {
-            Alert alert = new Alert(Alert.AlertType.ERROR, "End date can't be before the start date");
-            alert.setHeaderText(null);
+            Alert alert = new Alert(Alert.AlertType.ERROR, exception.getMessage());
+
             alert.show();
         }
-
 
 
         try
@@ -100,7 +101,7 @@ public class StatusViewController
             {
                 game.reserve(ID, startDate, endDate);
             }
-        } catch (NullPointerException exception)
+        } catch (Exception exception)
         {
             Alert alert = new Alert(Alert.AlertType.ERROR, exception.getMessage());
             alert.setHeaderText(null);

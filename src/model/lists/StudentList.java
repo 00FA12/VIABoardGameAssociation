@@ -18,7 +18,7 @@ public class StudentList implements Serializable
 
   public Student getStudentById(int ID)
   {
-    Student student = new Student("Bob", ID);
+    Student student = new Student("Bob Bobster", ID);
     for (int i = 0; i < students.size(); i++)
     {
       if (students.get(i).equals(student))
@@ -47,6 +47,10 @@ public class StudentList implements Serializable
     {
       throw new IllegalArgumentException("The ID introduced is already in use");
     }
+  }
+
+  public void addStudentAsAttender(Student student){
+    this.students.add(student);
   }
 
   public Student getStudent(int index)

@@ -18,6 +18,11 @@ public class MyDate implements Serializable
 
   public MyDate(int day, int month, int year)
   {
+    if(LocalDate.of(year, month, day).isBefore(LocalDate.now()))
+    {
+      throw new IllegalArgumentException("Start date should not be before the current date.");
+    }
+
     this.day = day;
     this.month = month;
     this.year = year;
