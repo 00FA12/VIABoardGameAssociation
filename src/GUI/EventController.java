@@ -160,7 +160,7 @@ public class EventController
                 }
                 catch (ArrayIndexOutOfBoundsException exception)
                 {
-                    System.err.println("Student list is empty in event tab");
+                    System.err.println("Student list is empty");
                 }
 
                 Association association = AssociationModelManager.getAssociation();
