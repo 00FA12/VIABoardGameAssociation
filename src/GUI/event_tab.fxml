@@ -72,7 +72,7 @@
                                         <Insets left="10.0" />
                                     </GridPane.margin>
                                 </Label>
-                                <DatePicker fx:id="datePicker" editable="false" onAction="#handleAction" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                <DatePicker fx:id="datePicker" editable="false" onAction="#handleAction" showWeekNumbers="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
                            <GridPane.margin>
                               <Insets left="10.0" right="10.0" />
                            </GridPane.margin></DatePicker>

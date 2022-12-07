@@ -127,6 +127,7 @@ public class StatusViewController
             Scene scene = statusBorrowerIDField.getScene();
             Stage window = (Stage) scene.getWindow();
             window.close();
+            return;
         }
         else if (student != null && student.getStatus().equals("Member") && count > 0)
         {

@@ -4,24 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" name="Tasks" comment="dark mode added">
+    <list default="true" id="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" name="Tasks" comment="fixed almost all bugs with borrow/reserve feature">
+      <change afterPath="$PROJECT_DIR$/WebPage/js/jquery-3.6.0.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebPage/js/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebPage/Export/catalogue.xml" beforeDir="false" afterPath="$PROJECT_DIR$/WebPage/Export/catalogue.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebPage/Export/events.xml" beforeDir="false" afterPath="$PROJECT_DIR$/WebPage/Export/events.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebPage/Export/votes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/WebPage/Export/votes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebPage/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/WebPage/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebPage/html/Catalogue.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebPage/html/Catalogue.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/association.bin" beforeDir="false" afterPath="$PROJECT_DIR$/association.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/CatalogueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/CatalogueController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/StartGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/StartGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/StatusViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/StatusViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/VoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/VoteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/catalogue_tab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/catalogue_tab.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/event_tab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/event_tab.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/BoardGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/BoardGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/GameAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/GameAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Student.java" afterDir="false" />
     </list>
     <list id="e87b550e-3d6a-4d86-a721-c06a7156f051" name="Changes" comment="1master" />
     <list id="68818cb0-604d-4df6-bbf4-d4fc4052d36d" name="Changes by hugom" comment="" />
@@ -170,13 +164,6 @@
       <workItem from="1669734724410" duration="5174000" />
       <workItem from="1669968834843" duration="15393000" />
       <workItem from="1670004844483" duration="8111000" />
-    </task>
-    <task id="LOCAL-00008" summary="1">
-      <created>1669645479967</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1669645479967</updated>
     </task>
     <task id="LOCAL-00009" summary="1">
       <created>1669740966795</created>
@@ -386,7 +373,8 @@
       <workItem from="1670335303763" duration="823000" />
       <workItem from="1670339936765" duration="596000" />
       <workItem from="1670411951110" duration="8347000" />
-      <workItem from="1670427743690" duration="6943000" />
+      <workItem from="1670427743690" duration="7012000" />
+      <workItem from="1670448565776" duration="2928000" />
     </task>
     <task id="LOCAL-00037" summary="Was added auto completion text field, little changes in CatalogueController.java &amp; EventController.java, preventing of errors">
       <created>1670027238045</created>
@@ -528,7 +516,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670340474940</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="fixed almost all bugs with borrow/reserve feature">
+      <created>1670434796128</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1670434796128</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -571,7 +566,9 @@
     <MESSAGE value="Changes by micha" />
     <MESSAGE value="Changes by pind9" />
     <MESSAGE value="dark mode added" />
-    <option name="LAST_COMMIT_MESSAGE" value="dark mode added" />
+    <MESSAGE value="fixed almost all bugs with borrow/reserve fiture" />
+    <MESSAGE value="fixed almost all bugs with borrow/reserve feature" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed almost all bugs with borrow/reserve feature" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -590,11 +587,6 @@
           <url>file://$PROJECT_DIR$/src/GUI/StatusViewController.java</url>
           <line>103</line>
           <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/test.java</url>
-          <line>10</line>
-          <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/model/lists/StudentList.java</url>

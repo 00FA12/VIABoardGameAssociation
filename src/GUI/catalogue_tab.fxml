@@ -99,6 +99,7 @@
                         <Button fx:id="returnGameButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleAction" text="Return game" />
                         <Button fx:id="deleteGameButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleAction" text="Delete game" />
                         <Button fx:id="addRateButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleAction" text="Add rate" />
+                  <Button fx:id="statusInfoButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleAction" text="Status info" />
                     </children>
                 </VBox>
             </children>

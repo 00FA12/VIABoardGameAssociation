@@ -30,7 +30,8 @@ public class CatalogueController
     @FXML
     private ComboBox<Genre> genreChoiceBox; //todo add to astah
     @FXML
-    private Button editGameButton, deleteGameButton, addGameButton, borrowGameButton, reserveGameButton, returnGameButton, addRateButton;
+    private Button editGameButton, deleteGameButton, addGameButton, borrowGameButton,
+            reserveGameButton, returnGameButton, addRateButton, statusInfoButton;
     @FXML
     private VBox actionsForSelectedGameBox;
     @FXML
@@ -181,6 +182,8 @@ public class CatalogueController
             {
                 int index = catalogueTable.getSelectionModel().getSelectedIndex();
                 BoardGame game = AssociationModelManager.getAssociation().getCatalogue().getBoardGame(index);
+                if(game.getStatusOfGame() != null)
+                    return;
 
 
                 Stage window = new Stage();
@@ -199,6 +202,8 @@ public class CatalogueController
             {
                 int index = catalogueTable.getSelectionModel().getSelectedIndex();
                 BoardGame game = AssociationModelManager.getAssociation().getCatalogue().getBoardGame(index);
+                if(game.getStatusOfGame() != null)
+                    return;
 
 
                 Stage window = new Stage();
@@ -235,6 +240,29 @@ public class CatalogueController
                 window.setScene(scene);
                 window.showAndWait();
                 updateTable();
+            }
+            else if (e.getSource() == statusInfoButton)
+            {
+                int index = catalogueTable.getSelectionModel().getSelectedIndex();
+                BoardGame game = AssociationModelManager.getAssociation().getBoardGame(index);
+
+                String str = "";
+                if(game.getStatusOfGame() == null)
+                    str = "Game is available!";
+                else
+                {
+                    Student student = game.getStatusOfGame().getStudent();
+                    str = "Game is " + game.getStatusToString() + " by " + student.getName() +
+                            " ( ID:" + student.getID() + " ). " + "\nStart date: " +
+                            game.getStatusOfGame().getStartDate().toString() + ". End date: " +
+                            game.getStatusOfGame().getEndDate().toString();
+                }
+                Label text = new Label(str);
+
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setHeaderText(null);
+                alert.getDialogPane().setContent(text);
+                alert.show();
             }
 
             MainController.exportData();
