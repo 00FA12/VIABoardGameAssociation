@@ -18,9 +18,7 @@
                   <menus>
                       <Menu mnemonicParsing="false" text="Export">
                           <items>
-                              <MenuItem fx:id="catalogueMenuItem" mnemonicParsing="false" onAction="#handleAction" text="Catalogue" />
-                              <MenuItem fx:id="eventsMenuItem" mnemonicParsing="false" onAction="#handleAction" text="Events" />
-                              <MenuItem fx:id="votesMenuItem" mnemonicParsing="false" onAction="#handleAction" text="Votes" />
+                              <MenuItem fx:id="exportMenuItem" mnemonicParsing="false" onAction="#handleAction" text="Export" />
                           </items>
                       </Menu>
                       <Menu mnemonicParsing="false" text="Help">

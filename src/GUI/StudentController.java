@@ -91,7 +91,11 @@ public class StudentController
 
         try
         {
-          student = new Student(name, ID, isMember);
+          student = new Student(name, ID);
+          if(isMember)
+            student.makeMember();
+          else
+            student.makeGuest();
           Association association = AssociationModelManager.getAssociation();
           association.addStudent(student);
           AssociationModelManager.saveAssociation(association);

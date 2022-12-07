@@ -73,6 +73,7 @@ public class VoteController implements Initializable
     String[] titles = AssociationModelManager.getVotingList().getGameTitlesToArray();
 
     autoCompletionTextField = new AutoCompletionTextField();
+
     autoCompletionTextField.getEntries().addAll(List.of(titles));
     double height = titleField.getPrefHeight();
     double width = titleField.getPrefWidth();
@@ -121,6 +122,8 @@ public class VoteController implements Initializable
     {
 
         String titleOfGame = autoCompletionTextField.getText();
+        if(titleOfGame.isEmpty())
+          return;
 
 
         Association association = AssociationModelManager.getAssociation();

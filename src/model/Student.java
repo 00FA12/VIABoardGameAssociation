@@ -119,7 +119,7 @@ public class Student implements Serializable
 
   public Student copy()
   {
-    return new Student(name, ID);
+    return new Student(name, ID, isMember);
   }
 
   public boolean equals(Object obj)

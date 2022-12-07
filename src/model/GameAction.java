@@ -1,5 +1,7 @@
 package model;
 
+import model.lists.Catalogue;
+
 import java.io.Serializable;
 
 //MICHAEL
@@ -13,7 +15,7 @@ public abstract class GameAction implements Serializable
     //find the student by static method. if student is not existent, create a new one
     try
     {
-      student = AssociationModelManager.getStudentList().getStudentById(ID).copy();
+      student = AssociationModelManager.getStudentList().getStudentById(ID);
     }
     catch (NullPointerException e)
     {
@@ -27,7 +29,7 @@ public abstract class GameAction implements Serializable
 
   public Student getStudent()
   {
-    return student.copy();
+    return this.student; // todo astah
   }
 
   public MyDate getStartDate()

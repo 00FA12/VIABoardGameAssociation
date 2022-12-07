@@ -11,8 +11,10 @@ public class BoardGame implements Serializable
   private int ownerID;
   private String description;
   private Genre genre;
-  private RatingList ratings;
+  private RatingList ratingList;
   private GameAction gameAction;
+
+  private String status = getStatusToString();
 
   public BoardGame(String title, int ownerID, String description, Genre genre)
   {
@@ -21,7 +23,7 @@ public class BoardGame implements Serializable
 
     for (Character ch:title.toCharArray())
     {
-      if(!Character.isLetterOrDigit(ch))
+      if(!Character.isLetterOrDigit(ch) && ch != ' ')
         throw new IllegalArgumentException("Field \"Title\" can only consist of digits and letters!");
     }
 
@@ -30,7 +32,7 @@ public class BoardGame implements Serializable
     this.description = description;
     this.genre = genre;
     gameAction = null;
-    this.ratings = new RatingList();
+    this.ratingList = new RatingList();
   }
 
   public String getTitle()
@@ -56,6 +58,7 @@ public class BoardGame implements Serializable
   public void setStatusOfGame(GameAction status)
   {
     this.gameAction = status;
+    this.status = getStatusToString();
   }
 
   public GameAction getStatusOfGame()
@@ -72,11 +75,12 @@ public class BoardGame implements Serializable
   {
     if(gameAction == null)
       return "None";
-    return gameAction.toString();
+    this.status = gameAction.toString();
+    return status;
   }
   public String getAverage()
   {
-    return ratings.averageToString();
+    return ratingList.averageToString();
   }
 
   public void setGenre(Genre genre)
@@ -97,26 +101,30 @@ public class BoardGame implements Serializable
   public void borrow(int ID, MyDate startDate, MyDate endDate)
   {
     gameAction = new Borrow(ID, startDate, endDate);
+    status = getStatusToString();
   }
 
   public void reserve(int ID, MyDate startDate, MyDate endDate)
   {
     gameAction = new Reserve(ID, startDate, endDate);
+    status = getStatusToString();
   }
 
   public void removeBorrow()
   {
     gameAction = null;
+    status = "None";
   }
 
   public void removeReserve()
   {
     gameAction = null;
+    status = "None";
   }
 
   public void addRating(int rating)
   {
-    ratings.addRating(rating);
+    ratingList.addRating(rating);
   }
 
 }

@@ -13,6 +13,7 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import model.*;
 import model.lists.Catalogue;
+import parser.ParserException;
 
 import java.io.IOException;
 
@@ -91,7 +92,7 @@ public class CatalogueController
         updateTable();
     }
 
-    public void handleAction(ActionEvent e) throws IOException
+    public void handleAction(ActionEvent e) throws IOException, ParserException
     {
         try
         {
@@ -235,6 +236,8 @@ public class CatalogueController
                 window.showAndWait();
                 updateTable();
             }
+
+            MainController.exportData();
         }
         catch (IndexOutOfBoundsException exception)
         {

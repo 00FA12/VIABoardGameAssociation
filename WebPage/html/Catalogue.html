@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -41,158 +42,12 @@
         </div>
     </nav>
 
-    <div class="container-fluid filter-bar px-3 p-0">
-        <div class="row my-3">
 
-            <!-- Search bar -->
-            <div class="col-lg-5 col-sm-6 d-flex justify-content-center align-self-center">
-                <input type="search" placeholder="Search...">
-                <input type="button" value="Find">
-            </div>
+    <table id="catalogue-table">
 
-            <!-- Dropdown button -->
-            <div class="col-lg-2 col-sm-6 d-flex justify-content-center align-self-center my-2">
-                <ul class="dropdown-button">
-                        <a tabindex="0">Game type</a>
-                        <ul>
-                            <li>
-                                <input type="checkbox" id="Family_Games">
-                                <label for="Family_Games">Family games</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" id="Party_Games">
-                                <label for="Party_Games">Party games</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" id="Detective_Games">
-                                <label for="Detective_Games">Detective games</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" id="Children_Games">
-                                <label for="Children_Games">Children games</label>
-                            </li>
-                        </ul>
-                </ul>
-            </div>
+    </table>
 
-            <div class="col-lg-3 col-sm-6 d-flex justify-content-center align-self-center align-items-center">
-                    <p>Number of players</p>
-                    <input type="number" max="98" min="1" id="max">
-                    <input type="number" max="99" min="2" id="min">
-            </div>
-
-            <div class="col-lg-2 col-sm-6 checkbox d-flex align-self-center justify-content-center align-items-center">
-                <label for="Checkbox">Is available now</label>
-                <input type="checkbox" id="Checkbox">
-                <div class="checkmark"></div>
-            </div>
-        </div>
-
-        <div class="container-fluid p-0 mb-3">
-            <div class="row">
-                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3">
-                    <div class="masking-box"><img src="../img/Images-for-Catalog-and-Event/ttr-germany.jpg" alt="tickettoride"></div>
-                    <div class="CATALOGUE_rent-games-block-text">Ticket to ride</div>
-                    <div class="button-container">
-                        <a tabindex="0" class="read-more-checkbox" id="read-more-checkbox-one">Read more</a>
-                        <input type="button" class="read-more-checkbox" value="Rent" title="rent" id="rent-button">
-                        <div>
-                            <p>Ticket to Ride is a cross-country train
-                                adventure in which players collect and play
-                                matching train cards to claim railway routes
-                                connecting cities throughout North America.
-                                <br> 
-                                <br>
-                                The longer the routes, the more points they earn.
-                                <br> 
-                                <br> 
-                                Additional points come to those who can fulfill their
-                                Destination Tickets by connecting two distant cities,
-                                and to the player who builds the longest continuous railway.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3">
-                    <div class="masking-box"><img src="../img/Images-for-Catalog-and-Event/sherlockCatalog.jpg" alt="sherlockCatalog"></div>
-                    <div class="CATALOGUE_rent-games-block-text">Sherlock Catalog</div>
-                    <div class="button-container">
-                        <a tabindex="0" class="read-more-checkbox" id="read-more-checkbox-two">Read more</a>
-                        <input type="button" class="read-more-checkbox" value="Rent" title="rent" id="rent-button">
-                        <div>
-                            <p>A deck-based, cooperative mystery game that reminds me of
-                                Chronicles of Crime in a smaller package, The Sherlock Files
-                                come with three cases per set, and ask players to work
-                                together by playing clue cards—but also award you points
-                                at the end of the case for what you got right and for
-                                discarding cards that turned out to be irrelevant.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3">
-                    <div class="masking-box"><img src="../img/Images-for-Catalog-and-Event/GuessWhoCatalog.jpg" alt="GuessWhoCatalog"></div>
-                    <div class="CATALOGUE_rent-games-block-text">GuessWhoCatalog</div>
-                    <div class="button-container">
-                        <a tabindex="0" class="read-more-checkbox" id="read-more-checkbox-three">Read more</a>
-                        <input type="button" class="read-more-checkbox" value="Rent" title="rent" id="rent-button">
-                        <div>
-                            <p>A deck-based, cooperative mystery game that reminds me of
-                                Chronicles of Crime in a smaller package, The Sherlock Files
-                                come with three cases per set, and ask players to work
-                                together by playing clue cards—but also award you points
-                                at the end of the case for what you got right and for
-                                discarding cards that turned out to be irrelevant.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3">
-                    <div class="masking-box"><img src="../img/Images-for-Catalog-and-Event/CodeNamesCatalog.jpg" alt="CodeNamesCatalog"></div>
-                    <div class="CATALOGUE_rent-games-block-text">CodeNames</div>
-                    <div class="button-container">
-                        <a tabindex="0" class="read-more-checkbox" id="read-more-checkbox-four">Read more</a>
-                        <input type="button" class="read-more-checkbox" value="Rent" title="rent" id="rent-button">
-                        <div>
-                            <p>Codenames is a game of guessing which codenames
-                                (i.e., words) in a set are related to a hint-word given by another player. </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3">
-                    <div class="masking-box"><img src="../img/Images-for-Catalog-and-Event/UnoCatalog.jpg" alt="UnoCatalog"></div>
-                    <div class="CATALOGUE_rent-games-block-text">Uno</div>
-                    <div class="button-container">
-                        <a tabindex="0" class="read-more-checkbox" id="read-more-checkbox-five">Read more</a>
-                        <input type="button" class="read-more-checkbox" value="Rent" title="rent" id="rent-button">
-                        <div>
-                            <p>A deck-based, cooperative mystery game that reminds me of
-                                Chronicles of Crime in a smaller package, The Sherlock Files
-                                come with three cases per set, and ask players to work
-                                together by playing clue cards—but also award you points
-                                at the end of the case for what you got right and for
-                                discarding cards that turned out to be irrelevant.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3">
-                    <div class="masking-box"><img src="../img/Images-for-Catalog-and-Event/PictionaryCatalog.jpg" alt="Pictionary"></div>
-                    <div class="CATALOGUE_rent-games-block-text">Pictionary</div>
-                    <div class="button-container">
-                        <a tabindex="0" class="read-more-checkbox" id="read-more-checkbox-six">Read more</a>
-                        <input type="button" class="read-more-checkbox" value="Rent" title="rent" id="rent-button">
-                        <div>
-                            <p>One player on a team picks a card and looks
-                                at the word matching the color of the space
-                                their pawn is on. The player has to sketch the prompt.
-                                The person sketching has 1 minute to draw the word without
-                                using letters or symbols. If their team guesses the word,
-                                they roll a die and move around the board.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
+    
 
 
     <div class="row footer p-0 m-0">
@@ -217,6 +72,8 @@
             <a href="https://www.instagram.com/viauniversitycollege/" class="fa fa-instagram"></a>
         </div>
     </div>
+
+    <script src="../js/script.js"></script>
 
 </body>
 

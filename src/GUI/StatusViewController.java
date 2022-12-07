@@ -7,14 +7,13 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
-import model.Association;
-import model.AssociationModelManager;
-import model.BoardGame;
-import model.MyDate;
+import javafx.stage.Window;
+import model.*;
 import model.lists.Catalogue;
 
 import java.security.cert.CertPathValidatorException;
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 //Kateryna//
 public class StatusViewController
@@ -93,6 +92,58 @@ public class StatusViewController
         }
 
 
+        Association association = AssociationModelManager.getAssociation();
+        Catalogue catalogue = association.getCatalogue();
+        int count = 0;
+        Student student = null;
+        ArrayList<String> gameTitles = new ArrayList<>();
+        for (int i = 0; i < catalogue.getSize(); i++)
+        {
+            if(catalogue.getBoardGame(i).getStatusOfGame() == null)
+                continue;
+            Student currStudent = catalogue.getBoardGame(i).getStatusOfGame().getStudent();
+            currStudent = association.getStudentByID(currStudent.getID());
+            if(currStudent.getID() == ID)
+            {
+                count++;
+                gameTitles.add(catalogue.getBoardGame(i).getTitle());
+                student = currStudent;
+            }
+        }
+
+        if(student != null && student.getStatus().equals("Guest") && count > 0)
+        {
+            String str = "";
+            for (String temp:gameTitles)
+            {
+                str += temp + "\n";
+            }
+
+            Label text = new Label("The guest can borrow/reserve only one game. Return all the games:\n" + str);
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.getDialogPane().setContent(text);
+            alert.setHeaderText(null);
+            alert.show();
+            Scene scene = statusBorrowerIDField.getScene();
+            Stage window = (Stage) scene.getWindow();
+            window.close();
+        }
+        else if (student != null && student.getStatus().equals("Member") && count > 0)
+        {
+            String str = "";
+            for (String temp:gameTitles)
+            {
+                str += temp + "\n";
+            }
+
+            Label text = new Label("Please don't forget to return all games:\n" + str);
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.getDialogPane().setContent(text);
+            alert.setHeaderText(null);
+            alert.show();
+        }
+
+
         try
         {
             if (isBorrowing)
@@ -111,7 +162,7 @@ public class StatusViewController
             return;
         }
 
-        Association association = AssociationModelManager.getAssociation();
+        association = AssociationModelManager.getAssociation();
         association.getCatalogue().setBoardGame(indexOfGame, game);
         AssociationModelManager.saveAssociation(association);
 

@@ -41,16 +41,14 @@ public class MainController
     @FXML
     private StudentController studentTabContentController;
 
-    @FXML private MenuItem catalogueMenuItem;
-    @FXML private MenuItem votesMenuItem;
-    @FXML private MenuItem eventsMenuItem;
+    @FXML private MenuItem exportMenuItem;
     @FXML private MenuItem helpMenuItem;
     @FXML private MenuItem aboutMenuItem;
     @FXML
     private ToggleSwitch darkModeToggleSwitch;
     @FXML
     private VBox mainPane;
-    private XmlJsonParser parser;
+    private static XmlJsonParser parser;
 
     public void initialize()
     {
@@ -102,30 +100,30 @@ public class MainController
 
     }
 
+    public static void exportData() throws ParserException
+    {
+        parser.toXml(AssociationModelManager.getAssociation().getCatalogue(), "WebPage/Export/catalogue.xml");
+
+        parser.toXml(AssociationModelManager.getAssociation().getVotingList(), "WebPage/Export/votes.xml");
+
+        parser.toXml(AssociationModelManager.getAssociation().getEventList(), "WebPage/Export/events.xml");
+    }
     public void handleAction(ActionEvent e) throws ParserException, IOException
     {
-        if(e.getSource() == catalogueMenuItem)
+        if(e.getSource() == exportMenuItem)
         {
-            File file = parser.toXml(AssociationModelManager.getAssociation().getCatalogue(), "WebPage/Export/catalogue.xml");
-        }
-        else if(e.getSource() == votesMenuItem)
-        {
-            File file = parser.toXml(AssociationModelManager.getAssociation().getVotingList(), "WebPage/Export/votes.xml");
-        }
-        else if(e.getSource() == eventsMenuItem)
-        {
-            File file = parser.toXml(AssociationModelManager.getAssociation().getEventList(), "WebPage/Export/events.xml");
+            exportData();
         }
         else if (e.getSource()==helpMenuItem)
         {
-            Alert alert =new Alert(Alert.AlertType.INFORMATION, "Please, contact to IT support\n nobody will help You, Bob!");
+            Alert alert =new Alert(Alert.AlertType.INFORMATION, "Please, contact to IT support\nbut nobody will help you, Bob!");
             alert.setHeaderText(null);
             alert.show();
         }
         else if(e.getSource()== aboutMenuItem)
         {
             Alert alert=new Alert(Alert.AlertType.INFORMATION,"IT assistance:" +
-                    " \nSevastian - 333425@via.dk " +
+                    "\nSevastian - 333425@via.dk " +
                     "\n Michael- 332872@via.dk " +
                     "\n Hugo -331335@via.dk " +
                     "\n Kateryna-333469@via.dk");
