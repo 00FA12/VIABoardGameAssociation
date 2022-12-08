@@ -8,51 +8,31 @@
     <description>Description_</description>
     <title>game1</title>
     <ownerID>100001</ownerID>
-    <gameAction>
-      <endDate>
-        <month>12</month>
-        <year>2022</year>
-        <day>8</day>
-      </endDate>
-      <student>
-        <name>Petro Jdad</name>
-        <ID>100002</ID>
-        <isMember>false</isMember>
-      </student>
-      <startDate>
-        <month>12</month>
-        <year>2022</year>
-        <day>14</day>
-      </startDate>
-    </gameAction>
-    <status>Borrowed</status>
+    <status>None</status>
   </catalogue>
   <catalogue>
-    <ratingList/>
+    <ratingList>
+      <ratings>5</ratings>
+    </ratingList>
     <genre>
       <name>Bluffing</name>
     </genre>
     <description>Description_</description>
     <title>game2</title>
     <ownerID>100002</ownerID>
-    <gameAction>
-      <endDate>
-        <month>12</month>
-        <year>2022</year>
-        <day>8</day>
-      </endDate>
-      <student>
-        <name>Bob F Jdad</name>
-        <ID>100001</ID>
-        <isMember>true</isMember>
-      </student>
-      <startDate>
-        <month>12</month>
-        <year>2022</year>
-        <day>8</day>
-      </startDate>
-    </gameAction>
-    <status>Borrowed</status>
+    <status>None</status>
+  </catalogue>
+  <catalogue>
+    <ratingList>
+      <ratings>3</ratings>
+    </ratingList>
+    <genre>
+      <name>Children’s Game</name>
+    </genre>
+    <description>Description_</description>
+    <title>game1</title>
+    <ownerID>100001</ownerID>
+    <status>None</status>
   </catalogue>
   <catalogue>
     <ratingList/>
@@ -62,24 +42,7 @@
     <description>Description_</description>
     <title>game1</title>
     <ownerID>100001</ownerID>
-    <gameAction>
-      <endDate>
-        <month>12</month>
-        <year>2022</year>
-        <day>8</day>
-      </endDate>
-      <student>
-        <name>Bob F Jdad</name>
-        <ID>100001</ID>
-        <isMember>true</isMember>
-      </student>
-      <startDate>
-        <month>12</month>
-        <year>2022</year>
-        <day>8</day>
-      </startDate>
-    </gameAction>
-    <status>Reserved</status>
+    <status>None</status>
   </catalogue>
   <catalogue>
     <ratingList/>
@@ -89,77 +52,20 @@
     <description>Description_</description>
     <title>game1</title>
     <ownerID>100001</ownerID>
-    <gameAction>
-      <endDate>
-        <month>12</month>
-        <year>2022</year>
-        <day>8</day>
-      </endDate>
-      <student>
-        <name>Bob F Jdad</name>
-        <ID>100001</ID>
-        <isMember>true</isMember>
-      </student>
-      <startDate>
-        <month>12</month>
-        <year>2022</year>
-        <day>15</day>
-      </startDate>
-    </gameAction>
-    <status>Borrowed</status>
+    <status>None</status>
   </catalogue>
   <catalogue>
-    <ratingList/>
+    <ratingList>
+      <ratings>5</ratings>
+      <ratings>5</ratings>
+      <ratings>3</ratings>
+    </ratingList>
     <genre>
       <name>Children’s Game</name>
     </genre>
     <description>Description_</description>
     <title>game1</title>
     <ownerID>100001</ownerID>
-    <gameAction>
-      <endDate>
-        <month>12</month>
-        <year>2022</year>
-        <day>8</day>
-      </endDate>
-      <student>
-        <name>Bob F Jdad</name>
-        <ID>100001</ID>
-        <isMember>true</isMember>
-      </student>
-      <startDate>
-        <month>12</month>
-        <year>2022</year>
-        <day>8</day>
-      </startDate>
-    </gameAction>
-    <status>Reserved</status>
-  </catalogue>
-  <catalogue>
-    <ratingList/>
-    <genre>
-      <name>Children’s Game</name>
-    </genre>
-    <description>Description_</description>
-    <title>game1</title>
-    <ownerID>100001</ownerID>
-    <gameAction>
-      <endDate>
-        <month>12</month>
-        <year>2022</year>
-        <day>8</day>
-      </endDate>
-      <student>
-        <name>Bob F Jdad</name>
-        <ID>100001</ID>
-        <isMember>true</isMember>
-      </student>
-      <startDate>
-        <month>12</month>
-        <year>2022</year>
-        <day>8</day>
-      </startDate>
-    </gameAction>
-    <status>Reserved</status>
+    <status>None</status>
   </catalogue>
 </Catalogue>

@@ -222,9 +222,26 @@ public class CatalogueController
             else if (e.getSource() == returnGameButton)
             {
                 int index = catalogueTable.getSelectionModel().getSelectedIndex();
+                BoardGame game = AssociationModelManager.getAssociation().getCatalogue().getBoardGame(index);
+
+                if(game.getStatusOfGame() == null)
+                    return;
+
                 Association association = AssociationModelManager.getAssociation();
                 association.getCatalogue().getBoardGame(index).setStatusOfGame(null);
                 AssociationModelManager.saveAssociation(association);
+                updateTable();
+
+
+
+                Stage window = new Stage();
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/rate_dialog_window.fxml"));
+                Parent root = (Parent) loader.load();
+                RateController rateController = loader.getController();
+                rateController.passData(index, theme);
+                Scene scene = new Scene(root);
+                window.setScene(scene);
+                window.showAndWait();
                 updateTable();
             }
             else if (e.getSource() == addRateButton)
