@@ -4,7 +4,6 @@ import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -14,12 +13,10 @@ import javafx.scene.layout.HBox;
 import model.*;
 import model.lists.VotingList;
 
-import java.net.URL;
 import java.util.List;
-import java.util.ResourceBundle;
 
 //Kateryna
-public class VoteController implements Initializable
+public class VoteController
 
 {
   @FXML
@@ -53,8 +50,8 @@ public class VoteController implements Initializable
     }
   }
 
-  @Override
-  public void initialize(URL location, ResourceBundle resources)
+
+  public void initialize()
   {
     tableListener = new MyTableListener();
     votesTable.getSelectionModel().selectedItemProperty().addListener(tableListener);
@@ -110,7 +107,7 @@ public class VoteController implements Initializable
 
   }
 
-  public void handleAction(ActionEvent e)
+  public void handleActions(ActionEvent e)
   {
     if (e.getSource() == voteButton)
     {

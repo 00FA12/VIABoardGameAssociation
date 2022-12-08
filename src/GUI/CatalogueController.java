@@ -28,12 +28,11 @@ public class CatalogueController
     @FXML
     private TextArea descriptionArea;
     @FXML
-    private ComboBox<Genre> genreChoiceBox; //todo add to astah
+    private ComboBox<Genre> genreChoiceBox;
     @FXML
     private Button editGameButton, deleteGameButton, addGameButton, borrowGameButton,
             reserveGameButton, returnGameButton, addRateButton, statusInfoButton;
-    @FXML
-    private VBox actionsForSelectedGameBox;
+
     @FXML
     private TableColumn<BoardGame, String> titleColumn;
     @FXML
@@ -48,6 +47,9 @@ public class CatalogueController
     private TableColumn<BoardGame, String> ratingColumn;
 
     private MyTableListener tableListener;
+
+    private String theme;
+
 
     private class MyTableListener implements ChangeListener<BoardGame>
     {
@@ -290,10 +292,8 @@ public class CatalogueController
         catalogueTable.getSelectionModel().select(indexSelected);
     }
 
-    private String theme;
     public void setTheme(String theme)
     {
         this.theme = theme;
-
     }
 }

@@ -27,8 +27,6 @@ public class StatusViewController
     private DatePicker statusStartDatePicker;
     @FXML
     private DatePicker statusEndDatePicker;
-    @FXML
-    private Button statusConfirmButton;
     private boolean isBorrowing;
     private int indexOfGame;
 

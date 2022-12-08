@@ -30,7 +30,7 @@
                         <TextField fx:id="titleField" />
                             </children>
                         </HBox>
-                        <Button fx:id="voteButton" alignment="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleAction" text="Vote" />
+                        <Button fx:id="voteButton" alignment="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleActions" text="Vote" />
                     </children>
                 </VBox>
             </children>

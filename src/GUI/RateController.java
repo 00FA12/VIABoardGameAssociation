@@ -19,8 +19,8 @@ public class RateController
 
     @FXML private Rating rating;
     @FXML private VBox rateDialogWindowBox;
-
     private int index;
+
     public void passData(int index, String theme)
     {
         this.index = index;
@@ -30,10 +30,9 @@ public class RateController
         gameTitle.setText(title);
         rateDialogWindowBox.getStylesheets().clear();
         rateDialogWindowBox.getStylesheets().add(theme);
-
     }
 
-    @FXML private void handleAction(ActionEvent e)
+    public void handleAction(ActionEvent e)
     {
         if(e.getSource() == rateButton)
         {

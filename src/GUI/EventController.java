@@ -2,32 +2,20 @@ package GUI;
 
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
-import javafx.collections.FXCollections;
-import javafx.collections.ListChangeListener;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.VBox;
 import model.*;
 import model.lists.EventList;
 import model.lists.StudentList;
 import org.controlsfx.control.CheckComboBox;
-import parser.ParserException;
-import parser.XmlJsonParser;
 
-import java.io.File;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Date;
 
 //Together
 public class EventController
 {
-    // todo delete all modelManager fields in astah!!
     @FXML
     private TableView<Event> eventsTable;
     @FXML
@@ -36,8 +24,6 @@ public class EventController
     private TextArea descriptionArea;
     @FXML
     private DatePicker datePicker;
-    @FXML
-    private VBox actionsForSelectedEventBox;
     @FXML
     private CheckComboBox<Student> checkComboBox;
     @FXML
@@ -113,7 +99,7 @@ public class EventController
     }
 
 
-    public void handleAction(ActionEvent e)
+    public void handleActions(ActionEvent e)
     {
         try
         {

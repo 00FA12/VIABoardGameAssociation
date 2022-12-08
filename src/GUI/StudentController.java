@@ -8,15 +8,11 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import model.Association;
 import model.AssociationModelManager;
-import model.Event;
 import model.Student;
 import model.lists.StudentList;
 
-import java.time.LocalDate;
-
 public class StudentController
 {
-
   @FXML private TableView<Student> studentTable;
   @FXML private TextField nameField;
   @FXML private TextField IDField;
@@ -27,8 +23,7 @@ public class StudentController
   @FXML private TableColumn<Student, String> nameColumn;
   @FXML private TableColumn<Student, String> IDColumn;
   @FXML private TableColumn<Student, String> statusColumn;
-  private MyTableListener myTableListener;
-
+  private MyTableListener tableListener;
 
   private class MyTableListener implements ChangeListener<Student>
   {
@@ -52,8 +47,8 @@ public class StudentController
 
   public void initialize()
   {
-    myTableListener = new MyTableListener();
-    studentTable.getSelectionModel().selectedItemProperty().addListener(myTableListener);
+    tableListener = new MyTableListener();
+    studentTable.getSelectionModel().selectedItemProperty().addListener(tableListener);
 
     nameColumn.setCellValueFactory(
         new PropertyValueFactory<Student, String>("name"));
@@ -67,7 +62,7 @@ public class StudentController
     updateTable();
   }
 
-  public void handleAction(ActionEvent e)
+  public void handleActions(ActionEvent e)
   {
     try
     {
@@ -174,7 +169,6 @@ public class StudentController
       Student student = studentList.getStudent(i);
       studentTable.getItems().add(student);
     }
-    // todo update table
 
     studentTable.getSelectionModel().select(index);
 

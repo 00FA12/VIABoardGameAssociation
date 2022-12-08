@@ -40,23 +40,6 @@ public class MyFileHandler
     }
   }
 
-  public static void appendArrayToTextFile(String name, String[] str)
-      throws FileNotFoundException
-  {
-    PrintWriter write = null;
-    try
-    {
-      FileOutputStream fileOut = new FileOutputStream(name, true);
-      write = new PrintWriter(fileOut);
-      write.print(str);
-    }
-    finally
-    {
-      if (write != null)
-        write.close();
-    }
-  }
-
   public static String[] readFromTextFile(String fileName)
       throws FileNotFoundException
   {
@@ -145,32 +128,5 @@ public class MyFileHandler
     }
 
     return obj;
-
-//  public static Object readFromBinaryFile(String name)
-//      throws FileNotFoundException, IOException, ClassNotFoundException
-//  {
-//    ObjectInputStream read = null;
-//    Object obj = null;
-//    try
-//    {
-//      FileInputStream fileIn = new FileInputStream(name);
-//      read = new ObjectInputStream(fileIn);
-//      obj = read.readObject();
-//    }
-//    finally
-//    {
-//      if (read != null)
-//      {
-//        try
-//        {
-//          read.close();
-//        }
-//        catch (IOException e)
-//        {
-//          System.out.println("IO Error closing file " + name);
-//        }
-//      }
-//      return obj;
-//    }
   }
 }

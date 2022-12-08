@@ -33,7 +33,7 @@ public class AutoCompletionTextField extends TextField
         this.entries = new TreeSet<>();
         this.entriesPopup = new ContextMenu();
 
-        setListner();
+        setListener();
     }
 
 
@@ -42,7 +42,7 @@ public class AutoCompletionTextField extends TextField
     /**
      * "Suggestion" specific listners
      */
-    private void setListner() {
+    private void setListener() {
         //Add "suggestions" by changing text
         textProperty().addListener((observable, oldValue, newValue) -> {
             String enteredText = getText();
@@ -89,7 +89,7 @@ public class AutoCompletionTextField extends TextField
      *
      * @param searchResult The set of matching strings.
      */
-    private void populatePopup(List<String> searchResult, String searchReauest) {
+    private void populatePopup(List<String> searchResult, String searchRequest) {
         //List of "suggestions"
         List<CustomMenuItem> menuItems = new LinkedList<>();
         //List size - 10 or founded suggestions count
@@ -100,7 +100,7 @@ public class AutoCompletionTextField extends TextField
             final String result = searchResult.get(i);
             //label with graphic (text flow) to highlight founded subtext in suggestions
             Label entryLabel = new Label();
-            entryLabel.setGraphic(buildTextFlow(result, searchReauest));
+            entryLabel.setGraphic(buildTextFlow(result, searchRequest));
             entryLabel.setPrefHeight(10);  //don't sure why it's changed with "graphic"
             CustomMenuItem item = new CustomMenuItem(entryLabel, true);
             menuItems.add(item);

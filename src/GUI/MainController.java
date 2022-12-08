@@ -130,7 +130,6 @@ public class MainController
             alert.setHeaderText(null);
             alert.show();
         }
-        // todo about and help
     }
 
 }
