@@ -47,8 +47,6 @@ public class EventController
     @FXML
     private Button addEventButton;
     @FXML
-    private Button exportEventButton;
-    @FXML
     private TableColumn<Event, String> titleColumn;
     @FXML
     private TableColumn<Event, String> descriptionColumn;
@@ -171,11 +169,6 @@ public class EventController
                 AssociationModelManager.saveAssociation(association);
                 updateTable();
             }
-            else if (e.getSource() == exportEventButton)
-            {
-                XmlJsonParser parser = new XmlJsonParser();
-                File file = parser.toXml(AssociationModelManager.getAssociation().getEventList(), "WebPage/Export/events.xml");
-            }
             else if (e.getSource() == editEventButton)
             {
                 String title = titleField.getText();
@@ -210,10 +203,6 @@ public class EventController
         catch (IndexOutOfBoundsException exception)
         {
 
-        }
-        catch (ParserException ex)
-        {
-            throw new RuntimeException(ex);
         }
 
     }

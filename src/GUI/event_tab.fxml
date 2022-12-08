@@ -99,7 +99,6 @@
                 <VBox fx:id="actionsForSelectedEventBox" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0">
                     <children>
                         <Button fx:id="deleteEventButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleAction" text="Delete event" />
-                        <Button fx:id="exportEventButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleAction" text="Export" />
                     </children>
                 </VBox>
             </children>

@@ -16,6 +16,13 @@ public class BoardGame implements Serializable
 
   private String status = getStatusToString();
 
+  /**
+   *
+   * @param title
+   * @param ownerID
+   * @param description
+   * @param genre
+   */
   public BoardGame(String title, int ownerID, String description, Genre genre)
   {
     if(title.isEmpty() || ownerID < 100000 || ownerID > 999999 || genre == null)
