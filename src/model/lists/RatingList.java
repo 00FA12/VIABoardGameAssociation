@@ -51,6 +51,12 @@ public class RatingList implements Serializable
     else
       return (double) sum / ratings.size();
   }
+
+  public int getSize() // todo astah
+  {
+    return this.ratings.size();
+  }
+
   public int getRating(int index)
   {
     return ratings.get(index);

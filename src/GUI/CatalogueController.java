@@ -117,6 +117,16 @@ public class CatalogueController
                     return;
                 }
 
+
+                if(AssociationModelManager.getAssociation().getStudentByID(ownerID) == null)
+                {
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setHeaderText(null);
+                    alert.setContentText("Entered ID is not listed in the system!");
+                    alert.show();
+                    return;
+                }
+
                 Genre genre = genreChoiceBox.getSelectionModel().getSelectedItem();
 
                 Association association = AssociationModelManager.getAssociation();
@@ -139,26 +149,39 @@ public class CatalogueController
                 String title = titleField.getText();
                 String description = descriptionArea.getText();
                 int ownerID = 0;
-                try
-                {
-                    ownerID = Integer.parseInt(ownerIDField.getText());
-                } catch (Exception exception)
-                {
-                    Alert alert = new Alert(Alert.AlertType.ERROR, "Enter VIA ID in \"Owner ID\" field!");
-                    alert.setHeaderText(null);
-                    alert.show();
-                    return;
-                }
+//                try
+//                {
+//                    ownerID = Integer.parseInt(ownerIDField.getText());
+//                } catch (Exception exception)
+//                {
+//                    Alert alert = new Alert(Alert.AlertType.ERROR, "Enter VIA ID in \"Owner ID\" field!");
+//                    alert.setHeaderText(null);
+//                    alert.show();
+//                    return;
+//                }
+//
+//                if(AssociationModelManager.getAssociation().getStudentByID(ownerID) == null)
+//                {
+//                    Alert alert = new Alert(Alert.AlertType.ERROR);
+//                    alert.setHeaderText(null);
+//                    alert.setContentText("Entered ID is not listed in the system!");
+//                    alert.show();
+//                    return;
+//                }
 
                 Genre genre = genreChoiceBox.getSelectionModel().getSelectedItem();
 
 
                 Association association = AssociationModelManager.getAssociation();
                 int index = catalogueTable.getSelectionModel().getSelectedIndex();
-                BoardGame boardGameTemp;
+                BoardGame boardGame;
                 try
                 {
-                    boardGameTemp = new BoardGame(title, ownerID, description, genre);
+                    BoardGame boardGameTemp = AssociationModelManager.getAssociation().getBoardGame(index);
+                    ownerID = AssociationModelManager.getAssociation().getBoardGame(index).getOwnerID();
+                    boardGame = new BoardGame(title, ownerID, description, genre);
+                    boardGame.setStatusOfGame(boardGameTemp.getStatusOfGame());
+                    boardGame.setRatingList(boardGameTemp.getRatingList());
                 }
                 catch (IllegalArgumentException exception)
                 {
@@ -167,7 +190,7 @@ public class CatalogueController
                     alert.show();
                     return;
                 }
-                association.getCatalogue().setBoardGame(index, boardGameTemp);
+                association.getCatalogue().setBoardGame(index, boardGame);
                 AssociationModelManager.saveAssociation(association);
                 updateTable();
 

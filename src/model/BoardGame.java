@@ -129,6 +129,17 @@ public class BoardGame implements Serializable
     status = "None";
   }
 
+
+  public RatingList getRatingList()
+  {
+    return ratingList;
+  }
+
+  public void setRatingList(RatingList ratingList)
+  {
+    this.ratingList = ratingList;
+  }
+
   public void addRating(int rating)
   {
     ratingList.addRating(rating);

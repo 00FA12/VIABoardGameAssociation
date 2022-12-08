@@ -65,6 +65,15 @@ public class StatusViewController
             alert.show();
             return;
         }
+
+        if(AssociationModelManager.getAssociation().getStudentByID(ID) == null)
+        {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText(null);
+            alert.setContentText("Entered ID is not listed in the system!");
+            alert.show();
+            return;
+        }
         MyDate endDate = new MyDate();
         MyDate startDate = new MyDate();
         LocalDate localEndDate = statusEndDatePicker.getValue();
@@ -109,6 +118,8 @@ public class StatusViewController
             if(catalogue.getBoardGame(i).getStatusOfGame() == null)
                 continue;
             Student currStudent = catalogue.getBoardGame(i).getStatusOfGame().getStudent();
+            if(currStudent == null)
+                continue;
             currStudent = association.getStudentByID(currStudent.getID());
             if(currStudent.getID() == ID)
             {

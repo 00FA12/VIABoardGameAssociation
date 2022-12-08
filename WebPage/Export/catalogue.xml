@@ -1,71 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Catalogue>
   <catalogue>
-    <ratingList/>
-    <genre>
-      <name>Children’s Game</name>
-    </genre>
-    <description>Description_</description>
-    <title>game1</title>
-    <ownerID>100001</ownerID>
-    <status>None</status>
-  </catalogue>
-  <catalogue>
     <ratingList>
       <ratings>5</ratings>
     </ratingList>
     <genre>
-      <name>Bluffing</name>
+      <name>Card Games</name>
     </genre>
-    <description>Description_</description>
+    <description>sfrggr</description>
     <title>game2</title>
-    <ownerID>100002</ownerID>
-    <status>None</status>
-  </catalogue>
-  <catalogue>
-    <ratingList>
-      <ratings>3</ratings>
-    </ratingList>
-    <genre>
-      <name>Children’s Game</name>
-    </genre>
-    <description>Description_</description>
-    <title>game1</title>
     <ownerID>100001</ownerID>
-    <status>None</status>
-  </catalogue>
-  <catalogue>
-    <ratingList/>
-    <genre>
-      <name>Children’s Game</name>
-    </genre>
-    <description>Description_</description>
-    <title>game1</title>
-    <ownerID>100001</ownerID>
-    <status>None</status>
-  </catalogue>
-  <catalogue>
-    <ratingList/>
-    <genre>
-      <name>Children’s Game</name>
-    </genre>
-    <description>Description_</description>
-    <title>game1</title>
-    <ownerID>100001</ownerID>
-    <status>None</status>
-  </catalogue>
-  <catalogue>
-    <ratingList>
-      <ratings>5</ratings>
-      <ratings>5</ratings>
-      <ratings>3</ratings>
-    </ratingList>
-    <genre>
-      <name>Children’s Game</name>
-    </genre>
-    <description>Description_</description>
-    <title>game1</title>
-    <ownerID>100001</ownerID>
-    <status>None</status>
+    <gameAction>
+      <endDate>
+        <month>12</month>
+        <year>2022</year>
+        <day>8</day>
+      </endDate>
+      <student>
+        <name>Bob Bobster</name>
+        <ID>100001</ID>
+        <isMember>true</isMember>
+      </student>
+      <startDate>
+        <month>12</month>
+        <year>2022</year>
+        <day>8</day>
+      </startDate>
+    </gameAction>
+    <status>Reserved</status>
   </catalogue>
 </Catalogue>
