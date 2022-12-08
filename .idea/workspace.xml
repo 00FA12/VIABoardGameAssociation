@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" name="Tasks" comment="fixed some bugs, status info">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/VoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/VoteController.java" afterDir="false" />
     </list>
     <list id="e87b550e-3d6a-4d86-a721-c06a7156f051" name="Changes" comment="1master" />
     <list id="68818cb0-604d-4df6-bbf4-d4fc4052d36d" name="Changes by hugom" comment="" />
@@ -154,13 +154,6 @@
       <workItem from="1669734724410" duration="5174000" />
       <workItem from="1669968834843" duration="15393000" />
       <workItem from="1670004844483" duration="8111000" />
-    </task>
-    <task id="LOCAL-00012" summary="Changes by Севастиан">
-      <created>1669741046652</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1669741046652</updated>
     </task>
     <task id="LOCAL-00013" summary="1">
       <created>1669741057908</created>
@@ -345,7 +338,7 @@
       <workItem from="1670427743690" duration="7012000" />
       <workItem from="1670448565776" duration="3568000" />
       <workItem from="1670452194409" duration="94000" />
-      <workItem from="1670490848876" duration="1342000" />
+      <workItem from="1670490848876" duration="1518000" />
     </task>
     <task id="LOCAL-00037" summary="Was added auto completion text field, little changes in CatalogueController.java &amp; EventController.java, preventing of errors">
       <created>1670027238045</created>
@@ -515,7 +508,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670491652582</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="fixed some bugs, status info">
+      <created>1670492216065</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1670492216065</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -1,7 +1,5 @@
 package GUI;
 
-import com.jfoenix.controls.JFXAutoCompletePopup;
-import impl.org.controlsfx.autocompletion.AutoCompletionTextFieldBinding;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
@@ -14,13 +12,9 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.HBox;
 import model.*;
-import model.lists.StudentList;
 import model.lists.VotingList;
-import org.controlsfx.control.textfield.AutoCompletionBinding;
-import org.controlsfx.control.textfield.TextFields;
 
 import java.net.URL;
-import java.util.Arrays;
 import java.util.List;
 import java.util.ResourceBundle;
 
