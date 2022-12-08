@@ -4,22 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" name="Tasks" comment="fixed some bugs, status info">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Diagrams/Class diagrams.asta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/AutoCompletionTextField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/AutoCompletionTextField.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/CatalogueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/CatalogueController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/EventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/EventController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/RateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/RateController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/StatusViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/StatusViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/VoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/VoteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/event_tab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/event_tab.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/student_tab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/student_tab.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/vote_tab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/vote_tab.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/MyFileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/MyFileHandler.java" afterDir="false" />
-    </list>
+    <list default="true" id="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" name="Tasks" comment="fixed some bugs, status info" />
     <list id="e87b550e-3d6a-4d86-a721-c06a7156f051" name="Changes" comment="1master" />
     <list id="68818cb0-604d-4df6-bbf4-d4fc4052d36d" name="Changes by hugom" comment="" />
     <list id="6323e09b-732e-4656-bc2c-154e7f31a3e3" name="Changes by micha" comment="Changes by micha" />
@@ -167,20 +152,6 @@
       <workItem from="1669734724410" duration="5174000" />
       <workItem from="1669968834843" duration="15393000" />
       <workItem from="1670004844483" duration="8111000" />
-    </task>
-    <task id="LOCAL-00014" summary="1">
-      <created>1669836710539</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1669836710539</updated>
-    </task>
-    <task id="LOCAL-00015" summary="1">
-      <created>1669836971340</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1669836971340</updated>
     </task>
     <task id="LOCAL-00016" summary="It's me HUGO, I fixed all the mistakes">
       <created>1669837610816</created>
@@ -344,7 +315,7 @@
       <workItem from="1670427743690" duration="7012000" />
       <workItem from="1670448565776" duration="3568000" />
       <workItem from="1670452194409" duration="94000" />
-      <workItem from="1670490848876" duration="10069000" />
+      <workItem from="1670490848876" duration="10414000" />
     </task>
     <task id="LOCAL-00037" summary="Was added auto completion text field, little changes in CatalogueController.java &amp; EventController.java, preventing of errors">
       <created>1670027238045</created>
@@ -528,7 +499,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670492392189</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="fixed some bugs, status info">
+      <created>1670505836302</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1670505836302</updated>
+    </task>
+    <task id="LOCAL-00064" summary="fixed some bugs, status info">
+      <created>1670505970916</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1670505970916</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
