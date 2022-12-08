@@ -89,7 +89,24 @@
     <description>Description_</description>
     <title>game1</title>
     <ownerID>100001</ownerID>
-    <status>None</status>
+    <gameAction>
+      <endDate>
+        <month>12</month>
+        <year>2022</year>
+        <day>8</day>
+      </endDate>
+      <student>
+        <name>Bob F Jdad</name>
+        <ID>100001</ID>
+        <isMember>true</isMember>
+      </student>
+      <startDate>
+        <month>12</month>
+        <year>2022</year>
+        <day>15</day>
+      </startDate>
+    </gameAction>
+    <status>Borrowed</status>
   </catalogue>
   <catalogue>
     <ratingList/>
@@ -126,6 +143,23 @@
     <description>Description_</description>
     <title>game1</title>
     <ownerID>100001</ownerID>
-    <status>None</status>
+    <gameAction>
+      <endDate>
+        <month>12</month>
+        <year>2022</year>
+        <day>8</day>
+      </endDate>
+      <student>
+        <name>Bob F Jdad</name>
+        <ID>100001</ID>
+        <isMember>true</isMember>
+      </student>
+      <startDate>
+        <month>12</month>
+        <year>2022</year>
+        <day>8</day>
+      </startDate>
+    </gameAction>
+    <status>Reserved</status>
   </catalogue>
 </Catalogue>

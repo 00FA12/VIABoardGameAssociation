@@ -72,6 +72,15 @@ public class StatusViewController
         LocalDate localEndDate = statusEndDatePicker.getValue();
         LocalDate localStartDate = statusStartDatePicker.getValue();
 
+        if(localEndDate.isBefore(localStartDate))
+        {
+            Alert alert  = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText(null);
+            alert.setContentText("You can't set end date before the start date!");
+            alert.show();
+            return;
+        }
+
         try
         {
             int day = localStartDate.getDayOfMonth();
