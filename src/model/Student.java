@@ -12,6 +12,12 @@ public class Student implements Serializable
   private int ID;
   private boolean isMember;
 
+
+  /**
+   * first class constructor, validate both parameters and throw an exception if found a mistake
+   * @param name which include first name and second name (Name can consist of middle names, max possible numbers of sub-names is 4)
+   * @param ID should be unique
+   */
   public Student(String name, int ID)
   {
     try
