@@ -5,7 +5,9 @@ import model.lists.StudentList;
 import java.io.Serializable;
 
 
-//Sevastian
+/**
+ *
+ */
 public class Student implements Serializable
 {
   private String name;
@@ -14,7 +16,7 @@ public class Student implements Serializable
 
 
   /**
-   * first class constructor, validate both parameters and throw an exception if found a mistake
+   * first class constructor, validate both parameters and throw an exception if found a mistake or initialize class fields if not
    * @param name which include first name and second name (Name can consist of middle names, max possible numbers of sub-names is 4)
    * @param ID should be unique
    */
@@ -52,7 +54,12 @@ public class Student implements Serializable
       this.isMember = false;
 
   }
-
+  /**
+   * first class constructor, validate both parameters and throw an exception if found a mistake
+   * @param name
+   * @param ID should be unique
+   * @param isMember
+   */
   public Student(String name, int ID, boolean isMember)
   {
     try

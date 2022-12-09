@@ -5,11 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" name="Tasks" comment="fixed some bugs, status info">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Diagrams/Use-case-diagrams.asta" beforeDir="false" afterPath="$PROJECT_DIR$/Diagrams/Use-case-diagrams.asta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Student.java" afterDir="false" />
     </list>
     <list id="e87b550e-3d6a-4d86-a721-c06a7156f051" name="Changes" comment="1master" />
     <list id="68818cb0-604d-4df6-bbf4-d4fc4052d36d" name="Changes by hugom" comment="" />
-    <list id="6323e09b-732e-4656-bc2c-154e7f31a3e3" name="Changes by micha" comment="Changes by micha" />
+    <list id="6323e09b-732e-4656-bc2c-154e7f31a3e3" name="Changes by micha" comment="Changes by micha">
+      <change beforePath="$PROJECT_DIR$/src/GUI/CatalogueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/CatalogueController.java" afterDir="false" />
+    </list>
+    <list id="6bdd26fe-a218-4396-968a-62774ad4d7e3" name="Changes by pind9" comment="" />
     <list id="d1a99415-edf2-468f-a9e2-b3fdf658817e" name="Changes by Севастиан" comment="Changes by Севастиан" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +38,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
@@ -154,20 +161,6 @@
       <workItem from="1669734724410" duration="5174000" />
       <workItem from="1669968834843" duration="15393000" />
       <workItem from="1670004844483" duration="8111000" />
-    </task>
-    <task id="LOCAL-00020" summary="test">
-      <created>1669889323810</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1669889323810</updated>
-    </task>
-    <task id="LOCAL-00021" summary="test">
-      <created>1669895632995</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1669895632995</updated>
     </task>
     <task id="LOCAL-00022" summary="event done">
       <created>1669904773986</created>
@@ -292,7 +285,7 @@
       <workItem from="1670490848876" duration="17129000" />
       <workItem from="1670528060530" duration="2072000" />
       <workItem from="1670534927048" duration="143000" />
-      <workItem from="1670584806967" duration="1731000" />
+      <workItem from="1670584806967" duration="2632000" />
     </task>
     <task id="LOCAL-00037" summary="Was added auto completion text field, little changes in CatalogueController.java &amp; EventController.java, preventing of errors">
       <created>1670027238045</created>
@@ -518,7 +511,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670586361698</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="fixed some bugs, status info">
+      <created>1670586644802</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1670586644802</updated>
+    </task>
+    <task id="LOCAL-00070" summary="fixed some bugs, status info">
+      <created>1670586656904</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1670586656904</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
