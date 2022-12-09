@@ -5,16 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" name="Tasks" comment="fixed some bugs, status info">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_01_12_2022_11_03_[Changes_by_micha]1/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_01_12_2022_11_03__Changes_by_micha_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_12_2022_11_05_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_12_2022_11_05__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Diagrams/Use-case-diagrams.asta" beforeDir="false" afterPath="$PROJECT_DIR$/Diagrams/Use-case-diagrams.asta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebPage/Export/catalogue.xml" beforeDir="false" afterPath="$PROJECT_DIR$/WebPage/Export/catalogue.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/association.bin" beforeDir="false" afterPath="$PROJECT_DIR$/association.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/event_tab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/event_tab.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Student.java" afterDir="false" />
     </list>
     <list id="e87b550e-3d6a-4d86-a721-c06a7156f051" name="Changes" comment="1master" />
     <list id="68818cb0-604d-4df6-bbf4-d4fc4052d36d" name="Changes by hugom" comment="" />
@@ -164,13 +155,6 @@
       <workItem from="1669968834843" duration="15393000" />
       <workItem from="1670004844483" duration="8111000" />
     </task>
-    <task id="LOCAL-00019" summary="123">
-      <created>1669889315520</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1669889315520</updated>
-    </task>
     <task id="LOCAL-00020" summary="test">
       <created>1669889323810</created>
       <option name="number" value="00020" />
@@ -308,7 +292,7 @@
       <workItem from="1670490848876" duration="17129000" />
       <workItem from="1670528060530" duration="2072000" />
       <workItem from="1670534927048" duration="143000" />
-      <workItem from="1670584806967" duration="1429000" />
+      <workItem from="1670584806967" duration="1731000" />
     </task>
     <task id="LOCAL-00037" summary="Was added auto completion text field, little changes in CatalogueController.java &amp; EventController.java, preventing of errors">
       <created>1670027238045</created>
@@ -527,7 +511,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670509112820</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="fixed some bugs, status info">
+      <created>1670586361698</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1670586361698</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
