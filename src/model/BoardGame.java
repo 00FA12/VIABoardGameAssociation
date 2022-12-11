@@ -111,35 +111,53 @@ public class BoardGame implements Serializable
     status = getStatusToString();
   }
 
+  /**
+   * sets {@link GameAction} to {@link Reserve} by polymorphism
+   * marks game as reserved
+   * @param ID
+   * @param startDate
+   * @param endDate
+   */
   public void reserve(int ID, MyDate startDate, MyDate endDate)
   {
     gameAction = new Reserve(ID, startDate, endDate);
     status = getStatusToString();
   }
 
-  public void removeBorrow()
+
+  /**
+   * sets {@link GameCandidate} to null which means that BoardGame is available
+   */
+  public void returnBoardGame()
   {
     gameAction = null;
     status = "None";
   }
 
-  public void removeReserve()
-  {
-    gameAction = null;
-    status = "None";
-  }
 
-
+  /**
+   *
+   * @return {@link RatingList}
+   */
   public RatingList getRatingList()
   {
     return ratingList;
   }
 
+
+  /**
+   *
+   * @param ratingList
+   */
   public void setRatingList(RatingList ratingList)
   {
     this.ratingList = ratingList;
   }
 
+  /**
+   * add rating to the {@link RatingList}
+   * @param rating
+   */
   public void addRating(int rating)
   {
     ratingList.addRating(rating);

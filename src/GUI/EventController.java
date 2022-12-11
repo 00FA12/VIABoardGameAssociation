@@ -123,6 +123,7 @@ public class EventController
                     Alert alert = new Alert(Alert.AlertType.ERROR, exception.getMessage());
                     alert.setHeaderText(null);
                     alert.show();
+                    return;
                 }
 
                 Event event = null;

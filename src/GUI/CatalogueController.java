@@ -149,25 +149,6 @@ public class CatalogueController
                 String title = titleField.getText();
                 String description = descriptionArea.getText();
                 int ownerID = 0;
-//                try
-//                {
-//                    ownerID = Integer.parseInt(ownerIDField.getText());
-//                } catch (Exception exception)
-//                {
-//                    Alert alert = new Alert(Alert.AlertType.ERROR, "Enter VIA ID in \"Owner ID\" field!");
-//                    alert.setHeaderText(null);
-//                    alert.show();
-//                    return;
-//                }
-//
-//                if(AssociationModelManager.getAssociation().getStudentByID(ownerID) == null)
-//                {
-//                    Alert alert = new Alert(Alert.AlertType.ERROR);
-//                    alert.setHeaderText(null);
-//                    alert.setContentText("Entered ID is not listed in the system!");
-//                    alert.show();
-//                    return;
-//                }
 
                 Genre genre = genreChoiceBox.getSelectionModel().getSelectedItem();
 
