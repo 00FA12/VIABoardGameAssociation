@@ -19,6 +19,10 @@ public class Reserve extends GameAction implements Serializable
     super(ID, startDate, endDate);
   }
 
+  /**
+   *
+   * @return the reservation String representation
+   */
   public String toString()
   {
     return "Reserved";
