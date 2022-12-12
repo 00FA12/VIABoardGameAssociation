@@ -6,26 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" name="Tasks" comment="fixed bug in EventController.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebPage/Export/catalogue.xml" beforeDir="false" afterPath="$PROJECT_DIR$/WebPage/Export/catalogue.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/association.bin" beforeDir="false" afterPath="$PROJECT_DIR$/association.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/AutoCompletionTextField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/AutoCompletionTextField.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/StartGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/StartGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/StatusViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/StatusViewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/styles-dark-mode.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/styles-dark-mode.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/styles-light-mode.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/styles-light-mode.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/via-logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/LoadInitialData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/LoadInitialData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/VIABoardGameAssociation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/VIABoardGameAssociation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Association.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Association.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/AssociationModelManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/AssociationModelManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/BoardGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/BoardGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Event.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/lists/EventList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/lists/EventList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/lists/GenreList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/lists/GenreList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/lists/StudentList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/lists/StudentList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/lists/VotingList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/lists/VotingList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/MyFileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/MyFileHandler.java" afterDir="false" />
     </list>
     <list id="e87b550e-3d6a-4d86-a721-c06a7156f051" name="Changes" comment="1master" />
     <list id="3db4bf5a-a229-4d5e-93bc-e90be7e6ace5" name="Changes by hmadrid" comment="Changes by hmadrid" />
@@ -244,63 +226,6 @@
     <setting file="file://$PROJECT_DIR$/src/GUI/VoteController.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/LoadInitialData.java" root0="FORCE_HIGHLIGHTING" />
   </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/model/Association.java">
-      <ranges>
-        <range start1="6" end1="7" start2="6" end2="13" changelist="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" />
-        <range start1="9" end1="9" start2="15" end2="18" changelist="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" />
-        <range start1="10" end1="10" start2="19" end2="23" changelist="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" />
-        <range start1="11" end1="11" start2="24" end2="28" changelist="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" />
-        <range start1="12" end1="12" start2="29" end2="33" changelist="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" />
-        <range start1="13" end1="13" start2="34" end2="38" changelist="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" />
-        <range start1="15" end1="15" start2="40" end2="43" changelist="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" />
-        <range start1="24" end1="24" start2="52" end2="56" changelist="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" />
-        <range start1="29" end1="29" start2="61" end2="65" changelist="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" />
-        <range start1="34" end1="34" start2="70" end2="74" changelist="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" />
-        <range start1="39" end1="39" start2="79" end2="83" changelist="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" />
-        <range start1="44" end1="44" start2="88" end2="92" changelist="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" />
-        <range start1="49" end1="49" start2="97" end2="101" changelist="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" />
-        <range start1="54" end1="54" start2="106" end2="110" changelist="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" />
-        <range start1="59" end1="59" start2="115" end2="119" changelist="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" />
-        <range start1="64" end1="64" start2="124" end2="128" changelist="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" />
-        <range start1="69" end1="69" start2="133" end2="137" changelist="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" />
-        <range start1="74" end1="74" start2="142" end2="147" changelist="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" />
-        <range start1="79" end1="79" start2="152" end2="157" changelist="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" />
-        <range start1="84" end1="84" start2="162" end2="167" changelist="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" />
-        <range start1="89" end1="89" start2="172" end2="177" changelist="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" />
-        <range start1="94" end1="94" start2="182" end2="187" changelist="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" />
-        <range start1="99" end1="99" start2="192" end2="197" changelist="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" />
-        <range start1="104" end1="104" start2="202" end2="207" changelist="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" />
-        <range start1="109" end1="109" start2="212" end2="217" changelist="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" />
-        <range start1="114" end1="114" start2="222" end2="226" changelist="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" />
-        <range start1="119" end1="119" start2="231" end2="235" changelist="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" />
-        <range start1="124" end1="124" start2="240" end2="244" changelist="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" />
-        <range start1="129" end1="129" start2="249" end2="253" changelist="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" />
-        <range start1="134" end1="134" start2="258" end2="262" changelist="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" />
-        <range start1="139" end1="139" start2="267" end2="271" changelist="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" />
-        <range start1="144" end1="144" start2="276" end2="281" changelist="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" />
-        <range start1="149" end1="149" start2="286" end2="290" changelist="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" />
-        <range start1="153" end1="153" start2="294" end2="299" changelist="6bdd26fe-a218-4396-968a-62774ad4d7e3" />
-        <range start1="158" end1="158" start2="304" end2="308" changelist="6bdd26fe-a218-4396-968a-62774ad4d7e3" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/GUI/StartGUI.java">
-      <ranges>
-        <range start1="13" end1="13" start2="13" end2="18" changelist="6323e09b-732e-4656-bc2c-154e7f31a3e3" />
-        <range start1="17" end1="18" start2="22" end2="23" changelist="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/GUI/StatusViewController.java">
-      <ranges>
-        <range start1="18" end1="18" start2="18" end2="23" changelist="6323e09b-732e-4656-bc2c-154e7f31a3e3" />
-        <range start1="34" end1="35" start2="39" end2="42" changelist="6323e09b-732e-4656-bc2c-154e7f31a3e3" />
-        <range start1="41" end1="42" start2="48" end2="54" changelist="6323e09b-732e-4656-bc2c-154e7f31a3e3" />
-        <range start1="52" end1="53" start2="64" end2="68" changelist="6323e09b-732e-4656-bc2c-154e7f31a3e3" />
-        <range start1="101" end1="101" start2="116" end2="117" changelist="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" />
-        <range start1="105" end1="106" start2="121" end2="122" changelist="d2be5ba0-3c90-4b79-a164-56b1ffb44f60" />
-      </ranges>
-    </file>
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -395,13 +320,6 @@
       <workItem from="1669734724410" duration="5174000" />
       <workItem from="1669968834843" duration="15393000" />
       <workItem from="1670004844483" duration="8111000" />
-    </task>
-    <task id="LOCAL-00025" summary="Changes by pind9">
-      <created>1669904852356</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1669904852356</updated>
     </task>
     <task id="LOCAL-00026" summary="01.12 event works">
       <created>1669911674560</created>
@@ -501,7 +419,7 @@
       <workItem from="1670584806967" duration="11126000" />
       <workItem from="1670754110590" duration="1224000" />
       <workItem from="1670755361719" duration="1962000" />
-      <workItem from="1670837587545" duration="9887000" />
+      <workItem from="1670837587545" duration="10516000" />
     </task>
     <task id="LOCAL-00037" summary="Was added auto completion text field, little changes in CatalogueController.java &amp; EventController.java, preventing of errors">
       <created>1670027238045</created>
@@ -762,7 +680,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670756652455</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="fixed bug in EventController.java">
+      <created>1670851106648</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1670851106648</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -806,17 +731,17 @@
     <MESSAGE value="fixed almost all bugs with borrow/reserve fiture" />
     <MESSAGE value="fixed almost all bugs with borrow/reserve feature" />
     <MESSAGE value="fixed some bugs, status info" />
-    <MESSAGE value="fixed bug in EventController.java" />
     <MESSAGE value="Changes by hmadrid" />
     <MESSAGE value="Changes by micha" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes by micha" />
+    <MESSAGE value="fixed bug in EventController.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed bug in EventController.java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/GUI/StatusViewController.java</url>
-          <line>147</line>
+          <line>146</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
