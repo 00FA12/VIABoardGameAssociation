@@ -2,31 +2,14 @@
 <Catalogue>
   <catalogue>
     <ratingList>
-      <ratings>5</ratings>
+      <ratings>2</ratings>
     </ratingList>
     <genre>
-      <name>Card Games</name>
+      <name>Children’s Game</name>
     </genre>
-    <description>sfrggr</description>
-    <title>game2</title>
+    <description>some dewf</description>
+    <title>title1</title>
     <ownerID>100001</ownerID>
-    <gameAction>
-      <endDate>
-        <month>12</month>
-        <year>2022</year>
-        <day>8</day>
-      </endDate>
-      <student>
-        <name>Bob Bobster</name>
-        <ID>100001</ID>
-        <isMember>true</isMember>
-      </student>
-      <startDate>
-        <month>12</month>
-        <year>2022</year>
-        <day>8</day>
-      </startDate>
-    </gameAction>
-    <status>Borrowed</status>
+    <status>None</status>
   </catalogue>
 </Catalogue>

@@ -113,7 +113,7 @@ public class BoardGame implements Serializable
   }
 
   /**
-   * {@link BoardGame#gameAction} = @param status
+   * {@link BoardGame#gameAction} = {@param status}
    * {@link BoardGame#status} = {@link BoardGame#getStatusOfGame()}
    */
   public void setStatusOfGame(GameAction status)
@@ -131,7 +131,7 @@ public class BoardGame implements Serializable
   }
 
   /**
-   * {@link BoardGame#title} = @param title
+   * {@link BoardGame#title} = {@param title}
    */
   public void setTitle(String title)
   {

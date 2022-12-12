@@ -99,11 +99,12 @@ public class StatusViewController
             day = localEndDate.getDayOfMonth();
             month = localEndDate.getMonthValue();
             year = localEndDate.getYear();
+            endDate = new MyDate(day, month, year);
         }
         catch (IllegalArgumentException exception)
         {
             Alert alert = new Alert(Alert.AlertType.ERROR, exception.getMessage());
-
+            alert.setHeaderText(null);
             alert.show();
         }
 

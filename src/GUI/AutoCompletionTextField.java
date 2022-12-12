@@ -17,8 +17,10 @@ import java.util.SortedSet;
 import java.util.TreeSet;
 import java.util.stream.Collectors;
 
-// This class we took from https://stackoverflow.com/questions/36861056/javafx-textfield-auto-suggestions,
-// the author: Ruslan Gabbazov
+/**
+ * This class were taken from https://stackoverflow.com/questions/36861056/javafx-textfield-auto-suggestion
+ * @author the author: Ruslan Gabbazov
+ */
 public class AutoCompletionTextField extends TextField
 {
     //Local variables
@@ -40,7 +42,7 @@ public class AutoCompletionTextField extends TextField
 
 
     /**
-     * "Suggestion" specific listners
+     * "Suggestion" specific listeners
      */
     private void setListener() {
         //Add "suggestions" by changing text

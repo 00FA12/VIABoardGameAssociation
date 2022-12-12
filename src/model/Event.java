@@ -1,19 +1,42 @@
 package model;
 
 import model.lists.StudentList;
-import org.controlsfx.control.CheckComboBox;
 
 import java.io.Serializable;
 import java.util.List;
 
 //Kateryna
+
+/**
+ * this class describes events of association
+ * @author Kateryna Sokolova
+ */
 public class Event implements Serializable
 {
+  /**
+   * event name
+   */
   private String title;
+  /**
+   * event description, for some details
+   */
   private String description;
+  /**
+   * the date when event start's
+   */
   private MyDate date;
+  /**
+   * the list of attenders that are invited on the event
+   */
   private StudentList attenders;
 
+  /**
+   * constructor which validate {@link Event#title} and initialize
+   * {@link Event#date} & {@link Event#description} if didn't find any mistakes. List of event attenders will be created
+   * @param title
+   * @param description
+   * @param date
+   */
   public Event(String title, String description, MyDate date)
   {
     if(title.isEmpty() || date == null || description.isEmpty())
@@ -33,31 +56,54 @@ public class Event implements Serializable
     attenders = new StudentList();
   }
 
+  /**
+   *
+   * @return {@link Event#title}
+   */
   public String getTitle()
   {
     return title;
   }
 
+  /**
+   *
+   * @return {@link Event#description}
+   */
   public String getDescription()
   {
     return description;
   }
 
+  /**
+   *
+   * @return {@link Event#date}
+   */
   public MyDate getDate()
   {
     return date;
   }
 
+  /**
+   *
+   * @param title
+   */
   public void setTitle(String title)
   {
     this.title = title;
   }
 
+  /**
+   * adds an attender to list of event attenders
+   * @param student
+   */
   public void addAttender(Student student)
   {
     attenders.addStudentAsAttender(student);
   }
 
+  /**
+   * initialize attender list with {@param students}
+   */
   public void addAttenderList(List<Student> students)
   {
     for (Student student:students)
@@ -66,22 +112,38 @@ public class Event implements Serializable
     }
   }
 
+  /**
+   *
+   * @param description
+   */
   public void setDescription(String description)
   {
     this.description = description;
   }
 
+  /**
+   *
+   * @param date
+   */
   public void setDate(MyDate date)
   {
     this.date = date;
   }
 
+  /**
+   *
+   * @return {@link Event#attenders}
+   */
   public StudentList getAttenders()
   {
     return attenders;
   }
 
-  public String toSting()
+  /**
+   *
+   * @return String representation of event information
+   */
+  public String toString()
   {
     return "Title: " + title + "\nDescription: " + description + "\nDate: "
         + date + "\nAttenders: " + attenders;

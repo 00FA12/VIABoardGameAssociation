@@ -9,8 +9,14 @@ import utils.MyFileHandler;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+/**
+ * class that load initial whenever the program starts
+ */
 public class LoadInitialData
 {
+  /**
+   * static method which actually loads the genres from the text file to the association binary file
+   */
   public static void load()
   {
     String fileNameTxt = "genres.txt";

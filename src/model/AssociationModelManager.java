@@ -8,10 +8,21 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.Serializable;
 
+/**
+ * association model manager works with {@link MyFileHandler} and {@link Association},
+ * it can read {@link Association} from the file and write it to the file
+ */
 public class AssociationModelManager implements Serializable
 {
+  /**
+   * binary filepath
+   */
   private static final String fileName = "association.bin";
 
+  /**
+   * overwrite file with new Object
+   * @param association
+   */
   public static void saveAssociation(Association association)
   {
     try
@@ -29,6 +40,10 @@ public class AssociationModelManager implements Serializable
     }
   }
 
+  /**
+   *
+   * @return {@link Association} object, which was read from the file
+   */
   public static Association getAssociation()
   {
     Association association = null;
@@ -56,11 +71,19 @@ public class AssociationModelManager implements Serializable
     return association;
   }
 
+  /**
+   * call {@link AssociationModelManager#getVotingList()} than call {@link Association#getVotingList()} from {@link Association}
+   * @return voting list
+   */
   public static VotingList getVotingList()
   {
     return getAssociation().getVotingList();
   }
 
+  /**
+   * call {@link AssociationModelManager#getStudentList()} ()} than call {@link Association#getStudentList()} from {@link Association}
+   * @return student list
+   */
   public static StudentList getStudentList()
   {
     return getAssociation().getStudentList();
