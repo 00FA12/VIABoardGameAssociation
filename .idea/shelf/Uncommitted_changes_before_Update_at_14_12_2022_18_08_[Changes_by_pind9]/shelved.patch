@@ -1,0 +1,298 @@
+Index: src/model/lists/RatingList.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package model.lists;\r\n\r\nimport java.io.Serializable;\r\nimport java.text.DecimalFormat;\r\nimport java.util.ArrayList;\r\nimport java.util.Collections;\r\n\r\n//Hugo\r\npublic class RatingList implements Serializable\r\n{\r\n  private ArrayList<Integer> ratings;\r\n\r\n  public RatingList()\r\n  {\r\n    ratings = new ArrayList<>();\r\n  }\r\n\r\n  public void addRating(int rating)\r\n  {\r\n    if (rating >= 1 && rating <= 5) //We don't want super high or super low values\r\n    {\r\n      ratings.add(rating);\r\n    }\r\n    else\r\n      throw new IllegalArgumentException(\"Rating has to be between 1 and 5\");\r\n  }\r\n\r\n  public String averageToString()\r\n  {\r\n    DecimalFormat lol = new DecimalFormat(\"#.#\");\r\n    int sum = 0;\r\n    for (int i = 0; i < ratings.size(); i++)\r\n    {\r\n      sum += ratings.get(i);\r\n    }\r\n    if(ratings.size() == 0)\r\n      return lol.format(sum);\r\n    else\r\n      return lol.format((double) sum / ratings.size());\r\n  }\r\n\r\n  public double getAverage()\r\n  {\r\n    int sum = 0;\r\n    for (int i = 0; i < ratings.size(); i++)\r\n    {\r\n      sum += ratings.get(i);\r\n    }\r\n    if(ratings.size() == 0)\r\n      return sum;\r\n    else\r\n      return (double) sum / ratings.size();\r\n  }\r\n\r\n  public int getSize() // todo astah\r\n  {\r\n    return this.ratings.size();\r\n  }\r\n\r\n  public int getRating(int index)\r\n  {\r\n    return ratings.get(index);\r\n  }\r\n\r\n  public void setRating(int index, int rating)\r\n  {\r\n    ratings.set(index, rating);\r\n  }\r\n\r\n  public void removeRating(int index)\r\n  {\r\n    ratings.remove(index);\r\n  }\r\n\r\n  public String toString()\r\n  {\r\n    String temp = \"\";\r\n    for (int i = 0; i < ratings.size(); i++)\r\n    {\r\n      temp += \"Rating number \" + i + \" is \" + ratings.get(i) + \"\\n\";\r\n    }\r\n    return temp;\r\n  }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/model/lists/RatingList.java b/src/model/lists/RatingList.java
+--- a/src/model/lists/RatingList.java	(revision d976daa0e75e7a35e45ef1bcda49df685ff4c0ab)
++++ b/src/model/lists/RatingList.java	(date 1670850200441)
+@@ -1,20 +1,40 @@
+ package model.lists;
+ 
++import model.Student;
++
+ import java.io.Serializable;
+ import java.text.DecimalFormat;
+ import java.util.ArrayList;
+ import java.util.Collections;
+ 
+ //Hugo
++
++/**
++ * A class containing a list of Rating objects.
++ * @author Hugo
++ * version 1.0
++ */
+ public class RatingList implements Serializable
+ {
++  /**
++   * {@link ArrayList}of ratings
++   */
+   private ArrayList<Integer> ratings;
+ 
++  /**
++   * default constructor
++   *
++   */
+   public RatingList()
+   {
+     ratings = new ArrayList<>();
+   }
+ 
++  /**
++   * add rating to the RatingList
++   * @param rating
++   */
++
+   public void addRating(int rating)
+   {
+     if (rating >= 1 && rating <= 5) //We don't want super high or super low values
+@@ -25,6 +45,11 @@
+       throw new IllegalArgumentException("Rating has to be between 1 and 5");
+   }
+ 
++  /**
++   *
++   * @return the String representation average of the list
++   */
++
+   public String averageToString()
+   {
+     DecimalFormat lol = new DecimalFormat("#.#");
+@@ -39,6 +64,10 @@
+       return lol.format((double) sum / ratings.size());
+   }
+ 
++  /**
++   *
++   * @return the average which calcucated by sum devided by number of ratings.
++   */
+   public double getAverage()
+   {
+     int sum = 0;
+@@ -52,26 +81,49 @@
+       return (double) sum / ratings.size();
+   }
+ 
+-  public int getSize() // todo astah
++  /**
++   *
++   * @return the list size
++   */
++  public int getSize()
+   {
+     return this.ratings.size();
+   }
+ 
++  /**
++   *
++   * @param index the position in the list of the Rating object
++   * @return the Rating at index
++   */
++
+   public int getRating(int index)
+   {
+     return ratings.get(index);
+   }
+ 
++  /**
++   * Replaces the Rating object at index with ratings.
++   * @param index the position in the list that will be replaced
++   * @param rating the rating to replace with
++   */
+   public void setRating(int index, int rating)
+   {
+     ratings.set(index, rating);
+   }
+ 
++  /**
++   *removes rating object by index
++   * @param index the position in the list that will be replaced
++   */
+   public void removeRating(int index)
+   {
+     ratings.remove(index);
+   }
+ 
++  /**
++   *
++   * @return the String representation of the list
++   */
+   public String toString()
+   {
+     String temp = "";
+Index: src/model/MyDate.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package model;\r\n\r\nimport java.io.Serializable;\r\nimport java.time.LocalDate;\r\nimport java.time.format.DateTimeFormatter;\r\n\r\n//Kateryna\r\npublic class MyDate implements Serializable\r\n{\r\n  private int day;\r\n  private int month;\r\n  private int year;\r\n\r\n  public MyDate(int day, int month, int year)\r\n  {\r\n    if(LocalDate.of(year, month, day).isBefore(LocalDate.now()))\r\n    {\r\n      throw new IllegalArgumentException(\"Start date should not be before the current date.\");\r\n    }\r\n\r\n    this.day = day;\r\n    this.month = month;\r\n    this.year = year;\r\n  }\r\n\r\n  public MyDate()\r\n  {\r\n    today();\r\n  }\r\n\r\n  public void today()\r\n  {\r\n    LocalDate currentDate = LocalDate.now();\r\n    this.day = currentDate.getDayOfMonth();\r\n    this.month = currentDate.getMonthValue();\r\n    this.year = currentDate.getYear();\r\n  }\r\n\r\n  public int getDay()\r\n  {\r\n    return day;\r\n  }\r\n\r\n  public int getMonth()\r\n  {\r\n    return month;\r\n  }\r\n\r\n  public int getYear()\r\n\r\n  {\r\n    return year;\r\n  }\r\n\r\n  public void setDay(int day)\r\n  {\r\n    this.day = day;\r\n  }\r\n\r\n  public void setMonth(int month)\r\n  {\r\n    this.month = month;\r\n  }\r\n\r\n  public void setYear(int year)\r\n  {\r\n    this.year = year;\r\n  }\r\n\r\n  public boolean isLeapYear()\r\n  {\r\n    return (year % 4 == 0 && year % 100 != 0 || year % 400 == 0);\r\n\r\n  }\r\n\r\n  public boolean equals(MyDate object)\r\n  {\r\n    if (day == object.day && month == object.month && year == object.year)\r\n    {\r\n      return true;\r\n    }\r\n    else\r\n    {\r\n      return false;\r\n    }\r\n  }\r\n\r\n  public MyDate copy()\r\n  {\r\n    return new MyDate(day, month, year);\r\n  }\r\n\r\n  public String toString()\r\n  {\r\n    LocalDate myDateObj = LocalDate.of(year, month, day);\r\n    DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern(\"dd.MM.yyyy\");\r\n\r\n    String formattedDate = myDateObj.format(myFormatObj);\r\n    return formattedDate;\r\n  }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/model/MyDate.java b/src/model/MyDate.java
+--- a/src/model/MyDate.java	(revision d976daa0e75e7a35e45ef1bcda49df685ff4c0ab)
++++ b/src/model/MyDate.java	(date 1670754253486)
+@@ -4,13 +4,24 @@
+ import java.time.LocalDate;
+ import java.time.format.DateTimeFormatter;
+ 
+-//Kateryna
++/**
++ * A class containing a data implementation
++ * @author Kateryna Sokolova
++ * @version 1.0
++ */
+ public class MyDate implements Serializable
+ {
+   private int day;
+   private int month;
+   private int year;
+ 
++  /**
++   * first class constructor
++   * @param day
++   * @param month
++   * @param year
++   * @throws IllegalArgumentException if the entered date is before the current date.
++   */
+   public MyDate(int day, int month, int year)
+   {
+     if(LocalDate.of(year, month, day).isBefore(LocalDate.now()))
+@@ -25,7 +36,7 @@
+ 
+   public MyDate()
+   {
+-    today();
++
+   }
+ 
+   public void today()
+@@ -36,43 +47,76 @@
+     this.year = currentDate.getYear();
+   }
+ 
++  /**
++   * 
++   * @return {@link MyDate#day}
++   */
+   public int getDay()
+   {
+     return day;
+   }
+ 
++  /**
++   *
++   * @return {@link MyDate#month}
++   */
+   public int getMonth()
+   {
+     return month;
+   }
+ 
++  /**
++   *
++   * @return {@link MyDate#year}
++   */
+   public int getYear()
+ 
+   {
+     return year;
+   }
+ 
++  /**
++   *
++   * @param day
++   */
+   public void setDay(int day)
+   {
+     this.day = day;
+   }
+ 
++  /**
++   *
++   * @param month
++   */
+   public void setMonth(int month)
+   {
+     this.month = month;
+   }
+ 
++  /**
++   *
++   * @param year
++   */
+   public void setYear(int year)
+   {
+     this.year = year;
+   }
+ 
++  /**
++   *
++   * @return boolean value if this a leap year or not
++   */
+   public boolean isLeapYear()
+   {
+     return (year % 4 == 0 && year % 100 != 0 || year % 400 == 0);
+ 
+   }
+ 
++  /**
++   *
++   * @param object
++   * @return true if {@param object }  equals to MyDate object
++   */
+   public boolean equals(MyDate object)
+   {
+     if (day == object.day && month == object.month && year == object.year)
+@@ -85,11 +129,19 @@
+     }
+   }
+ 
++  /**
++   *
++   * @return the copy of object
++   */
+   public MyDate copy()
+   {
+     return new MyDate(day, month, year);
+   }
+ 
++  /**
++   *
++   * @return the String that represents formatted date
++   */
+   public String toString()
+   {
+     LocalDate myDateObj = LocalDate.of(year, month, day);
+Index: src/model/Association.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package model;\r\n\r\nimport model.lists.*;\r\n\r\nimport java.io.Serializable;\r\n\r\n\r\n\r\n/**\r\n * class stores all list, file works with association and GUI call all methods from here\r\n * while association class calls method of lists\r\n * @author Michael Leo, Hugo Pennarubia, Kateryna Sokolove, Sevatian Bahynskyi\r\n */\r\npublic class Association implements Serializable\r\n{\r\n  /**\r\n   * genre list\r\n   */\r\n  private GenreList genreList;\r\n\r\n  /**\r\n   * student list\r\n   */\r\n  private StudentList studentList;\r\n\r\n  /**\r\n   * catalogue\r\n   */\r\n  private Catalogue catalogue;\r\n\r\n  /**\r\n   * event list\r\n   */\r\n  private EventList eventList;\r\n\r\n  /**\r\n   * list of votes\r\n   */\r\n  private VotingList votingList;\r\n\r\n  /**\r\n   * creates an association, creates all list\r\n   */\r\n  public Association()\r\n  {\r\n    this.studentList = new StudentList();\r\n    this.genreList = new GenreList();\r\n    this.catalogue = new Catalogue();\r\n    this.eventList = new EventList();\r\n    this.votingList = new VotingList();\r\n  }\r\n\r\n  /**\r\n   *\r\n   * @return catalogue\r\n   */\r\n  public Catalogue getCatalogue()\r\n  {\r\n    return catalogue;\r\n  }\r\n\r\n  /**\r\n   *\r\n   * @return event list\r\n   */\r\n  public EventList getEventList()\r\n  {\r\n    return eventList;\r\n  }\r\n\r\n  /**\r\n   *\r\n   * @return genre list\r\n   */\r\n  public GenreList getGenreList()\r\n  {\r\n    return genreList;\r\n  }\r\n\r\n  /**\r\n   *\r\n   * @return student list\r\n   */\r\n  public StudentList getStudentList()\r\n  {\r\n    return studentList;\r\n  }\r\n\r\n  /**\r\n   *\r\n   * @return list of votes\r\n   */\r\n  public VotingList getVotingList()\r\n  {\r\n    return votingList;\r\n  }\r\n\r\n  /**\r\n   * set catalogue\r\n   * @param catalogue\r\n   */\r\n  public void setCatalogue(Catalogue catalogue)\r\n  {\r\n    this.catalogue = catalogue;\r\n  }\r\n\r\n  /**\r\n   * set event list\r\n   * @param eventList\r\n   */\r\n  public void setEventList(EventList eventList)\r\n  {\r\n    this.eventList = eventList;\r\n  }\r\n\r\n  /**\r\n   * initialize the list\r\n   * @param genreList\r\n   */\r\n  public void setGenreList(GenreList genreList)\r\n  {\r\n    this.genreList = genreList;\r\n  }\r\n\r\n  /**\r\n   * initialize the student list\r\n   * @param studentList\r\n   */\r\n  public void setStudentList(StudentList studentList)\r\n  {\r\n    this.studentList = studentList;\r\n  }\r\n\r\n  /**\r\n   * initialize voting list\r\n   * @param votingList\r\n   */\r\n  public void setVotingList(VotingList votingList)\r\n  {\r\n    this.votingList = votingList;\r\n  }\r\n\r\n  /**\r\n   *\r\n   * @param index\r\n   * @return genre by index\r\n   */\r\n  public Genre getGenre(int index)\r\n  {\r\n    return genreList.getGenre(index);\r\n  }\r\n\r\n  /**\r\n   *\r\n   * @param index\r\n   * @return {@link Student} object by index\r\n   */\r\n  public Student getStudent(int index)\r\n  {\r\n    return this.studentList.getStudent(index);\r\n  }\r\n\r\n  /**\r\n   *\r\n   * @param index\r\n   * @return {@link BoardGame} by index\r\n   */\r\n  public BoardGame getBoardGame(int index)\r\n  {\r\n    return this.catalogue.getBoardGame(index);\r\n  }\r\n\r\n  /**\r\n   *\r\n   * @param index\r\n   * @return {@link Event} by index\r\n   */\r\n  public Event getEvent(int index)\r\n  {\r\n    return eventList.getEvent(index);\r\n  }\r\n\r\n  /**\r\n   *\r\n   * @param index\r\n   * @return {@link GameCandidate} by index\r\n   */\r\n  public GameCandidate getVote(int index)\r\n  {\r\n    return votingList.getVote(index);\r\n  }\r\n\r\n  /**\r\n   *\r\n   * @param title\r\n   * @return {@link BoardGame} by title\r\n   */\r\n  public BoardGame getBoardGameByTitle(String title)\r\n  {\r\n    return catalogue.getBoardGameByTitle(title);\r\n  }\r\n\r\n  /**\r\n   *\r\n   * @param ID\r\n   * @return {@link Student} by ID\r\n   */\r\n  public Student getStudentByID(int ID)\r\n  {\r\n    return this.studentList.getStudentById(ID);\r\n  }\r\n\r\n  /**\r\n   *\r\n   * @param title\r\n   * @return {@link Event} by title\r\n   */\r\n  public Event getEventByTitle(String title)\r\n  {\r\n    return eventList.getEventByTitle(title);\r\n  }\r\n\r\n  /**\r\n   * adds {@link Student} to the end of the list\r\n   * @param student\r\n   */\r\n  public void addStudent(Student student)\r\n  {\r\n    this.studentList.addStudent(student);\r\n  }\r\n\r\n  /**\r\n   * adds {@link BoardGame} to the end of the catalogue\r\n   * @param boardGame\r\n   */\r\n  public void addBoardGame(BoardGame boardGame)\r\n  {\r\n    this.catalogue.addBoardGame(boardGame);\r\n  }\r\n\r\n  /**\r\n   * adds {@link BoardGame} to the end of the list\r\n   * @param event\r\n   */\r\n  public void addEvent(Event event)\r\n  {\r\n    this.eventList.addEvent(event);\r\n  }\r\n\r\n  /**\r\n   * removes {@link Genre} by index\r\n   * @param index\r\n   */\r\n  public void removeGenre(int index)\r\n  {\r\n    this.genreList.removeGenre(index);\r\n  }\r\n\r\n  /**\r\n   * creates new {@link GameCandidate} by title and add it to the end of the list\r\n   * @param titleOfGame\r\n   */\r\n  public void addVote(String titleOfGame)\r\n  {\r\n    votingList.addVote(new GameCandidate(titleOfGame));\r\n  }\r\n\r\n  /**\r\n   * removes {@link BoardGame} by index\r\n   * @param index\r\n   */\r\n  public void removeBoardGame(int index)\r\n  {\r\n    catalogue.removeBoardGame(index);\r\n  }\r\n\r\n  /**\r\n   * set {@link Genre} by index\r\n   * @param genre\r\n   * @param index\r\n   */\r\n  public void setGenre(Genre genre, int index)\r\n  {\r\n    genreList.setGenre(genre, index);\r\n  }\r\n\r\n  /**\r\n   * removes {@link Student} from the list by {@link Student} object\r\n   * @param student\r\n   */\r\n  public void removeStudent(Student student)\r\n  {\r\n    this.studentList.removeStudent(student);\r\n  }\r\n  public void removeStudent(int index)\r\n  {\r\n    this.studentList.removeStudent(index);\r\n  }\r\n\r\n  public void removeEvent(int index)\r\n  {\r\n    eventList.removeEvent(index);\r\n  }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/model/Association.java b/src/model/Association.java
+--- a/src/model/Association.java	(revision d976daa0e75e7a35e45ef1bcda49df685ff4c0ab)
++++ b/src/model/Association.java	(date 1670850680450)
+@@ -292,11 +292,20 @@
+   {
+     this.studentList.removeStudent(student);
+   }
++
++  /**
++   *
++   * @param index the value of position in the list that will be replaced
++   */
+   public void removeStudent(int index)
+   {
+     this.studentList.removeStudent(index);
+   }
+ 
++  /**
++   *
++   * @param index the value of position in the list that will be replaced
++   */
+   public void removeEvent(int index)
+   {
+     eventList.removeEvent(index);
