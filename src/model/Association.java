@@ -292,11 +292,20 @@ public class Association implements Serializable
   {
     this.studentList.removeStudent(student);
   }
+
+  /**
+   *
+   * @param index the value of position in the list that will be replaced
+   */
   public void removeStudent(int index)
   {
     this.studentList.removeStudent(index);
   }
 
+  /**
+   *
+   * @param index the value of position in the list that will be replaced
+   */
   public void removeEvent(int index)
   {
     eventList.removeEvent(index);
