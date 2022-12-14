@@ -20,6 +20,11 @@ import java.net.URL;
 import java.nio.channels.Channels;
 import java.nio.channels.ReadableByteChannel;
 
+/**
+ * A class that controls all the tabs of the application window. It specifies all the controller classes, handles the switch of the tabs.
+ * @author Sevastian Bahynskyi
+ * @version 1.0
+ */
 public class MainController
 {
     @FXML
@@ -50,6 +55,9 @@ public class MainController
     private VBox mainPane;
     private static XmlJsonParser parser;
 
+    /**
+     * Method which is runned at the start of the GUI
+     */
     public void initialize()
     {
         parser = new XmlJsonParser();
@@ -58,7 +66,11 @@ public class MainController
 
     }
 
-    public void tabChanged(Event event)
+    /**
+     * Method that listens to the tab switches.
+     * @param event An action done by user. In our case, the tab has been changed.
+     */
+    public void tabChanged(Event event) throws ParserException
     {
         if (studentTab != null && studentTab.isSelected())
         {
@@ -78,6 +90,11 @@ public class MainController
         }
     }
 
+    /**
+     * Method that listens to the mouse clicks by user.
+     * @param e An action done by user. In this case, we the theme switch has been pressed.
+     * @throws ParserException
+     */
     public void handleMouseEvent(MouseEvent e) throws ParserException
     {
         if(e.getSource() == darkModeToggleSwitch)
@@ -100,6 +117,10 @@ public class MainController
 
     }
 
+    /**
+     * Static method to be able to export data at any point. All the information is parsed into XML file.
+     * @throws ParserException
+     */
     public static void exportData() throws ParserException
     {
         parser.toXml(AssociationModelManager.getAssociation().getCatalogue(), "WebPage/Export/catalogue.xml");
@@ -108,6 +129,11 @@ public class MainController
 
         parser.toXml(AssociationModelManager.getAssociation().getEventList(), "WebPage/Export/events.xml");
     }
+
+    /**
+     * Method that listens to the interactions with the buttons.
+     * @throws ParserException
+     */
     public void handleAction(ActionEvent e) throws ParserException, IOException
     {
         if(e.getSource() == exportMenuItem)

@@ -15,7 +15,11 @@ import java.security.cert.CertPathValidatorException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-//Kateryna//
+/**
+ * A class that controls the borrow and reservation pop-up window. User can use it to type the start and the end date and enter the student ID. It is responsible for initializing the window and handling the input.
+ * @author Kateryna Sokolova, Sevastian Bahynskyi
+ * @version 1.0
+ */
 public class StatusViewController
 
 {
@@ -32,14 +36,21 @@ public class StatusViewController
 
     private BoardGame game;
 
-
+    /**
+     * Method that is invoked at the start.
+     */
     public void initialize()
     {
         statusStartDatePicker.setPromptText(new MyDate(LocalDate.now().getDayOfMonth(), LocalDate.now().getMonthValue(),
                 LocalDate.now().getYear()).toString());
     }
 
-
+    /**
+     * Method to pass the information about the game user was asking for the status about.
+     * @param theme the file path of the theme
+     * @param isBorrowing shows whether it is a borrowing or reservation.
+     * @param indexOfGame the index of the game which we use to get the BoardGame object later on.
+     */
     public void passData(int indexOfGame, boolean isBorrowing, String theme)
     {
         this.game = AssociationModelManager.getAssociation().getBoardGame(indexOfGame);
@@ -50,7 +61,10 @@ public class StatusViewController
         setStatusDialogBox.getStylesheets().add(theme);
     }
 
-
+    /**
+     * Method to handle the input of the user. It also contains a lot of checkers not to allow user to choose the wrong dates.
+     * @param e the action done by user.
+     */
     public void handleActions(ActionEvent e)
     {
         int ID = 0;

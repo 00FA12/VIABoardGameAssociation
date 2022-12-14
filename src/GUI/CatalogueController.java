@@ -18,6 +18,12 @@ import parser.ParserException;
 import java.io.IOException;
 
 //Michael
+
+/**
+ * A class that controls the Catalogue tab in the GUI. It is responsible for initializing, updating the GUI and handling the input.
+ * @author Michael Leo, Sevastian Bahynskyi (logic for handling user input)
+ * @version 1.0
+*/
 public class CatalogueController
 {
 
@@ -50,7 +56,9 @@ public class CatalogueController
 
     private String theme;
 
-
+    /**
+     * A nested class that notifies us of the changes to the BoardGame, implements ChangeListener.
+     */
     private class MyTableListener implements ChangeListener<BoardGame>
     {
         public void changed(ObservableValue<? extends BoardGame> boardGame, BoardGame oldBoardGame, BoardGame newBoardGame)
@@ -69,7 +77,9 @@ public class CatalogueController
         }
     }
 
-
+    /**
+     * Method that is invoked at the start of the application and sets up the view.
+     */
     public void initialize()
     {
         tableListener = new MyTableListener();
@@ -95,6 +105,12 @@ public class CatalogueController
         updateTable();
     }
 
+    /**
+     * Method that is invoked when user interacts with the application, handles the actions of the user.
+     * @param e An action done by user. In our case, the button pressed.
+     * @throws IOException
+     * @throws ParserException
+     */
     public void handleAction(ActionEvent e) throws IOException, ParserException
     {
         try
@@ -304,6 +320,9 @@ public class CatalogueController
         }
     }
 
+    /**
+     * Method that updates the table that contains the games.
+     */
     public void updateTable()
     {
         int indexSelected = catalogueTable.getSelectionModel().getSelectedIndex();
@@ -321,6 +340,10 @@ public class CatalogueController
         catalogueTable.getSelectionModel().select(indexSelected);
     }
 
+    /**
+     * Method that sets the theme
+     * @param theme the desired theme
+     */
     public void setTheme(String theme)
     {
         this.theme = theme;

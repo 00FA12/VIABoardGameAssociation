@@ -11,6 +11,11 @@ import model.Association;
 import model.AssociationModelManager;
 import org.controlsfx.control.Rating;
 
+/**
+ * A class that controls all the rate pop-up window.It is responsible for initializing, updating the GUI and handling the input.
+ * @author Sevastian Bahynskyi
+ * @version 1.0
+ */
 public class RateController
 {
     @FXML private Label gameTitle;
@@ -21,6 +26,11 @@ public class RateController
     @FXML private VBox rateDialogWindowBox;
     private int index;
 
+    /**
+     * Method to pass the information about the game that is about to be rated.
+     * @param theme the file path of the theme
+     * @param index the index of the game which we use to get the title later on.
+     */
     public void passData(int index, String theme)
     {
         this.index = index;
@@ -32,6 +42,10 @@ public class RateController
         rateDialogWindowBox.getStylesheets().add(theme);
     }
 
+    /**
+     * Method that listens for the rate stars to be pressed and handles it.
+     * @param e the event which is in our case the rate stars pressed.
+     */
     public void handleAction(ActionEvent e)
     {
         if(e.getSource() == rateButton)

@@ -10,7 +10,15 @@ import model.Association;
 import model.AssociationModelManager;
 import model.Student;
 import model.lists.StudentList;
+import parser.ParserException;
 
+import java.io.IOException;
+
+/**
+ * A class that controls the student tab in the GUI. It is responsible for initializing, updating the GUI and handling the input.
+ * @author Sevastian Bahynskyi (logic for handling user input), Michael Leo, Hugo Madrid Peñarrubia, Kateryna Sokolova
+ * @version 1.0
+ */
 public class StudentController
 {
   @FXML private TableView<Student> studentTable;
@@ -25,6 +33,9 @@ public class StudentController
   @FXML private TableColumn<Student, String> statusColumn;
   private MyTableListener tableListener;
 
+  /**
+   * A nested class that notifies us of the changes to the Student, implements ChangeListener.
+   */
   private class MyTableListener implements ChangeListener<Student>
   {
     public void changed(ObservableValue<? extends Student> student, Student oldStudent, Student newStudent)
@@ -44,7 +55,9 @@ public class StudentController
     }
   }
 
-
+  /**
+   * Method that is invoked at the start of the application and sets up the view.
+   */
   public void initialize()
   {
     tableListener = new MyTableListener();
@@ -62,6 +75,10 @@ public class StudentController
     updateTable();
   }
 
+  /**
+   * Method that is invoked when user interacts with the application, handles the actions of the user.
+   * @param e An action done by user. In our case, the button pressed.
+   */
   public void handleActions(ActionEvent e)
   {
     try
@@ -155,6 +172,9 @@ public class StudentController
     }
   }
 
+  /**
+   * Method that updates the table that contains the students.
+   */
   public void updateTable()
   {
     int index = studentTable.getSelectionModel().getSelectedIndex();

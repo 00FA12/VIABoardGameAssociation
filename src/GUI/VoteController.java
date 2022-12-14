@@ -12,10 +12,17 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.HBox;
 import model.*;
 import model.lists.VotingList;
+import parser.ParserException;
 
+import java.io.IOException;
 import java.util.List;
 
 //Kateryna
+/**
+ * A class that controls the Vote tab in the GUI. It is responsible for initializing, updating the GUI and handling the input.
+ * @author Kateryna Sokolova, Sevastian Bahynskyi (logic for handling user input)
+ * @version 1.0
+ */
 public class VoteController
 
 {
@@ -37,6 +44,9 @@ public class VoteController
 
   private MyTableListener tableListener;
 
+  /**
+   * A nested class that notifies us of the changes to the GameCandidate, implements ChangeListener.
+   */
   private class MyTableListener implements ChangeListener<GameCandidate>
   {
     public void changed(ObservableValue<? extends GameCandidate> gameCandidate, GameCandidate oldVote, GameCandidate newVote)
@@ -50,7 +60,9 @@ public class VoteController
     }
   }
 
-
+  /**
+   * Method that is invoked at the start of the application and sets up the view.
+   */
   public void initialize()
   {
     tableListener = new MyTableListener();
@@ -83,6 +95,9 @@ public class VoteController
     updateTable();
   }
 
+  /**
+   * Method that updates the table that contains the votes.
+   */
   public void updateTable()
   {
     int indexSelected = votesTable.getSelectionModel().getSelectedIndex();
@@ -107,6 +122,10 @@ public class VoteController
 
   }
 
+  /**
+   * Method that is invoked when user interacts with the application, handles the actions of the user.
+   * @param e An action done by user. In our case, the button pressed.
+   */
   public void handleActions(ActionEvent e)
   {
     if (e.getSource() == voteButton)

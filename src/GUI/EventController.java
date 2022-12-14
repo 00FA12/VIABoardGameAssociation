@@ -11,9 +11,15 @@ import model.lists.EventList;
 import model.lists.StudentList;
 import org.controlsfx.control.CheckComboBox;
 
+import java.io.IOException;
 import java.time.LocalDate;
 
 //Together
+/**
+ * A class that controls the Event tab in the GUI. It is responsible for initializing, updating the GUI and handling the input.
+ * @author Sevastian Bahynskyi (logic for handling user input), Michael Leo, Hugo Madrid Peñarrubia, Kateryna Sokolova
+ * @version 1.0
+ */
 public class EventController
 {
     @FXML
@@ -42,6 +48,9 @@ public class EventController
     private TableColumn<Event, String> attendersColumn;
     private MyTableListener tableListener;
 
+    /**
+     * A nested class that notifies us of the changes to the BoardGame, implements ChangeListener.
+     */
     private class MyTableListener implements ChangeListener<Event>
     {
         public void changed(ObservableValue<? extends Event> event, Event oldEvent, Event newEvent)
@@ -81,6 +90,9 @@ public class EventController
         }
     }
 
+    /**
+     * Method that is invoked at the start of the application and sets up the view.
+     */
     public void initialize()
     {
         tableListener = new MyTableListener();
@@ -106,6 +118,10 @@ public class EventController
     }
 
 
+    /**
+     * Method that is invoked when user interacts with the application, handles the actions of the user.
+     * @param e An action done by user. In our case, the button pressed.
+     */
     public void handleActions(ActionEvent e)
     {
         try
@@ -201,6 +217,9 @@ public class EventController
 
     }
 
+    /**
+     * Method that updates the table that contains the events.
+     */
     public void updateTable()
     {
         // we store selected index of the table this takes 2 (get method and assigning it to variable)

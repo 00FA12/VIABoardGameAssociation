@@ -11,6 +11,11 @@ import main.LoadInitialData;
 
 import java.time.LocalDateTime;
 
+/**
+ * A class that starts the application.
+ * @author Sevastian Bahynskyi
+ * @version 1.0
+ */
 public class StartGUI extends Application
 {
   public void start(Stage window) throws Exception
