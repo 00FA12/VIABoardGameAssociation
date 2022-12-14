@@ -6,7 +6,7 @@ import java.util.Scanner;
 import java.util.logging.FileHandler;
 
 /**
- * @author Sevastian Bahynskyi & Allan Henriksen (copied one method from his "MyFileHandler")
+ * @author Sevastian Bahynskyi and Allan Henriksen (copied one method from his "MyFileHandler")
  */
 public class MyFileHandler
 {

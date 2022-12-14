@@ -38,6 +38,7 @@ public class Student implements Serializable
     try
     {
       String[] splitString = name.split(" ");
+
       if(splitString.length < 2 || splitString.length > 4)
         throw new IllegalArgumentException("You can ony have a name of 2 to 4 words.");
 
@@ -58,14 +59,10 @@ public class Student implements Serializable
       throw new IllegalArgumentException("Both name and surname should start with capital letter");
     }
 
-     if (ID < 100000 || ID > 999999)
-     {
-       throw new IllegalArgumentException("Wrong ID format");
-     }
+     if (ID < 100000 || ID > 999999) { throw new IllegalArgumentException("Wrong ID format"); }
       this.ID = ID;
       this.name = name;
       this.isMember = false;
-
   }
   /**
    * second class constructor, validate both name and ID, initialize isMember and throw an exception if found a mistake or initialize class fields if not
@@ -80,8 +77,7 @@ public class Student implements Serializable
     {
       String[] splitString = name.split(" ");
       if(splitString.length < 2 || splitString.length > 4)
-        throw new IllegalArgumentException("We are so restrictive that you can ony have a name of 2 to 4 words, we don't really care about your name");
-
+        throw new IllegalArgumentException("You can ony have a name of 2 to 4 words.");
       for (int i = 0; i < splitString.length; i++)
       {
         if (!Character.isUpperCase(splitString[i].charAt(0)))

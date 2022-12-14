@@ -32,7 +32,7 @@ public class Event implements Serializable
 
   /**
    * constructor which validate {@link Event#title} and initialize
-   * {@link Event#date} & {@link Event#description} if didn't find any mistakes. List of event attenders will be created
+   * {@link Event#date} and {@link Event#description} if didn't find any mistakes. List of event attenders will be created
    * @param title
    * @param description
    * @param date
@@ -46,7 +46,7 @@ public class Event implements Serializable
 
     for (Character ch:title.toCharArray())
     {
-      if(!Character.isLetterOrDigit(ch))
+      if(!Character.isLetterOrDigit(ch) && ch != ' ')
         throw new IllegalArgumentException("Field \"Title\" can only consist of digits and letters!");
     }
 

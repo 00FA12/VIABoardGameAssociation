@@ -1,2 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<VotingList/>
+<VotingList>
+  <votes>
+    <numberOfVotes>1</numberOfVotes>
+    <titleOfGame>Catan</titleOfGame>
+  </votes>
+  <votes>
+    <numberOfVotes>2</numberOfVotes>
+    <titleOfGame>Card deck</titleOfGame>
+  </votes>
+  <votes>
+    <numberOfVotes>1</numberOfVotes>
+    <titleOfGame>Uno</titleOfGame>
+  </votes>
+</VotingList>

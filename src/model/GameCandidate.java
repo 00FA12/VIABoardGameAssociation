@@ -30,6 +30,11 @@ public class GameCandidate implements Serializable
     numberOfVotes = 0;
   }
 
+  public String getNumberOfVotesToString()
+  {
+    return String.valueOf(numberOfVotes);
+  }
+
   /**
    * increment {@link GameCandidate#numberOfVotes}
    */

@@ -2,14 +2,64 @@
 <Catalogue>
   <catalogue>
     <ratingList>
-      <ratings>2</ratings>
+      <ratings>4</ratings>
+      <ratings>1</ratings>
+      <ratings>5</ratings>
     </ratingList>
     <genre>
-      <name>Children’s Game</name>
+      <name>Card Games</name>
     </genre>
-    <description>some dewf</description>
-    <title>title1</title>
-    <ownerID>100001</ownerID>
-    <status>None</status>
+    <description>A cool game</description>
+    <title>Catan</title>
+    <ownerID>333333</ownerID>
+    <gameAction>
+      <endDate>
+        <month>12</month>
+        <year>2022</year>
+        <day>16</day>
+      </endDate>
+      <student>
+        <name>Bob Bobson New</name>
+        <ID>333332</ID>
+        <isMember>true</isMember>
+      </student>
+      <startDate>
+        <month>12</month>
+        <year>2022</year>
+        <day>15</day>
+      </startDate>
+    </gameAction>
+    <status>Reserved</status>
+  </catalogue>
+  <catalogue>
+    <ratingList>
+      <ratings>5</ratings>
+      <ratings>4</ratings>
+      <ratings>5</ratings>
+    </ratingList>
+    <genre>
+      <name>Bluffing</name>
+    </genre>
+    <description>A cool game</description>
+    <title>Uno</title>
+    <ownerID>333332</ownerID>
+    <gameAction>
+      <endDate>
+        <month>12</month>
+        <year>2022</year>
+        <day>20</day>
+      </endDate>
+      <student>
+        <name>Bob Bobson</name>
+        <ID>333333</ID>
+        <isMember>true</isMember>
+      </student>
+      <startDate>
+        <month>12</month>
+        <year>2022</year>
+        <day>16</day>
+      </startDate>
+    </gameAction>
+    <status>Borrowed</status>
   </catalogue>
 </Catalogue>

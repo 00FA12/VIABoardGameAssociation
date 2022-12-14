@@ -46,31 +46,38 @@ public class EventController
     {
         public void changed(ObservableValue<? extends Event> event, Event oldEvent, Event newEvent)
         {
+            // whenever user selects item from the table, all the input fields will take corresponding data from the event
+            // we store selected event from the table, 1 for get and 1 for initialization (2)
             Event eventTemp = eventsTable.getSelectionModel().getSelectedItem();
 
-            if (eventTemp != null)
+            if (eventTemp != null) // safety check, 1
             {
-                titleField.setText(eventTemp.getTitle());
-                descriptionArea.setText(eventTemp.getDescription());
-                String[] strDate = eventTemp.getDate().toString().split("\\.");
-                int day = Integer.parseInt(strDate[0]);
-                int month = Integer.parseInt(strDate[1]);
-                int year = Integer.parseInt(strDate[2]);
-                LocalDate tempDate = LocalDate.of(year, month, day);
-                datePicker.setValue(tempDate);
-                checkComboBox.getItems().clear();
-                checkComboBox.getItems().addAll(AssociationModelManager.getAssociation().getStudentList().getArrayOfStudents());
+                titleField.setText(eventTemp.getTitle()); // title field get selected event title, 1 - get and 1 for set (2)
+                descriptionArea.setText(eventTemp.getDescription()); // description field get selected event description, 1 - get and 1 for set (2)
+                String[] strDate = eventTemp.getDate().toString().split("\\."); // get String data version and process it later, 2
+                int day = Integer.parseInt(strDate[0]); // 1 for parsing and 1 for initialization, 2
+                int month = Integer.parseInt(strDate[1]); // 2
+                int year = Integer.parseInt(strDate[2]); // 2
+                LocalDate tempDate = LocalDate.of(year, month, day); // 2
+                datePicker.setValue(tempDate); // 1
+                checkComboBox.getItems().clear(); // clear checkCombBox, 1
+                // add all students that was read from the file
+                checkComboBox.getItems().addAll(AssociationModelManager.getAssociation().getStudentList().getArrayOfStudents()); // 2
 
-                StudentList studentList = eventTemp.getAttenders();
-                for(int i = 0; i < studentList.getSize(); i++)
+                StudentList studentList = eventTemp.getAttenders(); // create student list of the event attenders, 2
+                for(int i = 0; i < studentList.getSize(); i++) // 1 + n-1 + n
                 {
-                    if(checkComboBox.getItems().contains(studentList.getStudent(i)))
+                    // condition checks if the student is the event attender, check it
+                    if(checkComboBox.getItems().contains(studentList.getStudent(i))) // 1 for get, 1 for contains method, 2
                     {
+                        // get the index of the student that was found
+                        // 1 for get, 1 for getting index, 1 for initialization, 3
                         int index = checkComboBox.getItems().indexOf(studentList.getStudent(i));
-                        checkComboBox.getCheckModel().check(index);
+                        checkComboBox.getCheckModel().check(index); // 1
                     }
                 }
             }
+            // O(30) + O(n-1) + O(n) ~ O(n)
         }
     }
 
@@ -196,28 +203,31 @@ public class EventController
 
     public void updateTable()
     {
+        // we store selected index of the table this takes 2 (get method and assigning it to variable)
         int indexSelected = eventsTable.getSelectionModel().getSelectedIndex();
-        int indexFocused = eventsTable.getSelectionModel().getFocusedIndex();
-        if(indexSelected == -1)
-            indexSelected = 0;
+        if(indexSelected == -1) // safety check, 1
+            indexSelected = 0; // 1
+
+        // read event list from the file, it takes 2
         EventList eventList = AssociationModelManager.getAssociation()
                 .getEventList();
-        eventsTable.getItems().clear();
+        eventsTable.getItems().clear(); // clear items of the table, 1
 
-        for (int i = 0; i < eventList.getSize(); i++)
+        // the loop add all events to the table from the stored event list
+        for (int i = 0; i < eventList.getSize(); i++) // 1 + n-1 + n
         {
-            Event event = eventList.getEvent(i);
-            eventsTable.getItems().add(event);
+            Event event = eventList.getEvent(i); // 2 (1 for getter and 1 for assigning)
+            eventsTable.getItems().add(event); // 1
         }
 
-//      ChechComboBox
-        System.out.println(checkComboBox.getItems().size());
-        checkComboBox.getItems().clear();
-        checkComboBox.getItems().addAll(AssociationModelManager.getAssociation().getStudentList().getArrayOfStudents());
-        System.out.println(checkComboBox.getItems().size());
+        eventsTable.getSelectionModel().select(indexSelected); // select the row in the table by index, 2
+        eventsTable.requestFocus(); // 1
 
-        eventsTable.getSelectionModel().select(indexSelected);
-        eventsTable.requestFocus();
+//      ChechComboBox
+        checkComboBox.getItems().clear(); // clear check combo box, 1
+        // add all students that was read from the file, this takes 2
+        checkComboBox.getItems().addAll(AssociationModelManager.getAssociation().getStudentList().getArrayOfStudents());
+        // O(17) + O(n - 1) + O(n) ~ O(n)
     }
 
 }

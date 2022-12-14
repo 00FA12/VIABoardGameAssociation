@@ -107,9 +107,10 @@ public class CatalogueController
 
                 try
                 {
+                    // tries to parse ownerIDField. If the input is a number, the method can continue
                     ownerID = Integer.parseInt(ownerIDField.getText());
                 }
-                catch (NumberFormatException exception)
+                catch (NumberFormatException exception) // if the input is not an integer, show an alert message and exit method
                 {
                     Alert alert = new Alert(Alert.AlertType.ERROR, "Enter only digits in \"Owner ID\" field!");
                     alert.setHeaderText(null);
@@ -117,7 +118,7 @@ public class CatalogueController
                     return;
                 }
 
-
+                // if student with such ID is not found show an alert and exit method
                 if(AssociationModelManager.getAssociation().getStudentByID(ownerID) == null)
                 {
                     Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -127,21 +128,28 @@ public class CatalogueController
                     return;
                 }
 
+                // gets the selected genre from the dropdown menu (combo box)
                 Genre genre = genreChoiceBox.getSelectionModel().getSelectedItem();
 
+                // gets the last version of "Association" by reading the file
                 Association association = AssociationModelManager.getAssociation();
                 try
                 {
+                    // system tries to create a "BoardGame" object
+                    // if it was created successfully, it will be added to the association's catalogue
                     association.getCatalogue().addBoardGame(new BoardGame(title, ownerID, description, genre));
                 }
-                catch (IllegalArgumentException exception)
+                catch (IllegalArgumentException exception) // handles the exception if the input has found invalid format/value
                 {
+                    // informs the user with an alert
                     Alert alert = new Alert(Alert.AlertType.ERROR, exception.getMessage());
                     alert.setHeaderText(null);
                     alert.show();
                     return;
                 }
+                // if all code above was executed, system can save a new "Association" version
                 AssociationModelManager.saveAssociation(association);
+                // refreshes the table view
                 updateTable();
             }
             else if (e.getSource() == editGameButton)
